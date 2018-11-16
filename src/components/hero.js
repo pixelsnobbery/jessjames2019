@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import HeaderEdge from "../images/corner-edges.svg"
 
-import Logo from "./hero/Logo";
+import Logo from "./hero/logo";
 import Clouds from "./hero/clouds";
 
 
