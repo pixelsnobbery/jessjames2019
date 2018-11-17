@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const CloudsContainer = styled.div`
     position: absolute;
-    bottom: 0;
+    bottom: 280px;
     right: 0;
     left: 0;
     top: 0;
@@ -41,8 +41,8 @@ const CloudsContainer = styled.div`
 const Clouds  = ({ bgColour }) => (
     <CloudsContainer>
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 732" className={bgColour}>
-        <g id="a" className="a"><path className="b" d="M1729.39,763.146a104.566,104.566,0,0,1-115.818,2.644,104.51,104.51,0,0,1-150.326-14.827,104.677,104.677,0,0,1-98.133-4.61,104.525,104.525,0,0,1-171.206-20.364,104.361,104.361,0,0,1-82.985-43.1,104.829,104.829,0,0,1-79.247-11.8,104.687,104.687,0,0,1-100.248,28.883L934.84,773.3H11.883V152.943A104.521,104.521,0,0,1,196.315,54.557,75.531,75.531,0,0,1,315.3,136.924a82.663,82.663,0,0,1,57.3,46.363l13.4,6.648A104.684,104.684,0,0,1,486.466,214.73,104.684,104.684,0,0,1,589.9,255.864a104.846,104.846,0,0,1,80.127,7.061,104.55,104.55,0,0,1,144.67,34.1,104.364,104.364,0,0,1,83,43.941A104.614,104.614,0,0,1,1026.12,428.88a103.972,103.972,0,0,1,49.659,20.451,104.664,104.664,0,0,1,115.073,67.77q2.31-.1,4.648-.1a104.485,104.485,0,0,1,92.594,56.013,103.984,103.984,0,0,1,51.794,14.636,104.508,104.508,0,0,1,160.867,4.39,104.661,104.661,0,0,1,100.674,6.173,104.51,104.51,0,0,1,150.181,14.643,104.718,104.718,0,0,1,93.316-13.394,104.456,104.456,0,1,1,54.148,156.08,104.519,104.519,0,0,1-169.683,7.606Z" transform="translate(-61 106)"/></g>
-</svg>
+            <g id="a" className="a"><g transform="translate(0 -212)"><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1646 851)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1767 809)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1504 830)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1380 839)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1253 809)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1121 830)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(1030 807)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(791 751)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(647 664)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(560 544)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(456 508)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(340 470)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(249 443)"/><circle className="b" cx="82.5" cy="82.5" r="82.5" transform="translate(154 392)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(-31 217)"/><circle className="b" cx="75.5" cy="75.5" r="75.5" transform="translate(107 295)"/><path className="b" d="M-24.117,142.682V818.3H898.84l-6.106-131.138-4.187-89.923L575.929,347.011,246.673,183.682" transform="translate(-25 212)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(920 814)"/><circle className="b" cx="104.5" cy="104.5" r="104.5" transform="translate(847 795)"/></g></g>
+        </svg>
     </CloudsContainer>
 )
 

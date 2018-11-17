@@ -103,7 +103,7 @@ const Footer = () => (
     </svg>
     <div>
         <h3>Will you be joining us?</h3>
-        <form method="post" action="#">
+        <form method="post" name="rsvp" netlify>
             <div className="fieldWrapper">
                 <span>We're stoked to have you as</span>
                 <h4>Our Guest</h4>

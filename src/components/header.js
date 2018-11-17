@@ -1,30 +1,46 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Navigation from './navigation'
 import styled from 'styled-components'
+import Button from './button'
 
 const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
+  padding: 24px 8px 8px 8px;
   z-index: 10;
 
-  &.down {
-    background-color: #fff;
-  }
+  background-color: ${props => props.isTop ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)"};
+  color: ${props => props.isTop ? "black" : "black"};
+
+
+  ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        li {
+            margin-right: 32px;
+            a:link, a:visited {
+                color: ${props => props.isTop ? props.theme.white : props.theme.primary};
+                text-decoration: none;
+            }
+            a:hover, a:active {
+                color: #333;
+            }
+        }
+    }
 `
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 8px 8px 8px;
-  margin: 0 auto 16px auto;
 `
 
-const HeaderElement = ({ siteTitle }) => (
-  <StyledHeader className={siteTitle}>
+const HeaderElement = ({ siteTitle, isTop }) => (
+  <StyledHeader className={siteTitle} isTop={isTop}>
     <Container>
       <h1 style={{ margin: 0 }}>
         <Link
@@ -36,7 +52,25 @@ const HeaderElement = ({ siteTitle }) => (
         >
         </Link>
       </h1>
-      <Navigation></Navigation>
+      <nav>
+        <ul>
+          <li>
+              <Link to="/">Home</Link>
+          </li>
+          <li>
+              <Link to="/wedding">Wedding</Link>
+          </li>
+          <li>
+              <Link to="/accommodation">Accommodation</Link>
+          </li>
+          <li>
+              <Link to="/travel">Travel</Link>
+          </li>
+          <li>
+              <Button href="#rsvp" text="RSVP"></Button>
+          </li>
+        </ul>
+      </nav>
     </Container>
   </StyledHeader>
 )
@@ -56,7 +90,7 @@ export default class Header extends React.Component {
   }
   render () {
     return (
-      <HeaderElement className={this.state.isTop ? 'down' : 'up'}></HeaderElement>
+      <HeaderElement isTop={this.state.isTop}></HeaderElement>
     )
   };
 };
