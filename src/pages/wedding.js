@@ -59,25 +59,32 @@ const Timeline = styled.div`
         }
       }
       div.details {
-        background-color: #ccc;
-        transition: all .2s ease;
-        transform: scale(1,1);
-        border-radius: 25;
-        width: 100px;
-        height: 100px;
         order: 2;
         margin: 16px 32px;
+        > div {
+          background-color: #ccc;
+          transition: all .2s ease;
+          transform: scale(1,1);
+          border-radius: 25;
+          width: 100px;
+          height: 100px;
+          
+          
 
-        .image {
+          .image {
             svg {
               width: 50px;
             }
+          }
+          .description {
+            transform: scale(0, 0);
+            transition: all .2s ease;
+            transform-origin: 50% 50%;
+          }
         }
-        .description {
-          transform: scale(0, 0);
-          transition: all .2s ease;
-          transform-origin: 50% 50%;
-        }
+        
+
+        
       }
       .divider {
         width: 2px;
@@ -107,7 +114,10 @@ const Timeline = styled.div`
       }
       &:hover {
         .details {
-          transform: scale(2, 2);
+          > div {
+            transform: scale(2, 2);
+          }
+          
         }
       
 
@@ -117,16 +127,28 @@ const Timeline = styled.div`
   }
 `
 
+const Container = styled.div`
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    max-width: 1000px;
+  }
+
+`
+
 const Wedding = () => (
   <ThemeProvider theme={Theme}>
   <Layout>
     <Hero>
-      <Image />
+      <Image imageUrl="../images/wedding-hero.jpg" />
       <h1>We're Getting Hitched</h1>
       <h2>and then having a party</h2>
       <div className="overlay"></div>
     </Hero>
-    
+
+    <Container>
 
     <h3>When and Where</h3>
     <p>Bodega Ridge, Galiano Island</p>
@@ -140,12 +162,14 @@ const Wedding = () => (
           </div>
           <div className="divider"></div>
           <div className="details">
-            <h3>Arrive</h3>
-            <div class="image ring">
-              <Icon />
-            </div>
-            <div class="description">
-              On-site checkin: 4pm
+            <div>
+              <h3>Arrive</h3>
+              <div class="image ring">
+                <Icon />
+              </div>
+              <div class="description">
+                On-site checkin: 4pm
+              </div>
             </div>
           </div>
         </li>
@@ -156,13 +180,14 @@ const Wedding = () => (
           </div>
           <div className="divider"></div>
           <div className="details">
-            <div class="image">
+            <div>
+              <div class="image">
 
+              </div>
+              <div class="description">
+                <p>Barbecue 6pm ish</p>
+              </div>
             </div>
-            <div class="description">
-              <p>Barbecue 6pm ish</p>
-            </div>
-            
           </div>
         </li>
         <li>
@@ -208,6 +233,8 @@ const Wedding = () => (
 
     <h3>Music</h3>
     <p>Something about song requests</p>
+
+    </Container>
   </Layout>
   </ThemeProvider>
 )

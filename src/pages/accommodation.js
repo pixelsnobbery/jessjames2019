@@ -2,14 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layouts/layout'
-import Image from '../components/image'
+import AccommodationHero from '../components/accommodation-hero'
+import Card from '../components/card'
 
 import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
+import Image1 from '../images/bodega_cabin_1.jpg'
+
 const Hero = styled.div`
 display: block;
-height: 100vh;
+height: 65vh;
 display:flex;
 flex-direction:column;
 justify-content: flex-start;
@@ -33,34 +36,63 @@ h1, h2 {
 }
 `
 
+const Cards = styled.div`
+  display: flex;
+  justify-content:space-between;
+
+  > div {
+    flex-grow: 1;
+    max-width: 30%;
+    h3 {
+      text-align:center;
+      color: #fff;
+      background-color: ${props => props.theme.primary};
+      width: 100%;
+      padding: 8px;
+    }
+  }
+`
+
+const Container = styled.div`
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    max-width: 1000px;
+  }
+
+`
+
 const Accommodation = () => (
   <ThemeProvider theme={Theme}>
     <Layout>
       <Hero>
-        <Image />
+        <AccommodationHero />
         <h1>Accommodation</h1>
-        <h2>and then having a party</h2>
         <div className="overlay"></div>
       </Hero>
+
+      <Container>
       <p>Bodega Ridge has 6 3-bedroom cabins available on-site. There's also several cabins at Bodega Cove which sleeps a further 12.</p>
     
+      <img src={Image1} />
+
       <h2>Other Accommodation Options</h2>
 
       <p>Galiano Island has plenty of other accommodation options available. Check out some of our favourites:</p>
 
-      <div className="card-wrapper">
-        <div>
-          <h3>Serenity By The Sea</h3>
-        </div>
-        <div>
-          <h3>Arrow's Run</h3>
-        </div>
-        <div>
-          <h3>Galiano Inn & Spa</h3>
-        </div>
-      </div>
+      <Cards>
+        <Card title="Serenity by the Sea" image="../images/serenity-by-the-sea.jpg"></Card>
+        <Card title="Arrow's Run"></Card>
+        <Card title="Galiano Inn & Spa"></Card>
+      </Cards>
+      </Container>
     </Layout>
   </ThemeProvider>
 )
 
 export default Accommodation
+
+
+
