@@ -7,8 +7,7 @@ import Header from '../header'
 import Footer from '../footer'
 import Hero from '../hero'
 import './layout.css'
-
-
+import BottomNav from '../bottom-nav'
 
 
 const LayoutIndex = ({ children }) => (
@@ -45,6 +44,7 @@ const LayoutIndex = ({ children }) => (
           {children}
         </div>
         <Footer></Footer>
+        <BottomNav></BottomNav>
       </>
     )}
   />

@@ -1,14 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import HeaderEdge from "../images/corner-edges.svg"
-
 import Clouds from "./hero/clouds";
 
 import HeroImage from '-!svg-react-loader?name=Icon!../images/hero.svg';
 import Logo from '-!svg-react-loader?name=Logo!../images/logo.svg';
-
-
 
 const HeroWrapper = styled.div`
     background: #5bbbce; /* Old browsers */
@@ -44,47 +40,25 @@ const HeroWrapper = styled.div`
         bottom: 0;
         top: 100px;
         max-width: 400px;
-        left: 16px;
-        right: 16px;
+        left: 64px;
+        right: 64px;
         @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-            left: 64px;
             right: auto;
             height: 350px;
             bottom: 280px;
-            width: 300px;
+            width: 350px;
             top: auto;
         }
         
         z-index: 5;
 
-        h2 {
-        color: ${props => props.theme.white};
-        background: ${props => props.theme.primary};
-        text-align: center;
-        margin: 16px 0;
-        padding: 8px;
-        font-weight: 300;
-        position: relative;
-
-        &::after {
-            content: '';
-            background-image: (${HeaderEdge});
-            width: 20px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            left: 0;
+        h3 {
+            font-size:1rem;
+            text-align: center;
+            font-weight: 200;
+            color: #666!important;
+            margin-top: 16px;
         }
-    }
-    h2:after {
-        
-    }
-    h3 {
-        font-size:1rem;
-        text-align: center;
-        font-weight: 200;
-        color: #666!important;
-    }
     }
 
     .cloudsBottom {
@@ -112,7 +86,6 @@ const Hero = () => (
     <div className="cloudsBottom"></div>
     <div className="title">
         <Logo className="logo"></Logo>
-        <h2>Wednesday July 3rd, 2019</h2>
         <h3>Galiano Island, British Columbia, Canada</h3>
       </div>
   </HeroWrapper>
