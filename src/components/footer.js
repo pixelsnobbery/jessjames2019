@@ -32,6 +32,13 @@ const Foot = styled.footer`
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            flex-direction: column;
+            padding: 16px;
+            @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+                flex-direction: row;
+                padding: 0;
+                
+            }
             
             .fieldWrapper {
                 flex-basis: 30%;
@@ -39,6 +46,10 @@ const Foot = styled.footer`
                 flex-direction: column;
                 align-items: flex-start;
                 text-align: center;
+                margin-bottom: 32px;
+                @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+                    margin-bottom: 0;
+                }
                 span {
                     font-weight: 200;
                 }
@@ -103,7 +114,7 @@ const Footer = () => (
     </svg>
     <div>
         <h3>Will you be joining us?</h3>
-        <form method="post" name="rsvp" netlify>
+        <form method="post" name="rsvp" data-netlify="true">
             <div className="fieldWrapper">
                 <span>We're stoked to have you as</span>
                 <h4>Our Guest</h4>

@@ -10,9 +10,7 @@ import { ThemeProvider } from 'styled-components'
 const IndexPage = () => (
   <ThemeProvider theme={Theme}>
     <LayoutIndex>
-      {/* <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-        <Image />
-      </div> */}
+      <h1>Welcome!</h1>
 
     </LayoutIndex>
   </ThemeProvider>

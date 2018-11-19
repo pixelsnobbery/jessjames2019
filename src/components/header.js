@@ -15,8 +15,12 @@ const StyledHeader = styled.header`
   background-color: ${props => props.isTop ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)"};
   color: ${props => props.isTop ? "black" : "black"};
 
-
-  ul {
+  nav {
+    display:none;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+      display: block;
+    }
+    ul {
         display: flex;
         list-style-type: none;
         margin: 0;
@@ -31,6 +35,7 @@ const StyledHeader = styled.header`
             }
         }
     }
+  }
 `
 
 const Container = styled.div`
@@ -82,10 +87,15 @@ export default class Header extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
+      const isTop = window.scrollY < 200;
       if (isTop !== this.state.isTop) {
           this.setState({ isTop })
       }
+    });
+  }
+  componentWillUnmount() {
+    document.removeEventListener('scroll', () => {
+
     });
   }
   render () {

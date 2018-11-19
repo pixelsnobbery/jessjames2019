@@ -7,6 +7,8 @@ import Image from '../components/image'
 import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
+// import Icon from 'svg-react-loader?name=Icon!../images/rings.svg';
+import Icon from '-!svg-react-loader?name=Icon!../images/rings.svg';
 
 
 const Hero = styled.div`
@@ -14,7 +16,8 @@ display: block;
 height: 100vh;
 display:flex;
 flex-direction:column;
-justify-content: center;
+justify-content: flex-start;
+padding-top: 120px;
 align-content: center;
 position: relative;
 
@@ -25,7 +28,7 @@ h1, h2 {
 }
 
 .overlay {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
   position:absolute;
   top: 0;
   right: 0;
@@ -45,18 +48,36 @@ const Timeline = styled.div`
       div.info {
         width: 400px;
         flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         order: 0;
         margin: 16px 32px;
         text-align: right;
         h3 {
-
+          margin-bottom: 8px;
         }
       }
-      div.image {
-        width: 400px;
+      div.details {
+        background-color: #ccc;
+        transition: all .2s ease;
+        transform: scale(1,1);
+        border-radius: 25;
+        width: 100px;
         height: 100px;
         order: 2;
         margin: 16px 32px;
+
+        .image {
+            svg {
+              width: 50px;
+            }
+        }
+        .description {
+          transform: scale(0, 0);
+          transition: all .2s ease;
+          transform-origin: 50% 50%;
+        }
       }
       .divider {
         width: 2px;
@@ -68,6 +89,8 @@ const Timeline = styled.div`
           width: 20px;
           height: 2px;
           position:absolute;
+          top: 50%;
+          margin-top: -50%;
           background: #666;
         }
       }
@@ -77,21 +100,20 @@ const Timeline = styled.div`
           order: 2;
           text-align: left;
         }
-        div.image {
+        div.details {
           order: 0;
+          text-align: right;
         }
       }
-      &:first-child {
-        .divider {
-          margin-top: 16px;
+      &:hover {
+        .details {
+          transform: scale(2, 2);
         }
-      }
-      &:last-child {
-        .divider {
-          margin-bottom: 16px;
-        }
-      }
+      
+
+  }
     }
+    
   }
 `
 
@@ -114,19 +136,34 @@ const Wedding = () => (
       <ul>
         <li>
           <div className="info">
-            <h3>Tuesday: Arrive</h3>
-            <p>On-site checkin: 4pm</p>
+            <h3>Tuesday</h3>
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details">
+            <h3>Arrive</h3>
+            <div class="image ring">
+              <Icon />
+            </div>
+            <div class="description">
+              On-site checkin: 4pm
+            </div>
+          </div>
         </li>
         <li>
         <div className="info">
-            <h3>Tuesday PM: Barbecue</h3>
-            <p>Barbecue 6pm ish</p>
+            <h3>Tuesday PM</h3>
+            
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details">
+            <div class="image">
+
+            </div>
+            <div class="description">
+              <p>Barbecue 6pm ish</p>
+            </div>
+            
+          </div>
         </li>
         <li>
         <div className="info">
@@ -134,7 +171,7 @@ const Wedding = () => (
             <p>Mount Galiano Hike</p>
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details"></div>
         </li>
         <li>
         <div className="info">
@@ -142,7 +179,7 @@ const Wedding = () => (
           <p>Starts @ 4:30</p>
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details"></div>
         </li>
         <li>
         <div className="info">
@@ -150,21 +187,21 @@ const Wedding = () => (
 
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details"></div>
         </li>
         <li>
         <div className="info">
             <h3>Thursday AM: Breakfast</h3>
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details"></div>
         </li>
         <li>
           <div className="info">
             <h3>Thursday 12pm: Depart</h3>
           </div>
           <div className="divider"></div>
-          <div className="image"></div>
+          <div className="details"></div>
         </li>
       </ul>
     </Timeline>

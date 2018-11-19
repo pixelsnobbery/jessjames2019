@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const LogoContainer = styled.div`
-  width: 200px;
+  width: 350px;
   transform-origin: 0% 0%;
   position: relative;
 
