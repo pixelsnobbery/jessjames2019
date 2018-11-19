@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const Nav = styled.div`
+
     position: fixed;
     bottom: 0;
     left: 0;
@@ -11,6 +12,10 @@ const Nav = styled.div`
     background-color: #fff;
     border-top: 1px solid #ccc;
     z-index: 10;
+
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+        display:none;
+    }
 
     ul {
         list-style-type: none;

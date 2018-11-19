@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 349 387">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 349 387" class="logo">
   <defs>
     <style>
-      .cls-1 {
+      .logo .cls-1 {
         clip-path: url(#clip-Web_1920_1);
       }
 
-      .cls-2, .cls-4 {
+      .logo .cls-2, .logo .cls-4 {
         fill: #fa6640;
       }
 
-      .cls-3 {
+      .logo .cls-3 {
         fill: none;
         stroke: #fa6640;
         stroke-width: 2px;
       }
 
-      .cls-4 {
+      .logo .cls-4 {
         stroke: rgba(112,112,112,0);
       }
 
-      .cls-5 {
+      .logo .cls-5 {
         fill: #fff;
       }
     </style>

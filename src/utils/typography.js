@@ -3,11 +3,19 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  headerFontFamily: [
-    "Lora",
-    "serif",
+  googleFonts: [
+    {
+      name: 'Lora'
+    },
+    {
+      name: 'Lato'
+    },
   ],
-  bodyFontFamily: ["Lato", "sans-serif"],
+  headerFontFamily: [
+    'Lora',
+    'serif',
+  ],
+  bodyFontFamily: ['Lato', 'sans-serif'],
 })
 
 export default typography

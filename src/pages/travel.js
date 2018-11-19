@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components'
 
 import Tofino from '../images/tofino.jpg'
 import Vancouver from '../images/vancouver.jpg'
+import Whistler from '../images/whistler.jpg'
 
 const Container = styled.div`
   max-width: 100%;
@@ -96,7 +97,7 @@ const Travel = () => (
         <h2>Places you have to see whilst you're here</h2>
         <CardWrapper>
           <div class="card">
-            <img src={Tofino} />
+            <img src={Whistler} />
             <h3>Whistler</h3>
           </div>
 
