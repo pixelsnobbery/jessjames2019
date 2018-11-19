@@ -34,6 +34,7 @@ const Nav = styled.div`
                 text-decoration: none;
                 color: #666;
                 text-transform: uppercase;
+                padding: 8px;
             }
         }
     }

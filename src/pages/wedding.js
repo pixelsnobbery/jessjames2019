@@ -8,7 +8,9 @@ import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
 // import Icon from 'svg-react-loader?name=Icon!../images/rings.svg';
-import Icon from '-!svg-react-loader?name=Icon!../images/rings.svg';
+import WeddingRingsIcon from '-!svg-react-loader?name=Icon!../images/rings.svg';
+
+import TimelineItem from '../components/timeline-item'
 
 
 const Hero = styled.div`
@@ -59,27 +61,45 @@ const Timeline = styled.div`
         }
       }
       div.details {
+        width: 400px;
         order: 2;
         margin: 16px 32px;
+        
         > div {
-          background-color: #ccc;
+          background-color: ${props => props.theme.primary};
           transition: all .2s ease;
           transform: scale(1,1);
-          border-radius: 25;
-          width: 100px;
-          height: 100px;
-          
-          
-
+          border-radius: 75px;
+          width: 150px;
+          height: 150px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          text-align: center;
+          transform-origin: left center;
+          h3 {
+            margin: 16px 0 0 0;
+            color: #fff;
+            transform: scale(1,1);
+          }
           .image {
             svg {
               width: 50px;
+              transform: scale(0,0);
+              transition: all .2s ease;
+              transition-delay: .1s;
             }
           }
           .description {
-            transform: scale(0, 0);
+            
+            p {
+              width: 100%;
+              transform: scale(0, 0);
+            display:inline-block;
             transition: all .2s ease;
             transform-origin: 50% 50%;
+            }
+            
           }
         }
         
@@ -110,20 +130,37 @@ const Timeline = styled.div`
         div.details {
           order: 0;
           text-align: right;
+          
+          > div {
+            transform-origin: right center;
+            float: right;
+          }
         }
       }
       &:hover {
         .details {
           > div {
             transform: scale(2, 2);
+            h3 {
+              transform: scale(1,1);
+            }
+            .image {
+              svg {
+                transform: scale(1,1);
+              }
+            }
+            .description {
+              p {
+                transform: scale(.5,.5);
+              }
+              
+            }
+            
           }
           
         }
-      
-
-  }
+      }
     }
-    
   }
 `
 
@@ -161,17 +198,7 @@ const Wedding = () => (
             <h3>Tuesday</h3>
           </div>
           <div className="divider"></div>
-          <div className="details">
-            <div>
-              <h3>Arrive</h3>
-              <div class="image ring">
-                <Icon />
-              </div>
-              <div class="description">
-                On-site checkin: 4pm
-              </div>
-            </div>
-          </div>
+          <TimelineItem title="Arrive" message="On-site checkin: 4pm" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
         <div className="info">
@@ -179,54 +206,43 @@ const Wedding = () => (
             
           </div>
           <div className="divider"></div>
-          <div className="details">
-            <div>
-              <div class="image">
-
-              </div>
-              <div class="description">
-                <p>Barbecue 6pm ish</p>
-              </div>
-            </div>
-          </div>
+          <TimelineItem title="Barbecue" message="Starts at 6ish" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
         <div className="info">
-            <h3>Wednesday: Free time optional activities</h3>
-            <p>Mount Galiano Hike</p>
+            <h3>Wednesday AM</h3>
           </div>
           <div className="divider"></div>
-          <div className="details"></div>
+          <TimelineItem title="Free time" message="Optional pre-drinks" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
         <div className="info">
-          <h3>Wednesday PM: Wedding Ceremony</h3>
-          <p>Starts @ 4:30</p>
+          <h3>Wednesday PM</h3>
           </div>
           <div className="divider"></div>
-          <div className="details"></div>
+          <TimelineItem title="Wedding" message="Starts @ 4:30" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
         <div className="info">
-            <h3>Wednesday Evening: Dinner & Partay</h3>
+            <h3>Wednesday Evening:</h3>
 
           </div>
           <div className="divider"></div>
-          <div className="details"></div>
+          <TimelineItem title="Dinner/Party" message="" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
         <div className="info">
             <h3>Thursday AM: Breakfast</h3>
           </div>
           <div className="divider"></div>
-          <div className="details"></div>
+          <TimelineItem title="Breakfast" message="Piece together recollections" icon={WeddingRingsIcon}></TimelineItem>
         </li>
         <li>
           <div className="info">
-            <h3>Thursday 12pm: Depart</h3>
+            <h3>Thursday</h3>
           </div>
           <div className="divider"></div>
-          <div className="details"></div>
+          <TimelineItem title="Depart" message="Must checkout by 12pm" icon={WeddingRingsIcon}></TimelineItem>
         </li>
       </ul>
     </Timeline>
