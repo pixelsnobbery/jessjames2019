@@ -10,6 +10,9 @@ import { ThemeProvider } from 'styled-components'
 import Tofino from '../images/tofino.jpg'
 import Vancouver from '../images/vancouver.jpg'
 import Whistler from '../images/whistler.jpg'
+import Okanagan from '../images/okanagan.jpg'
+import Banff from '../images/banff.jpg'
+
 
 const Container = styled.div`
   max-width: 100%;
@@ -52,9 +55,12 @@ const CardWrapper = styled.div`
   justify-content: space-between;
   .card {
     position: relative;
-    flex-basis: 300px;
+    flex-basis: 280px;
     height: 400px;
     overflow: hidden;
+    margin: 0 8px;
+    border-radius: 8px;
+    transition: .8s transform ease;
     > img {
       display: block;
       width: 100vw;
@@ -71,6 +77,16 @@ const CardWrapper = styled.div`
       top: 50%;
       color: #fff;
       text-transform: uppercase;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+      font-size: 2rem;
+      transition: .8s font-size ease;
+    }
+    &:hover {
+      transform: translateY(-10px);
+
+      h3 {
+        font-size: 2.2rem;
+      }
     }
   }
 `
@@ -85,7 +101,7 @@ const Travel = () => (
         <div className="overlay"></div>
       </Hero>
 
-      <Container>
+
 
         We're so excited that you're coming to join us! 
 
@@ -110,11 +126,21 @@ const Travel = () => (
             <img src={Tofino} />
             <h3>Tofino</h3>
           </div>
+
+          <div class="card">
+            <img src={Banff} />
+            <h3>Banff</h3>
+          </div>
+
+          <div class="card">
+            <img src={Okanagan} />
+            <h3>Okanagan</h3>
+          </div>
         </CardWrapper>
         <h2>Our personal, off the beaten track recommendations</h2>
         <p>Blah blah</p>
 
-      </Container>
+
       
     </Layout>
   </ThemeProvider>
