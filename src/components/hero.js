@@ -79,7 +79,6 @@ const Hero = () => (
         </g>
       </svg>
       
-        <Clouds bgColour="off-white"></Clouds>
         <Clouds bgColour="white"></Clouds>
     <HeroImage></HeroImage>
     <div className="ocean"></div>

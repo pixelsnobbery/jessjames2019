@@ -10,6 +10,9 @@ const Foot = styled.footer`
     padding: 0 0 64px 0;
     z-index: 3;
     position: relative;
+    .hidden {
+        display:none;
+    }
     .b{fill:#5fd892;}
     .c{fill:#fff;}
     > div {
@@ -102,7 +105,7 @@ const Foot = styled.footer`
 
 const Footer = () => (
   <Foot>
-    <a name="rsvp"></a>
+    <a name="rsvp" href="#rsvp" className="hidden">RSVP</a>
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 115">
         <defs>
             <clipPath id="b"><rect width="1920" height="115"/></clipPath>

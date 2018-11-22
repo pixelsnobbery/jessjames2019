@@ -11,12 +11,14 @@ const StyledHeader = styled.header`
   overflow: hidden;
   padding: 24px 8px 8px 8px;
   z-index: 10;
-
+  border-bottom: ${props => props.isTop ? "0px solid #eee" : "1px solid #eee"};
   background-color: ${props => props.isTop ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)"};
+  box-shadow: ${props => props.isTop ? "0 0 0 rgba(0,0,0,0)" : "0 1px 1px rgba(0,0,0,0.05)"};
   color: ${props => props.isTop ? "black" : "black"};
 
   nav {
     display:none;
+    
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
       display: block;
     }

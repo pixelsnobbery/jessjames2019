@@ -76,7 +76,7 @@ const Accommodation = () => (
       <Container>
       <p>Bodega Ridge has 6 3-bedroom cabins available on-site. There's also several cabins at Bodega Cove which sleeps a further 12.</p>
     
-      <img src={Image1} />
+      <img src={Image1} alt="Bodega Ridge" />
 
       <h2>Other Accommodation Options</h2>
 
