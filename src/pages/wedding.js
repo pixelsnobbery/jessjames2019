@@ -7,11 +7,7 @@ import Image from '../components/image'
 import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
-// import Icon from 'svg-react-loader?name=Icon!../images/rings.svg';
-import WeddingRingsIcon from '-!svg-react-loader?name=Icon!../images/rings.svg';
-
-import TimelineItem from '../components/timeline-item'
-
+import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
 
 const Hero = styled.div`
 display: block;
@@ -30,7 +26,7 @@ h1, h2 {
 }
 
 .overlay {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   position:absolute;
   top: 0;
   right: 0;
@@ -39,128 +35,83 @@ h1, h2 {
 }
 `
 
+const Section = styled.section`
+  padding: 32px 0;
+  width: 100%;
+  background-color: #f6f9fc;
+`
+
 const Timeline = styled.div`
   ul {
     list-style-type: none;
     -webkit-padding-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
     li {
       display: flex;
-      justify-content: center;
-      margin: 0;
-      div.info {
-        width: 400px;
-        flex-grow: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      flex: 1 0 0px;
+      font-size: .8rem;
+      z-index: 2;
+      
+      span.date {
+        font-size: .7rem;
+        margin: 16px 0;
+        background-color: ${props => props.theme.primary};
+        text-align: center;
+        width: auto;
+        padding: 4px 8px;
+        color: #fff;
+        justify-self: flex-end;
+
+        border-radius: 4px;
+      }
+      .img {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 50px;
+        margin-bottom: 16px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        order: 0;
-        margin: 16px 32px;
-        text-align: right;
-        h3 {
-          margin-bottom: 8px;
-        }
-      }
-      div.details {
-        width: 400px;
-        order: 2;
-        margin: 16px 32px;
-        
-        > div {
-          background-color: ${props => props.theme.primary};
-          transition: all .2s ease;
-          transform: scale(1,1);
-          border-radius: 75px;
-          width: 150px;
-          height: 150px;
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          text-align: center;
-          transform-origin: left center;
-          h3 {
-            margin: 16px 0 0 0;
-            color: #fff;
-            transform: scale(1,1);
-          }
-          .image {
-            svg {
-              width: 50px;
-              transform: scale(0,0);
-              transition: all .2s ease;
-              transition-delay: .1s;
-            }
-          }
-          .description {
-            
-            p {
-              width: 100%;
-              transform: scale(0, 0);
-            display:inline-block;
-            transition: all .2s ease;
-            transform-origin: 50% 50%;
-            }
-            
-          }
-        }
-        
+        align-items: center;
+        transform-origin: bottom center;
 
-        
-      }
-      .divider {
-        width: 2px;
-        background-color:#666;
-        order: 1;
-        position: relative;
-        &:after {
-          content: '';
-          width: 20px;
-          height: 2px;
-          position:absolute;
-          top: 50%;
-          margin-top: -50%;
-          background: #666;
+        svg {
+          width: 60%;
+          height: 60%;
         }
+      }
+      p {
+        color: #444;
+      }
+      h3 {
+        font-size:1rem;
       }
 
-      &:nth-child(even) {
-        div.info {
-          order: 2;
-          text-align: left;
-        }
-        div.details {
-          order: 0;
-          text-align: right;
-          
-          > div {
-            transform-origin: right center;
-            float: right;
-          }
-        }
-      }
-      &:hover {
-        .details {
-          > div {
-            transform: scale(2, 2);
-            h3 {
-              transform: scale(1,1);
-            }
-            .image {
-              svg {
-                transform: scale(1,1);
-              }
-            }
-            .description {
-              p {
-                transform: scale(.5,.5);
-              }
-              
-            }
-            
-          }
-          
+      &.wedding {
+        .img {
+          transform: scale(1.2,1.2);
         }
       }
     }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      height: 2px;
+      left: 20px;
+      right: 20px;
+      background-color: #e6ebf1;
+      z-index: 1;
+    }
+
   }
 `
 
@@ -190,66 +141,67 @@ const Wedding = () => (
     <h3>When and Where</h3>
     <p>Bodega Ridge, Galiano Island</p>
 
-    <h3>Schedule of Events</h3>
-    <Timeline>
-      <ul>
-        <li>
-          <div className="info">
-            <h3>Tuesday</h3>
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Arrive" message="On-site checkin: 4pm" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-        <div className="info">
-            <h3>Tuesday PM</h3>
+    </Container>
+
+    <Section>
+
+      <Container>
+
+        <h3>Schedule of Events</h3>
+        <Timeline>
+          <ul>
+            <li>
+              <div className="img"></div>
+              <h3>Arrive</h3>
+              <p>On-site checkin from 4pm</p>
+              
+              <span className="date">2nd July</span>
+            </li>
+            <li>
+              <div className="img"></div>
             
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Barbecue" message="Starts at 6ish" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-        <div className="info">
-            <h3>Wednesday AM</h3>
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Free time" message="Optional pre-drinks" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-        <div className="info">
-          <h3>Wednesday PM</h3>
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Wedding" message="Starts @ 4:30" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-        <div className="info">
-            <h3>Wednesday Evening:</h3>
+              <h3>Barbecue</h3>
+              <p>Starts at 6ish</p>
 
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Dinner/Party" message="" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-        <div className="info">
-            <h3>Thursday AM: Breakfast</h3>
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Breakfast" message="Piece together recollections" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-        <li>
-          <div className="info">
-            <h3>Thursday</h3>
-          </div>
-          <div className="divider"></div>
-          <TimelineItem title="Depart" message="Must checkout by 12pm" icon={WeddingRingsIcon}></TimelineItem>
-        </li>
-      </ul>
-    </Timeline>
+              <span className="date">2nd July PM</span>
+            </li>
+            <li>
+              <div className="img"></div>
+              <h3>Free time</h3>
+              <p>Hike? Beach? Yoga?</p>
+              <span className="date">3rd July AM</span>
+            </li>
+            <li className="wedding">
+            <div className="img"><RingsImage></RingsImage></div>
+              <h3>Wedding</h3>
+              <p>Starts @ 4:30</p>
+              <span className="date">3rd July PM</span>
+            </li>
+            <li>
+            <div className="img"></div>
+              <h3>Dinner</h3>
+              <p>Followed by </p>
+              <span className="date">3rd July PM</span>
+            </li>
+            <li>
+            <div className="img"></div>
+              <h3>Breakfast</h3>
+              <span className="date">4th July AM</span>
+            </li>
+            <li>
+              <div className="img"></div>
+              <h3>Depart</h3>
+              <span className="date">4th July PM</span>
+            </li>
+          </ul>
+        </Timeline>
 
-    <h3>Music</h3>
-    <p>Something about song requests</p>
+      </Container>
+    </Section>
 
+    <Container>
+      <h3>Music</h3>
+      <p>Something about song requests</p>
     </Container>
   </Layout>
   </ThemeProvider>

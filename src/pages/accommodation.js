@@ -39,18 +39,6 @@ h1, h2 {
 const Cards = styled.div`
   display: flex;
   justify-content:space-between;
-
-  > div {
-    flex-grow: 1;
-    max-width: 30%;
-    h3 {
-      text-align:center;
-      color: #fff;
-      background-color: ${props => props.theme.primary};
-      width: 100%;
-      padding: 8px;
-    }
-  }
 `
 
 const Container = styled.div`

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Btn = styled.a`
-    padding: 8px;
+    padding: 8px 16px;
     text-transform: uppercase;
     
     &:link, &:visited {
@@ -10,6 +10,11 @@ const Btn = styled.a`
         color: ${props => props.theme.white}!important;
         text-decoration: none;
         font-weight: 500;
+        transition: .2s background-color ease;
+    }
+
+    &:hover, &:active {
+      background-color: #333;
     }
 `
 
