@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from '../header'
-import Footer from '../footer'
-import Hero from '../hero'
+// import Header from '../header'
+// import Footer from '../footer'
+// import Hero from '../hero'
 import './layout.css'
-import BottomNav from '../bottom-nav'
+// import BottomNav from '../bottom-nav'
 
 
 const LayoutIndex = ({ children }) => (
@@ -32,7 +32,7 @@ const LayoutIndex = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {/* <Header siteTitle={data.site.siteMetadata.title} />
         <Hero></Hero>
         <div
           style={{
@@ -40,11 +40,12 @@ const LayoutIndex = ({ children }) => (
             maxWidth: 960,
             paddingTop: 0,
           }}
-        >
+        >*/}
           {children}
+          {/*
         </div>
         <Footer></Footer>
-        <BottomNav></BottomNav>
+        <BottomNav></BottomNav> */}
       </>
     )}
   />
