@@ -2,67 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 const LogoContainer = styled.div`
-  width: 350px;
+  width: 280px;
   transform-origin: 0% 0%;
   position: relative;
 
   @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-    width: 300px;
+    width: 20px;
   }
-  /* .b,.c,.e{fill:#fa6640;}.b{stroke:rgba(0,0,0,0);}
-          .c{font-size:30px;font-family:Noteworthy-Bold, Noteworthy;font-weight:700;}
-          .d{fill:none;stroke:#fa6640;stroke-width:2px;}.e{stroke:rgba(112,112,112,0);}
-  .jess {
-    .b{fill:#fa6640;stroke:rgba(0,0,0,0);}
-    position:absolute;
-    animation: scaleUp .5s ease;
-    left: 0px;
-    top: 0;
-  } */
-
-  /* .james {
-    position: absolute;
-    top: 120px;
-    left: 30px;
-    animation: scaleUpJames 1s ease;
-  } */
 
   svg {
     path {
       fill: #fa6640;
     }
   }
-
-  /* .and {
-    position: absolute;
-    top: 145px;
-    left: 0;
-    b,.d{fill:#fa6640;}.b{font-size:30px;font-family:Noteworthy-Bold, Noteworthy;font-weight:700;}.c{fill:none;stroke:#fa6640;stroke-width:2px;}.d{stroke:rgba(112,112,112,0);}
-  } */
-
-  @keyframes scaleUp {
-        0% {
-            transform: scale(0);
-        }
-        50% {
-          transform: scale(0);
-        }
-        100% {
-          transform: scale(1);
-        }
-    }
-
-    @keyframes scaleUpJames {
-      0% {
-        transform: scale(0);
-      }
-      75% {
-        transform: scale(0);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
 `
 
 const Logo = () => (

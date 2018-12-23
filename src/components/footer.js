@@ -2,27 +2,31 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from './button'
+
+import FooterDivider from '-!svg-react-loader?name=LogoTop!../images/footer_divider.svg';
 // import { Link } from 'gatsby'
 // import Navigation from './navigation'
 
 const Foot = styled.footer`
-    background-color: ${props => props.theme.secondary};
-    padding: 0 0 64px 0;
+    
+    
     z-index: 3;
     position: relative;
     .hidden {
         display:none;
     }
-    .b{fill:#5fd892;}
-    .c{fill:#fff;}
     > div {
-        max-width: ${props => props.theme.maxWidth};
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        padding-top: 32px;
+        margin-top:-5px;
+        padding: 0 0 64px 0;
+        background-color: ${props => props.theme.secondary};
+        > div {
+            max-width: ${props => props.theme.maxWidth};
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding-top: 32px;
 
-        h3 {
+            h3 {
             background-color: ${props => props.theme.primary};
             color: ${props => props.theme.white};
             display: inline-block;
@@ -100,22 +104,21 @@ const Foot = styled.footer`
                 }
             }
         }
+        }
+        
+        
+
+        
     }
 `
 
 const Footer = () => (
+    
   <Foot>
     <a name="rsvp" href="#rsvp" className="hidden">RSVP</a>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 115">
-        <defs>
-            <clipPath id="b"><rect width="1920" height="115"/></clipPath>
-        </defs>
-        <g id="a" className="a">
-            <rect className="c" width="1920" height="115"/>
-            <path className="b" d="M0,918.736s234.066,85.069,520.032,43.216,457.467,68.313,726.077,43.608,570.639-113.574,681.6-86.824,0,157.855,0,157.855H0Z" transform="translate(0 -912)"/>
-        </g>
-    </svg>
+    <FooterDivider></FooterDivider>
     <div>
+        <div>
         <h3>Will you be joining us?</h3>
         <form method="post" name="rsvp" data-netlify="true">
             <div className="fieldWrapper">
@@ -143,6 +146,7 @@ const Footer = () => (
                 </li>
             </ul>
         </form>
+        </div>
     </div>
   </Foot>
 )

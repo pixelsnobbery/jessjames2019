@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 115" class="footerDivider">
+  <defs>
+    <style>
+
+      .footerDivider .cls-2 {
+        fill: #5fd892;
+      }
+    </style>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" class="cls-1">
+    <path id="Path_1" data-name="Path 1" class="cls-2" d="M0,918.736s234.066,85.069,520.032,43.216,457.467,68.313,726.077,43.608,570.639-113.574,681.6-86.824,0,157.855,0,157.855H0Z" transform="translate(0 -912)"/>
+  </g>
+</svg>

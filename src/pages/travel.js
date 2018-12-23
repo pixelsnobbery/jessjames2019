@@ -42,37 +42,61 @@ const Container = styled.div`
 
       }
 
+      .row {
+        .box {
+          background-color: #333;
+          margin: 8px;
+          width: 20%;
+          
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            padding-top: 75%;
+          }
+          .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+
       .row2 {
         justify-content: flex-end;
         align-items: flex-end;
         display: flex;
-        > div {
-          background-color: #333;
-          margin: 8px;
-          width: 25%;
-          position: relative;
-          display: inline-block;
+        .box {
+          width: 20%;
           &:first-child {
-            top: 2em;
-            width: 35%;
+            width: 38%;
+            top: 150px;
           }
           &:last-child {
-            width: 45%;
-            height: 300px;
+            width: 47%;
           }
+          
         }
       }
 
       .row3 {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
-        > div {
+        .box {
           background-color: #555;
-          height: 100px;
-          width: 30%;
-          margin: 16px;
-          position: relative;
+          width: 35%;
+          &:first-child {
+            width: 20%;
+            &:before {
+              padding-top: 50%;
+            }
+          }
+          &:last-child {
+            width: 30%;
+          }
         }
       }
     }
@@ -164,7 +188,6 @@ const Section = styled.section`
     -webkit-transform: skewY(-8deg);
     transform: skewY(-8deg);
   }
-  
 `
 
 const OutsideCanada = styled.div`
@@ -182,31 +205,7 @@ const Travel = () => (
       </Hero>
 
 
-      <Container>
-        <div className="grid-display">
-          <div className="row1">
-            We're so excited that you're coming to join us! 
-          </div>
-          <div className="row2">
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div className="row3">
-            <div>
-
-            </div>
-            <div></div>
-          </div>
-        </div>
-        
-      </Container>
+      
       <Section bgColor="#f6f9fc">
       <Container>
           <h2>Coming from outside of Canada?</h2>
@@ -235,8 +234,9 @@ const Travel = () => (
       <Section bgColor="#f6f6f6">
       <Container>
         <div className="float-left">
-          <h2>Getting to Galiano Island</h2>
+          <h2>About Galiano Island</h2>
           <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
+          <p>Travelling by car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
           <Button text="View Schedule & Reserve Ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html"></Button>
         </div>
       </Container>

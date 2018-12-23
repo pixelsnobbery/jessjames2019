@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 342 466" class="barbecue">
+  <defs>
+    <style>
+
+      .barbecue .cls-2, .barbecue .cls-3, .barbecue .cls-5, .barbecue .cls-8 {
+        fill: none;
+      }
+
+      .barbecue .cls-2 {
+        stroke: #515151;
+        stroke-width: 10px;
+      }
+
+      .barbecue .cls-3 {
+        stroke: #c9e5ce;
+        stroke-width: 14px;
+      }
+
+      .barbecue .cls-4 {
+        fill: url(#radial-gradient);
+      }
+
+      .barbecue .cls-5 {
+        stroke: #707070;
+        stroke-linecap: round;
+        stroke-width: 20px;
+      }
+
+      .barbecue .cls-6 {
+        fill: #999;
+      }
+
+      .barbecue .cls-7 {
+        stroke: none;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="0.844" cy="1.574" r="2.284" gradientTransform="matrix(0.753, 0.003, -0.003, 1.013, 0.212, -0.023)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c9e5ce"/>
+      <stop offset="0.679" stop-color="#c9e5ce"/>
+      <stop offset="1" stop-color="#657367"/>
+    </radialGradient>
+
+  </defs>
+  <g>
+    <path id="Path_1" data-name="Path 1" class="cls-2" d="M354.848,635.566,386.609,501.41" transform="translate(-270 -171)"/>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M495.211,501.41l34.648,134.207" transform="translate(-270 -171)"/>
+    <line id="Line_1" data-name="Line 1" class="cls-2" x2="138" transform="translate(100.5 384.5)"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-3" transform="translate(128 1)">
+      <circle class="cls-7" cx="48" cy="48" r="48"/>
+      <circle class="cls-8" cx="48" cy="48" r="41"/>
+    </g>
+    <path id="Path_3" data-name="Path 3" class="cls-4" d="M119,0h61A119,119,0,0,1,299,119v57c0,65.722-299,65.722-299,0V119A119,119,0,0,1,119,0Z" transform="translate(22 41)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-5" x2="321" transform="translate(10.5 187.5)"/>
+    <path id="Path_4" data-name="Path 4" class="cls-6" d="M299,146c1.254,124.3-53.278,149-119,149H119C53.278,295,1.891,259.938,0,146Z" transform="translate(22 41)"/>
+  </g>
+</svg>

@@ -19,6 +19,39 @@ const typography = new Typography({
     'serif',
   ],
   bodyFontFamily: ['Lato', 'sans-serif'],
+  overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
+    // a: {
+    //   color: '#f92300',
+    //   textDecoration: 'none',
+    // },
+    // 'a:hover,a:active': {
+    //   textDecoration: 'underline',
+    // },
+    'blockquote > :last-child': {
+      marginBottom: 0,
+    },
+    'blockquote cite': {
+      ...adjustFontSizeTo(options.baseFontSize),
+      color: options.bodyColor,
+      fontWeight: options.bodyWeight,
+    },
+    'blockquote cite:before': {
+      content: '"— "',
+    },
+    'h1,h2,h3,h4,h5,h6': {
+      marginTop: rhythm(2),
+    },
+    // h1: {
+    //   ...scale(6 / 5),
+    //   letterSpacing: '-2px',
+    // },
+    h2: {
+      ...scale(1.2),
+    },
+    h6: {
+      fontStyle: 'italic',
+    },
+  }),
 })
 
 export default typography

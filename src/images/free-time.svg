@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 741 557" class="freeTime">
+  <defs>
+    <style>
+
+      .freeTime .cls-2 {
+        fill: #fae6ba;
+      }
+
+      .freeTime .cls-3 {
+        fill: #ffda76;
+      }
+
+      .freeTime .cls-4 {
+        fill: #707070;
+      }
+
+      .freeTime .cls-4, .freeTime .cls-5 {
+        stroke: #707070;
+      }
+
+      .freeTime .cls-5, .freeTime .cls-9 {
+        fill: none;
+      }
+
+      .freeTime .cls-5 {
+        stroke-width: 20px;
+      }
+
+      .freeTime .cls-6 {
+        fill: #f57953;
+      }
+
+      .freeTime .cls-7 {
+        fill: #f0fcff;
+      }
+
+      .freeTime .cls-8 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" class="cls-1">
+    <path id="Path_5" data-name="Path 5" class="cls-2" d="M189,0C293.382,0,378,54.618,378,159c1.613.426-378.566,1.977-378,0C0,54.618,84.618,0,189,0Z" transform="translate(362 397)"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="101.5" cy="101.5" r="101.5" transform="translate(1 1)"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(-10.18 -146.907) rotate(8)">
+      <g id="Ellipse_2" data-name="Ellipse 2" class="cls-4" transform="translate(474 106)">
+        <circle class="cls-8" cx="9.5" cy="9.5" r="9.5"/>
+        <circle class="cls-9" cx="9.5" cy="9.5" r="9"/>
+      </g>
+      <line id="Line_1" data-name="Line 1" class="cls-5" x1="128" y1="278" transform="translate(562.5 294.5)"/>
+      <path id="Path_1" data-name="Path 1" class="cls-6" d="M224.5,0C336.75,0,449,100.512,449,224.5c.1.574-39.55-26.243-77.451-25.958-36.962.278-72.185,27.663-72.185,27.663s-36.679-33.075-74.723-33.135-77.452,32.9-77.452,32.9-35.013-31.835-71.81-32.2S0,224.5,0,224.5C0,100.512,112.25,0,224.5,0Z" transform="translate(279.156 215.912) rotate(-25)"/>
+      <path id="Path_6" data-name="Path 6" class="cls-7" d="M507.813,358.312s-32.128-72.937-34.493-127.358,12.136-111.259,12.136-111.259,78.011,20.857,109.308,70.933S645.22,294.2,645.22,294.2s-55.723-10.1-80.939,2S507.813,358.312,507.813,358.312Z"/>
+    </g>
+  </g>
+</svg>

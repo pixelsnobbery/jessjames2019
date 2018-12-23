@@ -10,16 +10,28 @@ const HeroWrapper = styled.div`
     background: #fff; /* Old browsers */
     display: block;
     position: relative;
+
+    overflow:hidden;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+        height: 100vh;
+        max-height: 600px;
+        width: 100%;
+    }
+
+    .heroImg {
+        height: 100%;
+    }
+    
     .title {
         position:absolute;
-        max-width: 400px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+        max-width: 100%;
+        left: 50px;
+        right: 50px;
         @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-            height: 350px;
-            width: 350px;
+            max-height: 250px;
+            max-width: 250px;
+            left: 48px;
+            bottom: 100px;
         }
         
         z-index: 5;
@@ -36,16 +48,17 @@ const HeroWrapper = styled.div`
 
 const Hero = () => (
   <HeroWrapper>
-    
     <div className="title">
-        <div class="center">
+        <div className="center">
             <Logo className="logo"></Logo>
             <h3>Galiano Island, British Columbia, Canada</h3>
         </div>
     </div>
-    <HeroImage></HeroImage>
-    <Clouds bgColour="white"></Clouds>
+    <div className="heroImg">
+        <HeroImage></HeroImage>
+    </div>
     
+    <Clouds bgColour="white"></Clouds>
   </HeroWrapper>
 )
 
