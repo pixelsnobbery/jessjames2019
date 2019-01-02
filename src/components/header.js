@@ -35,12 +35,18 @@ const StyledHeader = styled.header`
         margin: 0;
         li {
             margin-right: 32px;
+            text-transform:  uppercase;
             a:link, a:visited {
                 color: ${props => props.isTop ? props.theme.white : '#444'};
                 text-decoration: none;
+                padding-bottom: 8px;
             }
             a:hover, a:active {
                 color: #333;
+            }
+
+            a.active {
+              border-bottom: 3px solid #fff;
             }
         }
     }
@@ -74,16 +80,16 @@ const HeaderElement = ({ siteTitle, isTop }) => (
       <nav>
         <ul>
           <li>
-              <Link to="/">Home</Link>
+              <Link to="/" activeClassName="active">Wedding</Link>
           </li>
           <li>
-              <Link to="/wedding">Wedding</Link>
+              <Link to="/accommodation" activeClassName="active">Getting Here</Link>
           </li>
           <li>
-              <Link to="/accommodation">Accommodation</Link>
+              <Link to="/vancouver" activeClassName="active">Vancouver</Link>
           </li>
           <li>
-              <Link to="/travel">Travel</Link>
+              <Link to="/travel" activeClassName="active">Travel</Link>
           </li>
           <li>
               <Button href="#rsvp" text="RSVP"></Button>
@@ -103,7 +109,7 @@ export default class Header extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 200;
+      const isTop = window.scrollY < 500;
       if (isTop !== this.state.isTop) {
           this.setState({ isTop })
       }

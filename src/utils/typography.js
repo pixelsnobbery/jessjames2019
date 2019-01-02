@@ -13,6 +13,10 @@ const typography = new Typography({
       name: 'Lato',
       styles: ['400', '400i', '700', '700i'],
     },
+    {
+      name: 'Aisha Latin',
+      styles: ['400'],
+    },
   ],
   headerFontFamily: [
     'Lora',

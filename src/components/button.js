@@ -4,7 +4,8 @@ import styled from 'styled-components'
 const Btn = styled.a`
     padding: 8px 16px;
     text-transform: uppercase;
-    
+    display: inline-block;
+
     &:link, &:visited {
         background: ${props => props.theme.primary};
         color: ${props => props.theme.white}!important;
@@ -16,10 +17,18 @@ const Btn = styled.a`
     &:hover, &:active {
       background-color: #333;
     }
+
+    &.ghost {
+      &:link, &:visited {
+        border: 3px solid ${props => props.borderColor || "#000000"};
+        background: none;
+        color: ${props => props.borderColor || "#000000"}!important;
+      }
+    }
 `
 
-const Button = ({text, href}) => (
-  <Btn href={href}>
+const Button = ({text, href, className}) => (
+  <Btn href={href} className={className}>
     {text}
   </Btn>
 )

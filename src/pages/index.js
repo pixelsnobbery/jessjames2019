@@ -1,232 +1,179 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LayoutIndex from '../components/layouts/layout-index'
+import AwesomeSlider from 'react-awesome-slider';
+
+import Layout from '../components/layouts/layout'
 import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
-import LogoImage from '-!svg-react-loader?name=Icon!../images/logo.svg';
-import Polaroid1 from '../images/polaroid_1.jpg'
-import Polaroid2 from '../images/polaroid_2.jpg'
-import Polaroid3 from '../images/polaroid_3.jpg'
-import Polaroid4 from '../images/polaroid_4.jpg'
-import Polaroid5 from '../images/polaroid_5.jpg'
+import Logo from '-!svg-react-loader?name=Logo!../images/logo.svg'
+import Button from '../components/button'
+import Section from '../components/layouts/section'
+import SectionTitle from '../components/layouts/section-title'
+import HomeHero from '../components/hero-images/home'
+import Timeline from '../components/timeline'
+import Countdown from '../components/countdown'
+
+import BodegaRidge1 from '../images/bodega_cabin_1.jpg'
+import BodegaRidge2 from '../images/bodega_cabin_2.jpg'
+import BodegaRidge3 from '../images/bodega_cabin_3.jpg'
+import BodegaRidge4 from '../images/bodega_cabin_4.jpg'
+
+import GalianoImage from '../components/hero-images/galiano'
 
 import WOW from "wowjs"
+import Overlay from '../components/overlay';
 
-const Container = styled.div`
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 32px 0;
+const Hero = styled.div`
+  display: block;
+  height: 85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  padding-top: 120px;
+  align-content: center;
+  position: relative;
 
-    h2 {
-      margin: 0 0 32px 0;
+  h1, h2 {
+    text-align:center;
+    z-index:3;
+    color:#fff;
+  }
+  .site-title {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 64px;
+    z-index: 2;
+    padding: 16px;
+    width: 360px;
+    text-align: center;
+    padding-top: 64px;
+    font-family: 'Aisha Latin';
+    font-size: 2rem;
+
+    .ghost {
+      padding-bottom: 0;
     }
+  }
+`
 
-    p {
-      margin: 0 0 48px 0;
-    }
+const ContentBox = styled.div`
+background-color: #fff;
+padding: 32px;
+max-width: 550px;
 
-    .float-left {
-      width: 50%;
-    }
+h3 {
+  margin-top: 0;
+}
+`
+const Tabs = styled.div`
+  display: flex;
 
-    @keyframes polaroidsIn {
-      0%   { transform: scale(0,0); }
-      100% { transform: scale(1,1); }
-    }
+  ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    li {
+      -webkit-padding-start: 0;
 
-    .grid-display {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 94vh;
-      padding: 4rem 0px 2rem;
-      margin: 0px auto;
-      -webkit-backface-visibility: hidden;
-
-      &.animated {
-        .row {
-          .box {
-            animation: polaroidsIn 1s ease;
-          }
-        }      
-      }
-
-      
-
-      .row1 {
-        max-width: 45%;
-        position:absolute;
-        left:0;
-        top: 8rem;
+      a:link, a:visited {
+        color: #fff;
+        text-decoration: none;
         text-transform: uppercase;
-        h2 {
-          font-size: 1.8rem;
-          margin-bottom: .5rem;
-        }
-        h3 {
-          color: ${props => props.theme.primary};
-          font-weight: 200;
-        }
-        
+        padding: 8px;
+        display: block;
       }
-
-      .row {
-        -webkit-backface-visibility: hidden;
-        .box {
-          background-color: #333;
-          margin: 8px;
-          width: 20%;
-          -webkit-backface-visibility: hidden;
-          transform-origin: center bottom;
-
-          
-          
-          position: relative;
-          &:before {
-            content: '';
-            display: block;
-            padding-top: 75%;
-          }
-          .content {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            img {
-              object-fit: cover;
-              height: 100%;
-              width: 100%;
-            }
-          }
-        }
-      }
-
-      .row2 {
-        display: flex;
-        align-items: flex-end;
-        margin-left: 0%;
-        .box {
-          position: relative;
-          opacity: 1;
-          display: inline-block;
-          transform: perspective(1000px) translate3d(0px, 0px, 0px) !important;
-          border-radius: 0.8rem;
-          margin: 0.3rem;
-          overflow: hidden;
-          width: 19.74%;
-          &:first-child {
-            top: 7.5rem;
-            width: 31%;
-          }
-          &:last-child {
-            width: 48.68%;
-          }
-          
-        }
-      }
-
-      .row3 {
-        display: flex;
-        align-items: flex-start;
-        margin-left: 8.2%;
-
-        .box {
-          position: relative;
-          
-          opacity: 1;
-          display: inline-block;
-          transform: perspective(1000px) translate3d(0px, 0px, 0px) !important;
-          border-radius: 0.8rem;
-          margin: 0.3rem;
-          overflow: hidden;
-          width: 38%;
-          &.two {
-            padding-bottom: 8em;
-          }
-          &.three {
-            padding-bottom:4em;
-          }
-          
-          &:first-child {
-            top: 7.5rem;
-            width: 25.6%;
-          }
-          &:last-child {
-            width: 39.48%;
-            display: flex;
-            flex-direction: column;
-          }
-        }
-      }
-
-      
     }
-
-
-  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-    max-width: 1000px;
-
   }
 `
 
 const Index = () => (
   <ThemeProvider theme={Theme}>
-    <LayoutIndex>
-      {/* <Logo>
-        <LogoImage></LogoImage>
-        <h3>Website coming soon...</h3>
-      </Logo> */}
-      <div className="cloudsBottom"></div>
-      <Container>
-        <div className="grid-display wow" data-wow-offset="400">
-          <div className="row row1">
-            <h2>
-              We're getting hitched
-            </h2>
-            <h3>and then having a party</h3>
-            
-          </div>
-          <div className="row row2">
-            <div className="box">
-              <div className="content">
-              <img src={Polaroid1} />
-              </div>
-            </div>
-            <div className="box">
-              <div className="content">
-              <img src={Polaroid3} />
-              </div>
-            </div>
-            <div className="box">
-              <div className="content">
-              <img src={Polaroid4} />
-              </div>
-            </div>
-          </div>
-          <div className="row row3">
-            <div className="box 1">
-              <div className="content">
-              </div>
-            </div>
-            <div className="box two">
-              <div className="content">
-              <img src={Polaroid2} />
-              </div>
-            </div>
-            <div className="box three">
-              <div className="content">
-              <img src={Polaroid5} />
-              </div>
-            </div>
-          </div>
+    <Layout>
+      <Hero>
+        <HomeHero></HomeHero>
+        <div className="site-title">
+          <Logo className="logo"></Logo>
+          <p>Galiano Island, Canada</p>
+
+          <Button text="RSVP" href="#rsvp" className="ghost"></Button>
         </div>
+        <Overlay></Overlay>
+      </Hero>
+      
+        <Section>
+          <SectionTitle text="When & Where" subtitle="The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island."></SectionTitle>
+          <p>You didn't think a simple flight to Canada would suffice did you?! Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+       <Countdown  date={`2019-07-03T16:00:00`}></Countdown>
+        </Section>
+
+        <Section>
+          <GalianoImage></GalianoImage>
+          <SectionTitle text="Getting to Galiano Island" color="#ffffff"></SectionTitle>
+          <ContentBox>
+            <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
+
+            <p>Travelling by car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
+          
+            <Button text="View schedule & reserve ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html"></Button>
+          </ContentBox>
+          <Overlay></Overlay>
+        </Section>
+
+        <Section bgColor="#F6F9FC">
+          <SectionTitle text="Schedule of Events" subtitle="The wedding will span 3 days, from July 2nd - 4th"></SectionTitle>
         
-      </Container>
-    </LayoutIndex>
+          <Timeline></Timeline>
+          
+        </Section>
+
+        <Section bgColor="#7795F8">
+          <SectionTitle 
+            text="Accommodation" 
+            subtitle="BODEGA RIDGE HAS 6 3-BEDROOM CABINS AVAILABLE ON-SITE. THERE’S ALSO SEVERAL CABINS AT BODEGA COVE WHICH SLEEPS A FURTHER 12.">
+          </SectionTitle>
+
+          <Tabs>
+            <ContentBox>
+              <h3>Bodega Ridge</h3>
+              <p>There are seven charming, self-contained log cabins, all with three bedrooms, living room, full kitchen and bath. Each cabin sleeps six comfortably, and all bedrooms have a queen-size bed with dreamy pillow-top mattress.</p>
+
+              <p>Take in the view from your cedar deck, have a long soak in the tub, or curl up in front of the wood stove.</p>
+
+              <AwesomeSlider>
+                <div data-src={BodegaRidge1} alt="Bodega Ridge"></div>
+                <div data-src={BodegaRidge2} alt="Bodega Ridge"></div>
+                <div data-src={BodegaRidge3} alt="Bodega Ridge"></div>
+                <div data-src={BodegaRidge4} alt="Bodega Ridge"></div>
+              </AwesomeSlider>
+  
+            </ContentBox>
+
+            <ul>
+              <li>
+                <a href="#">Bodega Ridge</a>
+              </li>
+              <li>
+                <a href="#">Bodega Cove</a>
+              </li>
+              <li>
+                <a href="#">Other Options</a>
+              </li>
+            </ul>
+
+          </Tabs>
+        </Section>
+
+        <Section>
+          <SectionTitle
+            text="Gifts"
+            subtitle="">
+          </SectionTitle>
+
+          <p>We are delighted to have you as our guest and we appreciate that you are making the effort to travel to our wedding. Buying us a gift is not necessary, however if you are looking to give us something, a contribution towards our honeymoon would really make our day.</p>
+        </Section>
+    </Layout>
   </ThemeProvider>
 )
 
