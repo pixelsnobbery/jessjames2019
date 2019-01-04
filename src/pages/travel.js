@@ -336,7 +336,7 @@ const TravelPage = () => (
 
 export default class Travel extends React.Component {
   componentDidMount() {
-    import WOW from "wowjs"
+    const WOW = require("wowjs");
     const wow = new WOW.WOW();
     wow.init();
   }
