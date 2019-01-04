@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import AwesomeSlider from 'react-awesome-slider';
+import Slider from '../components/slider'
 
 import Layout from '../components/layouts/layout'
 import Theme from '../config/theme'
@@ -22,7 +22,7 @@ import BodegaRidge4 from '../images/bodega_cabin_4.jpg'
 
 import GalianoImage from '../components/hero-images/galiano'
 
-import WOW from "wowjs"
+
 import Overlay from '../components/overlay';
 
 const Hero = styled.div`
@@ -105,7 +105,17 @@ const Index = () => (
         <Section>
           <SectionTitle text="When & Where" subtitle="The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island."></SectionTitle>
           <p>You didn't think a simple flight to Canada would suffice did you?! Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
-       <Countdown  date={`2019-07-03T16:00:00`}></Countdown>
+          
+          <address>
+            Bodega Ridge,<br />
+            120 Manastee Road,<br />
+            Galiano Island,<br />
+            British Columbia,<br />
+            Canada
+          </address>
+
+          <h4>Wednesday, July 3rd 2019</h4>
+          <Countdown date={`2019-07-03T16:00:00`}></Countdown>
         </Section>
 
         <Section>
@@ -141,12 +151,12 @@ const Index = () => (
 
               <p>Take in the view from your cedar deck, have a long soak in the tub, or curl up in front of the wood stove.</p>
 
-              <AwesomeSlider>
+              <Slider>
                 <div data-src={BodegaRidge1} alt="Bodega Ridge"></div>
                 <div data-src={BodegaRidge2} alt="Bodega Ridge"></div>
                 <div data-src={BodegaRidge3} alt="Bodega Ridge"></div>
                 <div data-src={BodegaRidge4} alt="Bodega Ridge"></div>
-              </AwesomeSlider>
+              </Slider>
   
             </ContentBox>
 
@@ -179,6 +189,7 @@ const Index = () => (
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
+    import WOW from "wowjs"
     const wow = new WOW.WOW();
     wow.init();
   }

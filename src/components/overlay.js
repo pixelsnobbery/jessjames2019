@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const OverlayDiv = styled.div`
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.3);
     position:absolute!important;
     top: 0;
     right: 0;

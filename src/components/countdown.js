@@ -10,8 +10,9 @@ const CountdownDiv = styled.div`
         margin-right: 16px;
         background-color: ${props => props.theme.primary};
         padding: 8px;
-        width: 100px;
+        width: 120px;
         color: #fff;
+        border-radius: 6px;
         .Countdown-col-element {
             text-align: center;
 
