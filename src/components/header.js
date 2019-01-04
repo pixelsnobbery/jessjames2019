@@ -40,6 +40,7 @@ const StyledHeader = styled.header`
                 color: ${props => props.isTop ? props.theme.white : '#444'};
                 text-decoration: none;
                 padding-bottom: 8px;
+                font-size: .9rem;
             }
             a:hover, a:active {
                 color: #333;

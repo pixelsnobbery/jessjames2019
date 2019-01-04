@@ -33,8 +33,8 @@ position: relative;
 }
 `
 
-const Section = ({bgColor, bgImage, children}) => (
-  <SectionElement bgColor={bgColor}>
+const Section = ({bgColor, bgImage, className, children}) => (
+  <SectionElement bgColor={bgColor} className={className}>
     {bgImage}
     <div>
       {children}

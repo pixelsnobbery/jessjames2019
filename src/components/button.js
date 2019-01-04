@@ -7,7 +7,7 @@ const Btn = styled.a`
     display: inline-block;
 
     &:link, &:visited {
-        background: ${props => props.theme.primary};
+        background: ${props => props.bgColor || props.theme.primary }!important;
         color: ${props => props.theme.white}!important;
         text-decoration: none;
         font-weight: 500;
@@ -25,10 +25,12 @@ const Btn = styled.a`
         color: ${props => props.borderColor || "#000000"}!important;
       }
     }
+
+    
 `
 
-const Button = ({text, href, className}) => (
-  <Btn href={href} className={className}>
+const Button = ({text, href, className, bgColor}) => (
+  <Btn href={href} className={className} bgColor={bgColor}>
     {text}
   </Btn>
 )

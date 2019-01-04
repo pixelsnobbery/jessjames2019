@@ -8,6 +8,8 @@ import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
 import Logo from '-!svg-react-loader?name=Logo!../images/logo.svg'
+import Marker from '-!svg-react-loader?name=Marker!../images/marker.svg'
+import Accommodation from '-!svg-react-loader?name=Accommodation!../images/accommodation.svg'
 import Button from '../components/button'
 import Section from '../components/layouts/section'
 import SectionTitle from '../components/layouts/section-title'
@@ -24,6 +26,7 @@ import GalianoImage from '../components/hero-images/galiano'
 
 
 import Overlay from '../components/overlay';
+import { checkPropTypes } from 'prop-types';
 
 const Hero = styled.div`
   display: block;
@@ -63,6 +66,7 @@ const ContentBox = styled.div`
 background-color: #fff;
 padding: 32px;
 max-width: 550px;
+box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 
 h3 {
   margin-top: 0;
@@ -103,7 +107,11 @@ const Index = () => (
       </Hero>
       
         <Section>
-          <SectionTitle text="When & Where" subtitle="The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island."></SectionTitle>
+          <SectionTitle 
+            text="When & Where" 
+            subtitle="The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island."
+            icon={<Marker></Marker>}>
+          </SectionTitle>
           <p>You didn't think a simple flight to Canada would suffice did you?! Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
           
           <address>
@@ -120,13 +128,13 @@ const Index = () => (
 
         <Section>
           <GalianoImage></GalianoImage>
-          <SectionTitle text="Getting to Galiano Island" color="#ffffff"></SectionTitle>
+          <SectionTitle text="Getting to Galiano Island" color="#ffffff" bgColor={Theme.secondary}></SectionTitle>
           <ContentBox>
             <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
 
             <p>Travelling by car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
           
-            <Button text="View schedule & reserve ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html"></Button>
+            <Button text="View schedule & reserve ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html" bgColor={Theme.secondary}></Button>
           </ContentBox>
           <Overlay></Overlay>
         </Section>
@@ -141,7 +149,10 @@ const Index = () => (
         <Section bgColor="#7795F8">
           <SectionTitle 
             text="Accommodation" 
-            subtitle="BODEGA RIDGE HAS 6 3-BEDROOM CABINS AVAILABLE ON-SITE. THERE’S ALSO SEVERAL CABINS AT BODEGA COVE WHICH SLEEPS A FURTHER 12.">
+            subtitle="BODEGA RIDGE HAS 6 3-BEDROOM CABINS AVAILABLE ON-SITE. THERE’S ALSO SEVERAL CABINS AT BODEGA COVE WHICH SLEEPS A FURTHER 12."
+            icon={<Accommodation></Accommodation>}
+            bgColor={Theme.neonBlue}
+            color="#ffffff">
           </SectionTitle>
 
           <Tabs>

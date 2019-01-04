@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
 import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
 import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
+import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
 
 const TimelineContainer = styled.div`
     flex-grow: 1;
@@ -154,7 +155,7 @@ const Timeline = () => (
               <span className="date">3rd July</span>
             </li>
             <li className="wow scaleIn" data-wow-delay="1s">
-            <div className="img"></div>
+            <div className="img"><PartyImage></PartyImage></div>
               <h3>Partay</h3>
               <p>Like it's 1999</p>
               <span className="date">3rd July</span>
