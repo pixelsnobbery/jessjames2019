@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import Button from './button'
 
 import FooterDivider from '-!svg-react-loader?name=LogoTop!../images/footer_divider.svg';
+
+import HeaderBanner from '-!svg-react-loader?name=HeaderBanner!../images/banner.svg';
 // import { Link } from 'gatsby'
 // import Navigation from './navigation'
 
-const Foot = styled.footer`
-    
-    
+const Foot = styled.footer` 
     z-index: 3;
     position: relative;
     .hidden {
@@ -33,6 +33,9 @@ const Foot = styled.footer`
             padding: 8px 16px;
             text-align: center;
             margin: 0 auto 32px auto;
+            text-transform: uppercase;
+            position: relative;
+
         }
 
         form {
@@ -111,15 +114,26 @@ const Foot = styled.footer`
         
     }
 `
+const HeaderBannerStyle = styled.span`
+    position:absolute;
+    right: -35px;
 
-const Footer = () => (
+    top: 5px;
+    height: 48px;
+    width: 48px;
+`
+const FooterElement = () => (
     
   <Foot>
     <a name="rsvp" href="#rsvp" className="hidden">RSVP</a>
     <FooterDivider></FooterDivider>
     <div>
         <div>
-        <h3>Will you be joining us?</h3>
+        <h3>
+            <HeaderBannerStyle flipped={true}><HeaderBanner></HeaderBanner></HeaderBannerStyle>    
+            Will you be joining us?
+            <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
+        </h3>
         <form method="post" name="rsvp" data-netlify="true">
             <div className="fieldWrapper">
                 <span>We're stoked to have you as</span>
@@ -151,4 +165,16 @@ const Footer = () => (
   </Foot>
 )
 
-export default Footer
+export default class Footer extends React.Component {
+    // constructor(props) {
+    //     super(props)
+    //     this.myRef = React.createRef() 
+    // }
+
+    render () {
+      return (
+        <FooterElement ref="rsvp"></FooterElement>
+      )
+    };
+  };
+  

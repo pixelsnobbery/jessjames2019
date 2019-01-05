@@ -15,6 +15,9 @@ const SectionElement = styled.h2`
     font-size: .8rem;
     font-family: 'Lato';
     font-weight: normal;
+    line-height: 1.2rem;
+    margin-top: 8px;
+    color: ${props => props.bgColor || '#000000'};
   }
 
   span.icon {

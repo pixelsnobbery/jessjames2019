@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475 202" class="boat">
+  <defs>
+    <style>
+
+      .boat .cls-2 {
+        fill: #fff;
+      }
+
+      .boat .cls-3, .boat .cls-4, .boat .cls-5 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .boat .cls-3 {
+        stroke-width: 16px;
+      }
+
+      .boat .cls-4 {
+        stroke-width: 25px;
+      }
+
+      .boat .cls-5 {
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <g id="boat-icon" class="cls-1">
+    <path id="Path_1" data-name="Path 1" class="cls-2" d="M136.59,382.668l52.3,88.484s354.125.359,355.441,0C577.97,473.567,610.2,346.379,610.2,346.379Z" transform="translate(-137 -271)"/>
+    <line id="Line_1" data-name="Line 1" class="cls-3" x1="56" y1="79" transform="translate(333.5 8.5)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-4" x1="56" y1="79" transform="translate(223.5 17.5)"/>
+    <path id="Path_2" data-name="Path 2" class="cls-5" d="M234,0S131.323,5.68,72.823,8.18" transform="translate(105.5 11.5)"/>
+  </g>
+</svg>

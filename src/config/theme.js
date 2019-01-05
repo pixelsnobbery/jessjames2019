@@ -2,7 +2,7 @@ const Theme = {
     white: '#ffffff',
     primary: '#fa6640',
     secondary: '#5fd892',
-    neonBlue: '#8FEFFB',
+    neonBlue: '#68D4EE',
   
     skyTop: '#5abbcd',
     skyBottom: '#bfddda',

@@ -6,7 +6,10 @@ padding: 64px 0;
 position: relative;
 
 > div {
-  width: 850px;
+  width: 100%;
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    width: 850px;
+  }
   margin: 0 auto;
 
   > * {

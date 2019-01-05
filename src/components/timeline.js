@@ -5,6 +5,7 @@ import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
 import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
 import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
 import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
+import Boat from  '-!svg-react-loader?name=Boat!../images/boat-icon.svg'
 
 const TimelineContainer = styled.div`
     flex-grow: 1;
@@ -70,6 +71,15 @@ const TimelineContainer = styled.div`
           width: 60%;
           height: 60%;
         }
+
+        &.boatIcon {
+          svg {
+            path {
+              fill: #444;
+            }
+            
+          }
+        }
       }
       p {
         color: #666;
@@ -122,7 +132,7 @@ const Timeline = () => (
     <TimelineContainer>
         <ul className="wow">
             <li className="wow scaleIn">
-              <div className="img"></div>
+              <div className="img boatIcon"><Boat></Boat></div>
               <h3>Arrive</h3>
               <p>On-site checkin from 4pm</p>
               
