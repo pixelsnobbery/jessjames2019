@@ -37,12 +37,21 @@ align-items: center;
         fill: #fff;
       }
     }
+
+    &.animated {
+        animation: scaleInRotate .5s ease;
+        animation-fill-mode: backwards;
+      }
+      @keyframes scaleInRotate {
+        0%   { transform: rotate(0) scale(0,0); }
+        100% { transform: rotate(360deg) scale(1)(1); }
+      }
   }
 `
 
 const SectionTitle = ({text, subtitle, bgColor, color, icon}) => (
   <SectionElement bgColor={bgColor} color={color}>
-    <span className="icon">{icon}</span>
+    <span className="icon wow">{icon}</span>
     {text}
     <span>{subtitle}</span>
   </SectionElement>

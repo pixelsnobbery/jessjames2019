@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Button from './button'
 
-import Logo from '-!svg-react-loader?name=LogoTop!../images/logo-top.svg';
+import Logo from '-!svg-react-loader?name=LogoTop!../images/small-logo.svg';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -11,16 +11,22 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   overflow: hidden;
-  padding: 24px 8px 8px 8px;
+  padding: 24px 8px 8px 24px;
   z-index: 10;
   border-bottom: ${props => props.isTop ? "0px solid #eee" : "1px solid #eee"};
   background-color: ${props => props.isTop ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)"};
   box-shadow: ${props => props.isTop ? "0 0 0 rgba(0,0,0,0)" : "0 1px 1px rgba(0,0,0,0.05)"};
   color: ${props => props.isTop ? "black" : "black"};
-
+  h1 {
+    line-height: 0;
+    padding-bottom: 16px;
+  }
   svg {
-    width: 200px;
-    display: ${props => props.isTop ? "none" : "block"};
+    width: 50px;
+    path {
+      fill: ${props => props.isTop ? props.theme.white : '#444'}!important;
+    }
+    
   }
 
   nav {
@@ -84,7 +90,7 @@ const HeaderElement = ({ siteTitle, isTop }) => (
               <Link to="/" activeClassName="active">Wedding</Link>
           </li>
           <li>
-              <Link to="/accommodation" activeClassName="active">Getting Here</Link>
+              <Link to="/getting-here" activeClassName="active">Getting To Canada</Link>
           </li>
           <li>
               <Link to="/vancouver" activeClassName="active">Vancouver</Link>

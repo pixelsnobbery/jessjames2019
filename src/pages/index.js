@@ -18,7 +18,8 @@ import Button from '../components/button'
 import Section from '../components/layouts/section'
 import SectionTitle from '../components/layouts/section-title'
 import HomeHero from '../components/hero-images/home'
-import Timeline from '../components/timeline'
+import Schedule from '../components/schedule'
+import ScheduleItem from '../components/schedule-item'
 import Countdown from '../components/countdown'
 
 import Tabs from '../components/tabs'
@@ -27,6 +28,12 @@ import BodegaRidge1 from '../images/bodega_cabin_1.jpg'
 import BodegaRidge2 from '../images/bodega_cabin_2.jpg'
 import BodegaRidge3 from '../images/bodega_cabin_3.jpg'
 import BodegaRidge4 from '../images/bodega_cabin_4.jpg'
+
+
+// import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
+// import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
+// import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
+// import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
 
 import GalianoImage from '../components/hero-images/galiano'
 
@@ -82,11 +89,16 @@ box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 h3 {
   margin-top: 0;
 }
+ul {
+  li {
+    color: #000!important;
+  }
+}
 `
 const TabsStyle = styled.div`
 .tabs {
 
-
+  min-height: 500px;
   display: flex;
 
   ul {
@@ -158,8 +170,24 @@ const Index = () => (
           <ContentBox>
             <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
 
-            <p>Travelling by car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
-          
+            <p>Renting a car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
+
+            <p>There are just 3 ferries per day to Galiano Island. Reserving a space on the ferry is HIGHLY recommended. Ferries depart Tsawwassen at the following times:</p>
+
+            <ul>
+              <li>
+                10:10AM
+              </li>
+              <li>
+                1:40PM
+              </li>
+              <li>
+                7:50PM
+              </li>
+            </ul>
+
+            <p>Please note: The welcome BBQ starts at 6pm on Tuesday 2nd July. Guests should aim to be on one of the 2 earlier ferries. Those departing on the 7:50PM ferry might not have much food left to choose from! </p>
+
             <Button text="View schedule & reserve ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html" bgColor={Theme.secondary}></Button>
           </ContentBox>
           <Overlay></Overlay>
@@ -172,19 +200,33 @@ const Index = () => (
             icon={<Calendar></Calendar>}>
           </SectionTitle>
         
-          <Timeline></Timeline>
+          {/* <Timeline></Timeline> */}
+          <Schedule>
+            <ScheduleItem>
+              <div>
+                <h3>Arrive</h3>
+                <p></p>
+              </div>
+              <div>
+                <span className="icon">
+                  <Boat></Boat>
+                </span>
+              </div>
+            </ScheduleItem>
+          </Schedule>
           
         </Section>
 
-        <Section bgColor="#7795F8">
+        <Section bgColor="#7795F8" textColor="#ffffff">
           <SectionTitle 
             text="Accommodation" 
-            subtitle="Bodega Ridge has 6 3-bedroom cabins available on-site. there’s also several cabins at Bodega Cove which sleeps a further 12."
+            subtitle="Somewhere to rest your weary heads"
             icon={<Accommodation></Accommodation>}
             bgColor={Theme.neonBlue}
             color="#ffffff">
           </SectionTitle>
-          
+          <p>There's plenty of top-notch accommodation on the Bodega Ridge property itself, a stones-throw away at Bodega Cove, or in one of several B&B's within a 10 minute walk away.</p>
+          <p>Bodega Ridge has 6 3-bedroom cabins available on-site. there’s also several cabins at Bodega Cove which sleeps a further 12.</p>
           <TabsStyle>
           <Tabs>
           <div label="Bodega Ridge">
@@ -193,7 +235,7 @@ const Index = () => (
               <p>There are seven charming, self-contained log cabins, all with three bedrooms, living room, full kitchen and bath. Each cabin sleeps six comfortably, and all bedrooms have a queen-size bed with dreamy pillow-top mattress.</p>
 
               <p>Take in the view from your cedar deck, have a long soak in the tub, or curl up in front of the wood stove.</p>
-
+              <h4>Price per double room: $140/night</h4>
               <Slider>
                 <div data-src={BodegaRidge1} alt="Bodega Ridge"></div>
                 <div data-src={BodegaRidge2} alt="Bodega Ridge"></div>
@@ -208,11 +250,34 @@ const Index = () => (
               <h3>Bodega Cove</h3>
 
               <p>A 5-minute walk from Bodega Ridge, and the ceremony site, Bodega Cove consists of 5 cedar cabins. There are two designs: romantic one bedroom units and more spacious two bedroom cabins ideal for two couples or a small family.</p>
+            
+              <ul>
+        <li>
+          1 bedroom cabin: $350/night
+        </li>
+        <li>
+          2 bedroom cabin (price per room): $200/night
+        </li>
+      </ul>
             </ContentBox>
           </div>
           <div label="Other Options">
             <ContentBox>
               <h3>Other Options</h3>
+              <h4><a href="https://abnb.me/9soohDPSNL">Private Oceanfront Studio</a></h4> 
+              <p>Just 2 doors down from Bodega Cove. Modern waterfront studio suite with private entrance. Large deck with views of Trincomali Channel, surrounded by fir and arbutus trees. Go for a swim in the ocean. Take an outdoor shower. Watch whales, eagles, hummingbirds, sea lions and otters.</p>
+
+              <h4><a href="http://pinkgeraniumcottage.com/Welcome.html">Pink Geranium</a></h4>           
+              <p>A 10-minute walk from Bodega Ridge. Beautiful little cottage with one bedroom and pull out across the street from the water</p>
+            
+              <h4><a href="http://www.galianoreddoor.com">Behind the Red Door</a></h4>
+              <p>About a 5-7-minute drive from Bodega Ridge. A cozy 1-bedroom B&B.</p>
+
+              <h4><a href="http://www.galianocabins.com">Galiano Oceanfront Cabins</a></h4>
+              <p>A 10-minute walk from Bodega Ridge, 2 lovely cabins just down the hill. 1 oceanfront cottage w/ 1 bedroom and a 3-bedroom cabin with a beautiful view of the water.</p>
+
+              <h4><a href="https://www.vrbo.com/2144">Galiano Getaways</a></h4>
+              <p>A 3-bedroom beautiful cabin located just north of Bodega Ridge, a 30 second drive, up Clementine Lane. 5-10 walking distance. </p>
             </ContentBox>
           </div>
           </Tabs>

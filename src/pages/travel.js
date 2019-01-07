@@ -17,6 +17,8 @@ import Vancouver from '../images/vancouver.jpg'
 import Whistler from '../images/whistler.jpg'
 import Okanagan from '../images/okanagan.jpg'
 
+import Heart from  '-!svg-react-loader?name=Heart!../images/heart.svg'
+import ItineraryIcon from  '-!svg-react-loader?name=Itinerary!../images/itinerary-icon.svg'
 
 
 const Hero = styled.div`
@@ -34,49 +36,57 @@ const Hero = styled.div`
     color:#fff;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 `
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   .card {
     position: relative;
-    flex-basis: 200px;
+    flex: 1 0 0;
+    min-width: 300px;
     height: 300px;
     overflow: hidden;
-    margin: 0 8px;
+    margin: 8px 8px;
     border-radius: 8px;
-    transition: .8s transform ease;
-    > img {
-      display: block;
-      width: 200px;
-      height: 300px;
-      object-fit: cover;
-      object-position: left center;
-    }
-    h3 {
-      z-index: 2;
-      position:absolute;
-      text-align:center;
-      left: 0;
-      right: 0;
-      top: 50%;
-      color: #fff;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
-      font-size: 1.4rem;
-      transition: .8s font-size ease;
-    }
-    &:hover {
-      transform: translateY(-10px);
-
-      h3 {
-        font-size: 1.5rem;
+    transition: .8s all ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    a {
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left center;
       }
-    }
-
-    &.animated {
+      h3 {
+        z-index: 2;
+        position:absolute;
+        text-align:center;
+        left: 0;
+        right: 0;
+        top: 50%;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+        font-size: 1.4rem;
+        transition: .8s font-size ease;
+      }
+    
+      &:hover {
+        
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+  }
+  &:hover, &:active {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  &.animated {
         animation: scaleUp .5s ease;
         animation-fill-mode: backwards;
       }
@@ -84,7 +94,7 @@ const CardWrapper = styled.div`
         0%   { transform: translateY(50px); opacity: 0; }
         100% { transform: translateY(0); opacity: 1; }
       }
-  }
+    }
 `
 
 const Itinerary = styled.ul`
@@ -182,63 +192,43 @@ const TravelPage = () => (
         <h1>Travel</h1>
         <Overlay />
       </Hero>
-
-
-      
-      {/* <Section bgColor="#f6f9fc">
-      <Container>
-          <h2>Coming from outside of Canada?</h2>
-          <p className="lead">The nearest airport is Vancouver International Airport (YVR). The following UK airports have summer flights direct to Vancouver:</p>
-          <CardWrapper>
-            <Card>
-              <h3>London Gatewick</h3>
-              <span>13 flights per week</span>
-            </Card>
-            <Card>
-              <h3>London Heathrow</h3>
-              <span>21 flights per week</span>
-            </Card>
-            <Card>
-              <h3>Manchester</h3>
-              <span>3 flights per week</span>
-            </Card>
-            <Card>
-              <h3>Glasgow</h3>
-              <span>1 flight per week</span>
-            </Card>
-
-          </CardWrapper>
-      </Container>
-      </Section> */}
       
       <Section>
-        <SectionTitle text="BC Highlights"></SectionTitle>
+        <SectionTitle text="BC Highlights" icon={<Heart></Heart>}></SectionTitle>
 
       <CardWrapper>
         <div className="card wow">
+        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
           <img src={Whistler} alt="Whistler" />
           <h3>Whistler</h3>
+          </a>
         </div>
 
         <div className="card wow" data-wow-delay=".1s">
+          <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
           <img src={Vancouver} alt="Vancouver" />
           <h3>Vancouver</h3>
+          </a>
         </div>
 
         <div className="card wow" data-wow-delay=".2s">
+        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
           <img src={Tofino} alt="Tofino" />
           <h3>Tofino</h3>
+          </a>
         </div>
 
         <div className="card wow" data-wow-delay=".3s">
+        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
           <img src={Okanagan} alt="Okanagan" />
           <h3>Okanagan Valley</h3>
+        </a>
         </div>
       </CardWrapper>
       </Section>
 
       <Section bgColor="#F6F9FC">
-        <SectionTitle text="Example Itinerary"></SectionTitle>
+        <SectionTitle text="Example Itinerary" icon={<ItineraryIcon></ItineraryIcon>}></SectionTitle>
 
         <Itinerary>
           <li>

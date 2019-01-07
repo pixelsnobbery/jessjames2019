@@ -2,16 +2,34 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CardDiv = styled.div`
-    flex-grow: 1;
-    max-width: 30%;
-    background-color: #f6f6f6;
+    
+    flex: 1 0 0px;
+    min-width: 200px;
+    background-color: #fff;
     margin: 0 8px;
+
+    > img {
+        margin: 0;
+    }
+
+    > div {
+        padding: 16px;
+
+        p {
+            font-size: .8rem;
+        }
+    }
     h3 {
       text-align:center;
       color: #fff;
       background-color: ${props => props.theme.primary};
       width: 100%;
-      padding: 8px;
+      padding: 16px;
+      
+    }
+    h4 {
+        margin-top: 0;
+        margin-bottom: 8px;
     }
     &:first-child {
         margin-left: 0;

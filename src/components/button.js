@@ -21,8 +21,14 @@ const Btn = styled.a`
     &.ghost {
       &:link, &:visited {
         border: 3px solid ${props => props.borderColor || "#000000"};
-        background: none;
+        background: none!important;
         color: ${props => props.borderColor || "#000000"}!important;
+      }
+      &:hover, &:active {
+        background: #000!important;
+        color: #fff!important;
+        transform: translateY(-4px);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.4);
       }
     }
 

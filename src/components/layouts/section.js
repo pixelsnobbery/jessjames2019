@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SectionElement = styled.section` 
-padding: 64px 0;
+padding: 96px 0;
 position: relative;
+
+p {
+  color: ${props => props.textColor}!important;
+}
 
 > div {
   width: 100%;
