@@ -10,6 +10,7 @@ import { ThemeProvider } from 'styled-components'
 
 import Section from '../components/layouts/section'
 import Overlay from '../components/overlay'
+import SectionTitle from '../components/layouts/section-title';
 
 const Hero = styled.div`
   display: block;
@@ -31,63 +32,8 @@ const Hero = styled.div`
 `
 
 const CardWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  .card {
-    position: relative;
-    flex-basis: 200px;
-    height: 300px;
-    overflow: hidden;
-    margin: 0 8px;
-    border-radius: 8px;
-    transition: .8s transform ease;
-    a {
-      > img {
-        display: block;
-        width: 200px;
-        height: 300px;
-        object-fit: cover;
-        object-position: left center;
-      }
-      h3 {
-        z-index: 2;
-        position:absolute;
-        text-align:center;
-        left: 0;
-        right: 0;
-        top: 50%;
-        color: #fff;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
-        font-size: 1.4rem;
-        transition: .8s font-size ease;
-      }
-    
-      &:hover {
-        h3 {
-          font-size: 1.5rem;
-        }
-      }
-  }
-  &:hover, &:active {
-    transform: translateY(-10px);
-  }
-  &.animated {
-        animation: scaleUp .5s ease;
-        animation-fill-mode: backwards;
-      }
-      @keyframes scaleUp {
-        0%   { transform: translateY(50px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-      }
-    }
+
 `
-
-// const Cards = styled.div`
-//   display: flex;
-//   justify-content:space-between;
-// `
-
 
 const Accommodation = () => (
   <ThemeProvider theme={Theme}>
@@ -98,8 +44,15 @@ const Accommodation = () => (
         <Overlay></Overlay>
       </Hero>
 
+      <Section>
+        <SectionTitle text="When to fly"></SectionTitle>
+        <p>If you are travelling from afar and are planning a trip to incorporate the wedding, we would advise you to book return/onward travel no earlier than Friday July 5th to ensure you have enough time to get back to the mainland.</p>
+      </Section>
+
       <Section bgColor="#f6f9fc">
-          <h2>Coming from outside of Canada?</h2>
+        <SectionTitle
+          text="Coming from Outside of Canada?"
+          subTitle=""></SectionTitle>
           <p className="lead">The nearest airport is Vancouver International Airport (YVR). The following UK airports have summer flights direct to Vancouver:</p>
           <CardWrapper>
             <Card>

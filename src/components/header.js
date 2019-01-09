@@ -49,11 +49,11 @@ const StyledHeader = styled.header`
                 font-size: .9rem;
             }
             a:hover, a:active {
-                color: #333;
+                color: ${props => props.theme.primary};
             }
 
             a.active {
-              border-bottom: 3px solid #fff;
+              border-bottom: 3px solid ${props => props.isTop ? props.theme.white : '#444'};
             }
         }
     }

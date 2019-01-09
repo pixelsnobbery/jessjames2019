@@ -20,6 +20,12 @@ import Okanagan from '../images/okanagan.jpg'
 import Heart from  '-!svg-react-loader?name=Heart!../images/heart.svg'
 import ItineraryIcon from  '-!svg-react-loader?name=Itinerary!../images/itinerary-icon.svg'
 
+import TofinoTravel from '../images/tofino-travel.jpg'
+import SeaToSky from '../images/sea-to-sky.jpg'
+import MountGaliano from '../images/mount-galiano.jpg'
+import WhistlerLakes from '../images/whistler-lakes.jpg'
+import BearTour from '../images/bear-tour.jpg'
+import VancouverSeawall from '../images/vancouver-seawall.jpg'
 
 const Hero = styled.div`
   display: block;
@@ -28,6 +34,7 @@ const Hero = styled.div`
   flex-direction:column;
   justify-content: center;
   align-content: center;
+  align-items: center;
   position: relative;
 
   h1, h2 {
@@ -37,6 +44,16 @@ const Hero = styled.div`
   }
   h1 {
     font-size: 4rem;
+  }
+
+  span {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 500px;
+    font-weight: 200;
   }
 `
 const CardWrapper = styled.div`
@@ -190,6 +207,7 @@ const TravelPage = () => (
       <Hero>
         <TravelHero />
         <h1>Travel</h1>
+        <span>Read on for some of our favourite places to see in British Columbia</span>
         <Overlay />
       </Hero>
       
@@ -242,6 +260,7 @@ const TravelPage = () => (
             <div className="content-box wow">
               <h3>Vancouver Stuff</h3>
               <p>Spend a day exploring what makes Vancouver one of the world’s most livable cities. There are so many free attractions to enjoy, such as Stanley and Queen Elizabeth Parks, Granville Island, and Kitsilano Beach. For museum buffs, check out the Museum of Vancouver, Science World, and the Museum of Anthropology.</p>
+              <img src={VancouverSeawall} alt="Vancouver" />
             </div>
             <h4 className="wow">Day 2</h4>
             <div className="content-spacer"></div>
@@ -250,6 +269,7 @@ const TravelPage = () => (
             <div className="content-box wow">
               <h3>Sea to Sky Highway</h3>
               <p>The drive along the Sea to Sky Highway is one of the most beautiful in Canada. Definitely stop at the Sea to Sky Gondola along the way, which has amazing views of Howe Sound, plus a suspension bridge and trails. Another great place to visit is Shannon Falls, BC’s third largest waterfall. Once in Whistler, head to Whistler Village for dinner.</p>
+              <img src={SeaToSky} alt="Sea to Sky Highway"></img>
             </div>
             <h4 className="wow">Day 3</h4>
             <div className="content-spacer"></div>
@@ -264,6 +284,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Lakes</h3>
+              <img src={WhistlerLakes} alt="Whistler Lakes"></img>
             </div>
             <h4 className="wow">Day 5</h4>
             <div className="content-spacer"></div>
@@ -271,6 +292,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Ferry to Galiano Island</h3>
+              <img src={MountGaliano} alt="Mount Galiano"></img>
             </div>
             <h4 className="wow">Day 6</h4>
             <div className="content-spacer"></div>
@@ -299,6 +321,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Drive to Tofino</h3>
+              <img src={TofinoTravel} alt="=Tofino"></img>
             </div>
             <h4 className="wow">Day 10</h4>
             <div className="content-spacer"></div>
@@ -306,6 +329,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Bear Tour?</h3>
+              <img src={BearTour} alt="Bear Tour"></img>
             </div>
             <h4 className="wow">Day 11</h4>
             <div className="content-spacer"></div>

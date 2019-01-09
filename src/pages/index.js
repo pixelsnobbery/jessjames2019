@@ -30,10 +30,10 @@ import BodegaRidge3 from '../images/bodega_cabin_3.jpg'
 import BodegaRidge4 from '../images/bodega_cabin_4.jpg'
 
 
-// import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
-// import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
-// import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
-// import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
+import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
+import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
+import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
+import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
 
 import GalianoImage from '../components/hero-images/galiano'
 
@@ -70,6 +70,16 @@ const Hero = styled.div`
     font-family: 'Aisha Latin';
     font-size: 2rem;
 
+    p {
+      color: ${Theme.primary}!important;
+      margin-bottom: 16px;
+      line-height: 1.5rem;
+    }
+    p.date {
+      color: #333!important;
+      font-family: 'Lato';
+      font-size: 1rem;
+    }
     .ghost {
       padding-bottom: 0;
     }
@@ -125,6 +135,19 @@ const TabsStyle = styled.div`
 }
 `
 
+const CountdownWrapper = styled.div`
+  address {
+    text-align: center;
+  }
+  h4 {
+    color: ${Theme.primary};
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 1.8rem;
+    font-weight: 200;
+  }
+`
+
 const Index = () => (
   <ThemeProvider theme={Theme}>
     <Layout>
@@ -134,11 +157,15 @@ const Index = () => (
           <Logo className="logo"></Logo>
           <p>Galiano Island, Canada</p>
 
+          <p className="date">July 2nd  - 4th 2019</p>
+
           <Button text="RSVP" href="#rsvp" className="ghost"></Button>
         </div>
         <Overlay></Overlay>
       </Hero>
-      
+        <Section bgColor={Theme.paleBlue}>
+
+        </Section>
         <Section>
           <SectionTitle 
             text="When & Where" 
@@ -147,16 +174,19 @@ const Index = () => (
           </SectionTitle>
           <p>You didn't think a simple flight to Canada would suffice did you?! Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
           
-          <address>
-            Bodega Ridge,<br />
-            120 Manastee Road,<br />
-            Galiano Island,<br />
-            British Columbia,<br />
-            Canada
-          </address>
+          <CountdownWrapper>
+            <address>
+              Bodega Ridge,<br />
+              120 Manastee Road,<br />
+              Galiano Island,<br />
+              British Columbia,<br />
+              Canada
+            </address>
 
-          <h4>Wednesday, July 3rd 2019</h4>
-          <Countdown date={`2019-07-03T16:00:00`}></Countdown>
+            <h4>Wednesday, July 3rd 2019</h4>
+            <Countdown date={`2019-07-03T16:00:00`}></Countdown>
+          </CountdownWrapper>
+          
         </Section>
 
         <Section>
@@ -168,7 +198,7 @@ const Index = () => (
             icon={<Boat></Boat>}>
           </SectionTitle>
           <ContentBox>
-            <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
+            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
 
             <p>Renting a car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
 
@@ -203,11 +233,97 @@ const Index = () => (
           {/* <Timeline></Timeline> */}
           <Schedule>
             <ScheduleItem>
+              <h3>Tuesday, 3rd July</h3>
+            </ScheduleItem>
+            <ScheduleItem>
               <div>
-                <h3>Arrive</h3>
+                <h4>Arrive</h4>
+                <p>Check-in from 12pm</p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <Boat></Boat>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Welcome BBQ</h4>
+                <p>Starts @ 6pm</p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <BarbecueImage></BarbecueImage>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <h3>Wednesday, 2nd July</h3>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Free Time</h4>
+                <p>Perhaps go for a morning hike up Mount Galiano? Hire a kayak from Montague Harbour? Take a whale-watching tour?</p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <FreeTimeImage></FreeTimeImage>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Wedding</h4>
+                <p>Starts at 4:30pm. The wedding site is a 5 minute walk up the hill, and features a beautiful panoramic view of the Gulf Islands.</p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <RingsImage></RingsImage>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Drinks & Canapes</h4>
                 <p></p>
               </div>
+              <div className="meta">
+                <span className="icon">
+                  <RingsImage></RingsImage>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
               <div>
+                <h4>Dinner</h4>
+                <p></p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <Boat></Boat>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Partay</h4>
+                <p></p>
+              </div>
+              <div className="meta">
+                <span className="icon">
+                  <Boat></Boat>
+                </span>
+              </div>
+            </ScheduleItem>
+            <ScheduleItem>
+              <h3>Thursday, 4th July</h3>
+            </ScheduleItem>
+            <ScheduleItem>
+              <div>
+                <h4>Depart</h4>
+                <p></p>
+              </div>
+              <div className="meta">
                 <span className="icon">
                   <Boat></Boat>
                 </span>

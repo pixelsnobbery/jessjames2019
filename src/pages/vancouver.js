@@ -13,6 +13,8 @@ import GranvilleIsland from '../images/granville-island.jpg'
 import StanleyPark from '../images/stanley-park.jpg'
 import Gastown from '../images/gastown.jpg'
 import Capilano from '../images/capilano.jpg'
+import Grouse from '../images/grouse.jpg'
+import SpanishBanks from '../images/spanish-banks.jpg'
 
 import Card from '../components/card'
 
@@ -28,6 +30,7 @@ const Hero = styled.div`
   flex-direction:column;
   justify-content: center;
   align-content: center;
+  align-items: center;
   position: relative;
 
  
@@ -39,6 +42,16 @@ const Hero = styled.div`
   }
   h1 {
     font-size: 4rem;
+  }
+
+  span {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 500px;
+    font-weight: 200;
   }
 `
 
@@ -54,6 +67,7 @@ const Travel = () => (
       <Hero>
         <VancouverHero />
         <h1>Vancouver</h1>
+        <span>The world's 'most liveable city' has lots to offer. Check out some of our suggestions.</span>
         <Overlay></Overlay>
       </Hero>
 
@@ -110,17 +124,18 @@ const Travel = () => (
             </div>
           </Card>
           <Card>
-            <img src={GranvilleIsland} alt="Granville Island"></img>
+            <img src={Grouse} alt="Grouse Mountain"></img>
             <div>
-              <h4>Granville Island</h4>
-              <p>Granville Island is home to a public market, food shops, restaurants, artist studios and galleries, shopping and green space.</p>
+              <h4>Grouse Mountain</h4>
+              <p>Rising 1,250 metres (4,100 feet) above Vancouver and just 15 minutes from the city’s downtown core, is the vast alpine playground of Grouse Mountain. </p>
             </div>
           </Card>
           <Card>
-          <img src={StanleyPark} alt="Stanley Park"></img>
+          <img src={SpanishBanks} alt="Spanish Banks"></img>
             <div>
-              <h4>Bike Around the Seawall</h4>
-              <p>The Seawall starts downtown at the cruise ship terminal, heads west around Stanley Park and then encircles False Creek past Kitsilano beach.</p>
+              <h4>Spanish Banks</h4>
+              <p>
+                This expansive beach offers fantastic picnicking opportunities, swimming, beach volleyball, and gorgeous panoramic views of Vancouver and the mountains. </p>
             </div>
           </Card>
         </CardWrapper>
