@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components'
 import Section from '../components/layouts/section'
 import Overlay from '../components/overlay'
 import SectionTitle from '../components/layouts/section-title';
+import Button from '../components/button'
 
 const Hero = styled.div`
   display: block;
@@ -49,30 +50,39 @@ const Accommodation = () => (
         <p>If you are travelling from afar and are planning a trip to incorporate the wedding, we would advise you to book return/onward travel no earlier than Friday July 5th to ensure you have enough time to get back to the mainland.</p>
       </Section>
 
+      <Section>
+        <SectionTitle text="Electronic Travel Authorization (eTA)"></SectionTitle>
+
+        <p>All visitors are required to apply for an eTA before departing for Canada. It only costs $7, and can be applied for online. Verification is usually instant, however in rare cases, it can take a few days. We recommend you get it sorted a week or two in advance.</p>
+
+        <p>eTA's last for 5 years, or until you get a new passport - whichever comes first.</p>
+
+        <Button text="Find out more" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html" bgColor={Theme.secondary}></Button>
+      
+        <p>Note: Anyone visiting the US during their trip will need to apply for an <a href="https://esta.cbp.dhs.gov/esta/" target="_blank" rel="nofollow noreferrer">ESTA</a>.</p>
+      </Section>
+
       <Section bgColor="#f6f9fc">
         <SectionTitle
-          text="Coming from Outside of Canada?"
+          text="UK Airports"
           subTitle=""></SectionTitle>
           <p className="lead">The nearest airport is Vancouver International Airport (YVR). The following UK airports have summer flights direct to Vancouver:</p>
-          <CardWrapper>
-            <Card>
-              <h3>London Gatewick</h3>
-              <span>13 flights per week</span>
-            </Card>
-            <Card>
-              <h3>London Heathrow</h3>
-              <span>21 flights per week</span>
-            </Card>
-            <Card>
-              <h3>Manchester</h3>
-              <span>3 flights per week</span>
-            </Card>
-            <Card>
-              <h3>Glasgow</h3>
-              <span>1 flight per week</span>
-            </Card>
+          
+          <ul>
+            <li>
+              <strong>London Gatwick: </strong>13 flights per week
+            </li>
+            <li>
+              <strong>London Heathrow: </strong>21 flights per week
+            </li>
+            <li>
+              <strong>Manchester: </strong>3 flights per week
+            </li>
+            <li>
+              <strong>Glasgow: </strong>1 flight per week
+            </li>
+          </ul>
 
-          </CardWrapper>
       </Section>
 
     </Layout>

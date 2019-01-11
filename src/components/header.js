@@ -64,10 +64,16 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    display: ${props => props.noLogo ? 'none' : 'block'};
+  }
+
+
 `
 
-const HeaderElement = ({ siteTitle, isTop }) => (
-  <StyledHeader className={siteTitle} isTop={isTop}>
+const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
+  <StyledHeader className={siteTitle} isTop={isTop} noLogo={noLogo}>
     
     <Container>
     
@@ -110,8 +116,10 @@ const HeaderElement = ({ siteTitle, isTop }) => (
 )
 
 export default class Header extends React.Component {
+  
   state = {
     isTop: true,
+    noLogo: this.props.noLogo
   };
 
   componentDidMount() {
@@ -121,6 +129,7 @@ export default class Header extends React.Component {
           this.setState({ isTop })
       }
     });
+
   }
   componentWillUnmount() {
     document.removeEventListener('scroll', () => {
@@ -129,7 +138,7 @@ export default class Header extends React.Component {
   }
   render () {
     return (
-      <HeaderElement isTop={this.state.isTop}></HeaderElement>
+      <HeaderElement isTop={this.state.isTop} noLogo={this.state.noLogo}></HeaderElement>
     )
 
   };

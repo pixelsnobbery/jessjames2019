@@ -51,15 +51,12 @@ const Foot = styled.footer`
             }
             
             .fieldWrapper {
-                flex-basis: 30%;
+                flex-basis: 48%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 text-align: center;
                 margin-bottom: 32px;
-                @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-                    margin-bottom: 0;
-                }
                 span {
                     font-weight: 200;
                 }
@@ -102,8 +99,10 @@ const Foot = styled.footer`
                 margin: 32px 0 0 0;
 
                 a {
-                    width: 200px;
-                    
+                    font-weight: bold;
+                    &:hover, &:active {
+                        background-color: #333!important;
+                    }
                 }
             }
         }
@@ -149,9 +148,15 @@ const FooterElement = () => (
                 <input name="number_of_kids" id="number_of_kids" rows="5" placeholder="Number of kids" />
             </div>
             <div className="fieldWrapper">
-                <span>Would you like to include</span>
-                <h4>A Message</h4>
-                <span className="sub">Song requests, dietary requirements, praise and gratitude, etc</span>
+                <span>Let us know any</span>
+                <h4>Dietary requirements</h4>
+                <span className="sub">Dietary requirements and intolerances of note</span>
+                <textarea name="message" id="message" rows="5"></textarea>
+            </div>
+            <div className="fieldWrapper">
+                <span>What gets you up</span>
+                <h4>On the dancefloor?</h4>
+                <span className="sub">Song requests. We won't judge  you.</span>
                 <textarea name="message" id="message" rows="5"></textarea>
             </div>
             <ul className="actions">

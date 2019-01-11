@@ -5,11 +5,11 @@ const ScheduleItemLi = styled.li`
     display: flex;
     justify-content: flex-start;
     .icon {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         display: flex;
         background: ${props => props.theme.white};
-        border-radius: 50px;
+        border-radius: 75px;
         justify-content: center;
         align-items: center;
        svg {

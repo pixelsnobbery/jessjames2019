@@ -13,6 +13,9 @@ import Accommodation from '-!svg-react-loader?name=Accommodation!../images/accom
 import Boat from  '-!svg-react-loader?name=Boat!../images/boat-icon.svg'
 import Calendar from  '-!svg-react-loader?name=Calendar!../images/calendar-icon.svg'
 import Gift from  '-!svg-react-loader?name=Gift!../images/gift-icon.svg'
+import Dinner from '-!svg-react-loader?name=Dinner!../images/dinner-icon.svg'
+import Ferry from '-!svg-react-loader?name=Ferry!../images/ferry-icon.svg'
+import Canapes from '-!svg-react-loader?name=Canapes!../images/canapes-icon.svg'
 
 import Button from '../components/button'
 import Section from '../components/layouts/section'
@@ -29,6 +32,10 @@ import BodegaRidge2 from '../images/bodega_cabin_2.jpg'
 import BodegaRidge3 from '../images/bodega_cabin_3.jpg'
 import BodegaRidge4 from '../images/bodega_cabin_4.jpg'
 
+import Galiano1 from '../images/galiano-1.jpg'
+import Galiano2 from '../images/galiano-2.jpg'
+import Galiano3 from '../images/galiano-3.jpg'
+import Galiano4 from '../images/galiano-4.jpg'
 
 import RingsImage from '-!svg-react-loader?name=Icon!../images/rings.svg';
 import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
@@ -47,7 +54,6 @@ const Hero = styled.div`
   display:flex;
   flex-direction:column;
   justify-content: flex-start;
-  padding-top: 120px;
   align-content: center;
   position: relative;
 
@@ -64,7 +70,7 @@ const Hero = styled.div`
     left: 64px;
     z-index: 2;
     padding: 16px;
-    width: 360px;
+    width: 330px;
     text-align: center;
     padding-top: 64px;
     font-family: 'Aisha Latin';
@@ -82,6 +88,12 @@ const Hero = styled.div`
     }
     .ghost {
       padding-bottom: 0;
+    }
+    
+    .gatsby-image-wrapper  {
+      picture img, img {
+        object-position: bottom center!important;
+      }
     }
   }
   }
@@ -102,6 +114,15 @@ h3 {
 ul {
   li {
     color: #000!important;
+  }
+}
+
+h4 {
+  a:link, a:visited {
+    color: ${Theme.primary};
+  }
+  a:visited {
+    color: #333;
   }
 }
 `
@@ -150,7 +171,7 @@ const CountdownWrapper = styled.div`
 
 const Index = () => (
   <ThemeProvider theme={Theme}>
-    <Layout>
+    <Layout location="/" noLogo={true}>
       <Hero>
         <HomeHero></HomeHero>
         <div className="site-title">
@@ -180,7 +201,8 @@ const Index = () => (
               120 Manastee Road,<br />
               Galiano Island,<br />
               British Columbia,<br />
-              Canada
+              Canada<br />
+              <a href="https://www.bodegaridge.com" target="_blank" rel="nofollow noreferrer">www.bodegaridge.com</a>
             </address>
 
             <h4>Wednesday, July 3rd 2019</h4>
@@ -202,7 +224,7 @@ const Index = () => (
 
             <p>Renting a car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
 
-            <p>There are just 3 ferries per day to Galiano Island. Reserving a space on the ferry is HIGHLY recommended. Ferries depart Tsawwassen at the following times:</p>
+            <p>There are just 3 ferries per day to Galiano Island. Reserving a space on the ferry is HIGHLY recommended. Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
 
             <ul>
               <li>
@@ -212,7 +234,7 @@ const Index = () => (
                 1:40PM
               </li>
               <li>
-                7:50PM
+                7:50PM (High chance you'll have missed the BBQ if you get this ferry. We'll save you a burger!)
               </li>
             </ul>
 
@@ -238,11 +260,11 @@ const Index = () => (
             <ScheduleItem>
               <div>
                 <h4>Arrive</h4>
-                <p>Check-in from 12pm</p>
+                <p>Your ferry will land at Sturdies Bay. </p>
               </div>
               <div className="meta">
                 <span className="icon">
-                  <Boat></Boat>
+                  <Ferry></Ferry>
                 </span>
               </div>
             </ScheduleItem>
@@ -289,7 +311,7 @@ const Index = () => (
               </div>
               <div className="meta">
                 <span className="icon">
-                  <RingsImage></RingsImage>
+                  <Canapes></Canapes>
                 </span>
               </div>
             </ScheduleItem>
@@ -300,7 +322,7 @@ const Index = () => (
               </div>
               <div className="meta">
                 <span className="icon">
-                  <Boat></Boat>
+                <Dinner></Dinner>
                 </span>
               </div>
             </ScheduleItem>
@@ -311,7 +333,7 @@ const Index = () => (
               </div>
               <div className="meta">
                 <span className="icon">
-                  <Boat></Boat>
+                  <PartyImage></PartyImage>
                 </span>
               </div>
             </ScheduleItem>
@@ -394,10 +416,57 @@ const Index = () => (
 
               <h4><a href="https://www.vrbo.com/2144">Galiano Getaways</a></h4>
               <p>A 3-bedroom beautiful cabin located just north of Bodega Ridge, a 30 second drive, up Clementine Lane. 5-10 walking distance. </p>
+            
+              <h4><a href="https://www.airbnb.ca/rooms/13999967">The Sweet Suite</a></h4>
+              <p>2-bedroom accommodation on the South End of Galiano Island, about a 20- 25-minute drive to Bodega Ridge.</p> 
+
+              <h4><a href="http://hiddenridgegaliano.com">The Hidden Ridge</a></h4>
+              <p>A Cottage and a Bed & Breakfast about a 5-7-minute drive from Bodega Ridge.</p> 
+
+              <h4><a href="https://www.vrbo.com/596088">Heritage House</a></h4>
+              <p>A cozy 4-bedroom Heritage House on 5 acres of tranquility. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p>
+
+              <h4><a href="https://www.vrbo.com/810824">Guest Cottage on 3-Acres</a></h4> 
+              <p>Sleeps up to 6 people, waterfront cottage. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p> 
+
+              <h4><a href="https://www.airbnb.ca/rooms/12156952">Captain's Quarters</a></h4>
+              <p>5-minute drive from Bodega Ridge, very nice historic log cabin.</p>
+
+              <h4>
+                <a href="https://www.airbnb.ca/rooms/12156952">
+                  Captain's Quarters
+                </a>
+              </h4>
+              <p>5-minute drive from Bodega Ridge, very nice historic log cabin.</p>
             </ContentBox>
           </div>
           </Tabs>
           </TabsStyle>
+        </Section>
+
+        <Section bgColor="#F6F9FC">
+          <SectionTitle
+            text="Things to do on Galiano"
+            subtitle="How about doing one of these activities on before the wedding ceremony?"
+          ></SectionTitle>
+
+          <Slider>
+            <div data-src={Galiano1} alt="Kayak">
+              <h3>Kayak around Montague Harbour</h3>
+              <p>Explore the calm waters of Montague Harbour, taking in the beautiful bscenery, and scouting out private beaches to moore at.</p>
+            </div>
+            <div data-src={Galiano2} alt="Mount Galiano">
+              <h3>Hike up Mount Galiano</h3>
+              <p>With a 301 metre elevation at it's peak, Mount Galiano offers incredible views of the southern gulf islands. Allow 45 minutes to an hour for the ascent.</p>
+            </div>
+            <div data-src={Galiano3} alt="Coastline">
+              <h3>Explore the stunning coastline</h3>
+            </div>
+            <div data-src={Galiano4} alt="Bodega Ridge">
+              <h3>Get to know the local wildlife</h3>
+              <p>Eagles, deer, seals, otters and orcas are seen regularly from all over the island.</p>
+            </div>
+          </Slider>
         </Section>
 
         <Section>

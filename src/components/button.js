@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Btn = styled.a`
-    padding: 8px 16px;
+    margin-bottom: 32px;
+    padding: 10px 16px;
     text-transform: uppercase;
+    transition: all .1s ease;
     display: inline-block;
 
     &:link, &:visited {
@@ -12,10 +14,11 @@ const Btn = styled.a`
         text-decoration: none;
         font-weight: 500;
         transition: .2s background-color ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     }
 
     &:hover, &:active {
-      background-color: #333;
+      background-color: #333!important;
     }
 
     &.ghost {
@@ -30,6 +33,10 @@ const Btn = styled.a`
         transform: translateY(-4px);
         box-shadow: 0 3px 6px rgba(0,0,0,0.4);
       }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     
