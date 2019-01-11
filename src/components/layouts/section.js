@@ -35,13 +35,14 @@ p {
   background-color: ${props => props.bgColor || "#fff"};
   top: 0;
   bottom: 0;
-  -webkit-transform: skewY(-8deg);
-  transform: skewY(-8deg);
+  transform: ${props => props.skewY || "skewY(-8deg)" };
 }
 `
 
-const Section = ({bgColor, bgImage, className, children}) => (
-  <SectionElement bgColor={bgColor} className={className}>
+
+
+const Section = ({bgColor, bgImage, skewY, className, children}) => (
+  <SectionElement bgColor={bgColor} skewY={skewY} className={className}>
     {bgImage}
     <div>
       {children}

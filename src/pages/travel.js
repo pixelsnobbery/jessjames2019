@@ -26,6 +26,7 @@ import MountGaliano from '../images/mount-galiano.jpg'
 import WhistlerLakes from '../images/whistler-lakes.jpg'
 import BearTour from '../images/bear-tour.jpg'
 import VancouverSeawall from '../images/vancouver-seawall.jpg'
+import WhistlerItinerary from '../images/whistler-itinerary.jpg'
 
 const Hero = styled.div`
   display: block;
@@ -122,6 +123,7 @@ const Itinerary = styled.ul`
   li {
     display: flex;
     align-items: center;
+
     h4 {
       width: 80px;
       height: 80px;
@@ -154,6 +156,7 @@ const Itinerary = styled.ul`
       padding: 16px;
       order: 0;
       flex-basis: 40%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 
       h3 {
         margin-top: 0;
@@ -252,6 +255,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Arrive</h3>
+              <p>Once you get through immigration (Don't forget to apply for your eTA!), drop your bags off at the hotel and then head out to one of Vancouver's foodie areas for a bite to eat.</p>
             </div>
             <h4 className="wow">Day 1</h4>
             <div className="content-spacer"></div>
@@ -277,13 +281,16 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Whistler</h3>
+              <p>Finally, you can see for yourselves why Jess fell in love with this place. Named for the furry marmots that populate the area and whistle like deflating balloons, this gabled alpine village and 2010 Olympics venue is one of the world's most popular ski resorts. Summer visitors now outnumber their ski-season equivalents, with many lured by the area's scenic hiking, biking and thrill-popping outdoor adventures.</p>
+              <img src={WhistlerItinerary} alt="Whistler"></img>
             </div>
             <h4 className="wow">Day 4</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Lakes</h3>
+              <h3>Whistler Lakes</h3>
+              <p>Take a day and explore Whistler's lakes and beaches by bike or on foot via the Valley Trail.</p>
               <img src={WhistlerLakes} alt="Whistler Lakes"></img>
             </div>
             <h4 className="wow">Day 5</h4>
@@ -292,6 +299,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Ferry to Galiano Island</h3>
+              <p>Drive back down the Sea-to-Sky highway (stop off at Brandywine Falls on the way - it's a picture-perfect waterfall!) to Tsawwassen ferry terminal, and board your ferry to Galiano. (Don't forget to reserve a space - they book up quickly!)</p>
               <img src={MountGaliano} alt="Mount Galiano"></img>
             </div>
             <h4 className="wow">Day 6</h4>
@@ -321,6 +329,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Drive to Tofino</h3>
+              <p>Tofino is Vancouver Island's favorite outdoorsy retreat. It's not surprising that surf fans, families and city-escaping Vancouverites keep coming: packed with activities and blessed with spectacular local beaches, it sits on Clayoquot Sound, where forested mounds rise from roiling, ever-dramatic waves.</p>
               <img src={TofinoTravel} alt="=Tofino"></img>
             </div>
             <h4 className="wow">Day 10</h4>
@@ -329,6 +338,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Bear Tour?</h3>
+              <p>Take a cruise along the coast and watch bears come to the shore in search of crabs.</p>
               <img src={BearTour} alt="Bear Tour"></img>
             </div>
             <h4 className="wow">Day 11</h4>

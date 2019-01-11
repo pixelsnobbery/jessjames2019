@@ -27,14 +27,7 @@ const IndexHero = () => (
       }
     `}
     
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{
-      position: "absolute",
-      left: 0,
-      top: 0,
-      width: "100%",
-      height: "100%",
-      objectPosition: "bottom center"
-    }}  />}
+    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} className="heroImg" />}
   />
 )
 export default IndexHero

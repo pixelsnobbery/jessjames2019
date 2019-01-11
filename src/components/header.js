@@ -22,6 +22,7 @@ const StyledHeader = styled.header`
     padding-bottom: 16px;
   }
   svg {
+    display: ${props => props.noLogo ? 'none' : 'block'}!important;
     width: 50px;
     path {
       fill: ${props => props.isTop ? props.theme.white : '#444'}!important;
@@ -86,7 +87,7 @@ const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
             textDecoration: 'none',
           }}
         >
-          <Logo></Logo>
+          <Logo noLogo={noLogo}></Logo>
         </Link>
         
       </h1>

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const ScheduleItemLi = styled.li`
     display: flex;
     justify-content: flex-start;
+    
     .icon {
         width: 150px;
         height: 150px;
@@ -18,6 +19,20 @@ const ScheduleItemLi = styled.li`
     }
     div {
         order: 1;
+    }
+    .description {
+        flex-grow: 1;
+        background-color: #fff;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        padding: 16px;
+        h4 {
+            margin-top: 0;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0!important;
+            }
+        }
     }
     div.meta {
         order: 0;

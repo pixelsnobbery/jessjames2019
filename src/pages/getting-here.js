@@ -47,11 +47,15 @@ const Accommodation = () => (
 
       <Section>
         <SectionTitle text="When to fly"></SectionTitle>
-        <p>If you are travelling from afar and are planning a trip to incorporate the wedding, we would advise you to book return/onward travel no earlier than Friday July 5th to ensure you have enough time to get back to the mainland.</p>
+        <p>If you are travelling from afar and are planning a trip to incorporate the wedding, we would advise you to give yourselves a day's leeway between the ferry to/from Galiano Island and your outbound/return flight. There's not many things more stressful than a delayed ferry that causes you to miss your flight!</p>
       </Section>
 
-      <Section>
-        <SectionTitle text="Electronic Travel Authorization (eTA)"></SectionTitle>
+      <Section bgColor="#7795F8" textColor="#ffffff">
+          <SectionTitle 
+            text="Electronic Travel Authorization (eTA)" 
+            bgColor={Theme.neonBlue}
+            color="#ffffff">
+          </SectionTitle>
 
         <p>All visitors are required to apply for an eTA before departing for Canada. It only costs $7, and can be applied for online. Verification is usually instant, however in rare cases, it can take a few days. We recommend you get it sorted a week or two in advance.</p>
 
@@ -62,7 +66,7 @@ const Accommodation = () => (
         <p>Note: Anyone visiting the US during their trip will need to apply for an <a href="https://esta.cbp.dhs.gov/esta/" target="_blank" rel="nofollow noreferrer">ESTA</a>.</p>
       </Section>
 
-      <Section bgColor="#f6f9fc">
+      <Section>
         <SectionTitle
           text="UK Airports"
           subTitle=""></SectionTitle>

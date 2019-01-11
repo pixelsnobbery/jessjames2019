@@ -89,13 +89,14 @@ const Hero = styled.div`
     .ghost {
       padding-bottom: 0;
     }
-    
-    .gatsby-image-wrapper  {
-      picture img, img {
-        object-position: bottom center!important;
-      }
-    }
   }
+  
+  }
+
+  .heroImg {
+    img {
+      object-position: center bottom!important;
+    }
   }
 `
 
@@ -169,6 +170,15 @@ const CountdownWrapper = styled.div`
   }
 `
 
+const Intro = styled.div`
+  p {
+    font-family: 'Lora';
+    font-size: 1.3rem;
+    text-align: center;
+    color: #829EBA;
+  }
+`
+
 const Index = () => (
   <ThemeProvider theme={Theme}>
     <Layout location="/" noLogo={true}>
@@ -184,17 +194,43 @@ const Index = () => (
         </div>
         <Overlay></Overlay>
       </Hero>
-        <Section bgColor={Theme.paleBlue}>
+        <Section bgColor={Theme.paleBlue} skewY="skewY(0deg)">
+          <Intro>
+          <p>Welcome to our wedding website, we can’t wait to celebrate our special day with you.</p>
 
+          <p>We’ve created this website as a convenient and interactive way to share all of the important details in the lead up to our Canadian wedding.</p>
+
+          <p>So have fun, take a look around and don’t forget to RSVP!</p>
+
+          <p>Finally – thank you for your ongoing love and support. We are so excited to share this day with you and look forward to spending some quality time with all of our favourite people!’</p>
+
+          </Intro>
         </Section>
         <Section>
           <SectionTitle 
-            text="When & Where" 
-            subtitle="The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island."
+            text="Wedding Deets" 
+            subtitle=""
             icon={<Marker></Marker>}>
           </SectionTitle>
-          <p>You didn't think a simple flight to Canada would suffice did you?! Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+
+          <p>Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will start at 4:30pm on Wedneday, July 3rd.</p>
           
+          <p>Bodega Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+          
+          <h3>Helpful Details</h3>
+
+          <ul>
+            <li>
+              The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception. There is ample seating available at the ceremony site.
+            </li>
+            <li>
+              Bring sun screen, sunglasses, and keep an eye out for orcas in the channel!
+            </li>
+            <li>
+              The bar accepts cash & card payments. There are cash points available on the island towards Sturdies Bay.
+            </li>
+          </ul>
+
           <CountdownWrapper>
             <address>
               Bodega Ridge,<br />
@@ -258,9 +294,9 @@ const Index = () => (
               <h3>Tuesday, 3rd July</h3>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Arrive</h4>
-                <p>Your ferry will land at Sturdies Bay. </p>
+                <p>Grab a coffee and a treat from the great eateries in Sturdies Bay. If you have time, then drive the kilometre to Bellhouse Park, where you can sip while watching the ferries, the eagles and the pleasure boats in the pass. Then, head north to Bodega Ridge and check in to your cabins.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -269,9 +305,9 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+            <div className="description">
                 <h4>Welcome BBQ</h4>
-                <p>Starts @ 6pm</p>
+                <p>Settle in to island life at Bodega Ridge, kick back and enjoy a bbq and a few bevvies.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -283,9 +319,9 @@ const Index = () => (
               <h3>Wednesday, 2nd July</h3>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+            <div className="description">
                 <h4>Free Time</h4>
-                <p>Perhaps go for a morning hike up Mount Galiano? Hire a kayak from Montague Harbour? Take a whale-watching tour?</p>
+                <p>Perhaps spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -294,7 +330,7 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Wedding</h4>
                 <p>Starts at 4:30pm. The wedding site is a 5 minute walk up the hill, and features a beautiful panoramic view of the Gulf Islands.</p>
               </div>
@@ -305,7 +341,7 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Drinks & Canapes</h4>
                 <p></p>
               </div>
@@ -316,9 +352,9 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Dinner</h4>
-                <p></p>
+                <p>Menu details to follow. Please ensure you inform us of any dietary requirements in your RSVP.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -327,7 +363,7 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Partay</h4>
                 <p></p>
               </div>
@@ -341,7 +377,7 @@ const Index = () => (
               <h3>Thursday, 4th July</h3>
             </ScheduleItem>
             <ScheduleItem>
-              <div>
+              <div className="description">
                 <h4>Depart</h4>
                 <p></p>
               </div>
