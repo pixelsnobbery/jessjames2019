@@ -17,6 +17,8 @@ import Dinner from '-!svg-react-loader?name=Dinner!../images/dinner-icon.svg'
 import Ferry from '-!svg-react-loader?name=Ferry!../images/ferry-icon.svg'
 import Canapes from '-!svg-react-loader?name=Canapes!../images/canapes-icon.svg'
 
+import Map from '../images/map.png'
+
 import Button from '../components/button'
 import Section from '../components/layouts/section'
 import SectionTitle from '../components/layouts/section-title'
@@ -198,9 +200,9 @@ const Index = () => (
           <Intro>
           <p>Welcome to our wedding website, we can’t wait to celebrate our special day with you.</p>
 
-          <p>We’ve created this website as a convenient and interactive way to share all of the important details in the lead up to our Canadian wedding.</p>
+          <p>We’ve created this website as a convenient way to share all of the important details in the lead up to our Canadian wedding.</p>
 
-          <p>So have fun, take a look around and don’t forget to RSVP!</p>
+          <p>So have fun, take a look around and don’t forget to <a href="#">RSVP</a>!</p>
 
           <p>Finally – thank you for your ongoing love and support. We are so excited to share this day with you and look forward to spending some quality time with all of our favourite people!’</p>
 
@@ -213,10 +215,12 @@ const Index = () => (
             icon={<Marker></Marker>}>
           </SectionTitle>
 
-          <p>Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will start at 4:30pm on Wedneday, July 3rd.</p>
+          <p className="lead">Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will start at 4:30pm on Wedneday, July 3rd.</p>
           
           <p>Bodega Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
           
+          <img src={Map} alt="Map of Galiano Island" />
+
           <h3>Helpful Details</h3>
 
           <ul>
@@ -256,7 +260,7 @@ const Index = () => (
             icon={<Boat></Boat>}>
           </SectionTitle>
           <ContentBox>
-            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
+            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver. You must arrive at Tsawwassen Ferry Terminal no later than 45 minutes before your reserved departure.</p>
 
             <p>Renting a car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
 
@@ -399,16 +403,15 @@ const Index = () => (
             bgColor={Theme.neonBlue}
             color="#ffffff">
           </SectionTitle>
-          <p>There's plenty of top-notch accommodation on the Bodega Ridge property itself, a stones-throw away at Bodega Cove, or in one of several B&B's within a 10 minute walk away.</p>
-          <p>Bodega Ridge has 6 3-bedroom cabins available on-site. there’s also several cabins at Bodega Cove which sleeps a further 12.</p>
+          {/* <p>There's plenty of top-notch accommodation on the Bodega Ridge property itself, a stones-throw away at Bodega Cove, or in one of several B&B's within a 10 minute walk away.</p>
+          <p>Bodega Ridge has 6 3-bedroom cabins available on-site. there’s also several cabins at Bodega Cove which sleeps a further 12.</p> */}
           <TabsStyle>
           <Tabs>
           <div label="Bodega Ridge">
             <ContentBox>
             <h3>Bodega Ridge</h3>
-              <p>There are seven charming, self-contained log cabins, all with three bedrooms, living room, full kitchen and bath. Each cabin sleeps six comfortably, and all bedrooms have a queen-size bed with dreamy pillow-top mattress.</p>
-
-              <p>Take in the view from your cedar deck, have a long soak in the tub, or curl up in front of the wood stove.</p>
+              <p>We've reserved seven charming, self-contained log cabins, all with three bedrooms, living room, full kitchen and bath. Each cabin sleeps six comfortably, and all bedrooms have a queen-size bed with dreamy pillow-top mattress.</p>
+              <p>We highly recommend staying in these cabins as you'll be in the heart of the action.</p>
               <h4>Price per double room: $140/night</h4>
               <Slider>
                 <div data-src={BodegaRidge1} alt="Bodega Ridge"></div>

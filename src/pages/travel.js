@@ -92,6 +92,10 @@ const CardWrapper = styled.div`
         font-size: 1.4rem;
         transition: .8s font-size ease;
       }
+
+      p {
+        color: #999!important;
+      }
     
       &:hover {
         
@@ -153,7 +157,7 @@ const Itinerary = styled.ul`
 
     .content-box {
       background-color: #fff;
-      padding: 16px;
+      padding: 32px;
       order: 0;
       flex-basis: 40%;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -161,6 +165,12 @@ const Itinerary = styled.ul`
       h3 {
         margin-top: 0;
         
+      }
+
+      p {
+        color: #999;
+        line-height: 1.4rem;
+        font-size:.9rem;
       }
 
       &.animated {
@@ -352,6 +362,11 @@ const TravelPage = () => (
             <div className="content-spacer"></div>
           </li>
         </Itinerary>
+      </Section>
+
+      <Section>
+
+        <SectionTitle text="Heading on a US road trip?"></SectionTitle>
       </Section>
 
     </Layout>

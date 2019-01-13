@@ -342,5 +342,6 @@ template {
 
 p.lead {
   font-size:1.2rem;
-  color: #666;
+  line-height: 1.4em;
+  color: #999;
 }
