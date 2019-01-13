@@ -282,7 +282,7 @@ const Index = () => (
               </li>
             </ul>
 
-            <p>Please note: The welcome BBQ starts at 6pm on Tuesday 2nd July. Guests should aim to be on one of the 2 earlier ferries. Those departing on the 7:50PM ferry might not have much food left to choose from! </p>
+            <p>Please note: The welcome BBQ starts at 6pm on Tuesday July 2nd. Guests should aim to be on one of the 2 earlier ferries. Those departing on the 7:50PM ferry might not have much food left to choose from! </p>
 
             <Button text="View schedule & reserve ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html" bgColor={Theme.secondary}></Button>
           </ContentBox>
@@ -299,12 +299,12 @@ const Index = () => (
           {/* <Timeline></Timeline> */}
           <Schedule>
             <ScheduleItem>
-              <h3>Tuesday, 3rd July</h3>
+              <h3>Tuesday, July 2nd</h3>
             </ScheduleItem>
             <ScheduleItem>
               <div className="description">
                 <h4>Arrive</h4>
-                <p>Grab a coffee and a treat from the great eateries in Sturdies Bay. If you have time, then drive the kilometre to Bellhouse Park, where you can sip while watching the ferries, the eagles and the pleasure boats in the pass. Then, head north to Bodega Ridge and check in to your cabins.</p>
+                <p>Grab a coffee from Sturdies Bay. If you have time, then drive the kilometre to Bellhouse Park, where you might be able to see seals, eagles and orcas. Then, head north to Bodega Ridge and check in to your accommodation.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -315,7 +315,7 @@ const Index = () => (
             <ScheduleItem>
             <div className="description">
                 <h4>Welcome BBQ</h4>
-                <p>Settle in to island life at Bodega Ridge, kick back and enjoy a bbq and a few bevvies.</p>
+                <p>Settle in to island life at Bodega Ridge, kick back and enjoy a BBQ and a few bevvies.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -324,12 +324,12 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Wednesday, 2nd July</h3>
+              <h3>Wednesday, July 3rd</h3>
             </ScheduleItem>
             <ScheduleItem>
             <div className="description">
                 <h4>Free Time</h4>
-                <p>Perhaps spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
+                <p>We're thinking of organising an optional hike around Bodega Ridge Provincial Park. Let us know if you're interested. Otherwise, spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -340,7 +340,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Wedding</h4>
-                <p>Starts at 4:30pm. The wedding site is a 5 minute walk up the hill, and features a beautiful panoramic view of the Gulf Islands.</p>
+                <p>The ceremony will start at around 4pm. The wedding site is a short walk up to the bluff, and features a beautiful panoramic view of the Gulf Islands.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -351,7 +351,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Drinks & Canapes</h4>
-                <p></p>
+                <p>Enjoy celebratory drinks and nibbles whilst listening to some local acoustics.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -362,7 +362,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Dinner</h4>
-                <p>Menu details to follow. Please ensure you inform us of any dietary requirements in your RSVP.</p>
+                <p>The menu will feature as many Galiano grown ingredients as possible, using the best local farms and designed around seasonal availability. Many herbs and fruit come right off the Bodega Ridge property itself. Please ensure you inform us of any dietary requirements in your RSVP.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -382,12 +382,12 @@ const Index = () => (
               </div>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Thursday, 4th July</h3>
+              <h3>Thursday, July 4th</h3>
             </ScheduleItem>
             <ScheduleItem>
               <div className="description">
                 <h4>Depart</h4>
-                <p></p>
+                <p>Depending on numbers, and people's departure plans, we may organise a brunch. </p>
               </div>
               <div className="meta">
                 <span className="icon">
