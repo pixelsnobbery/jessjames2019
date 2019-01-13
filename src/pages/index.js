@@ -188,7 +188,7 @@ const Index = () => (
         <HomeHero></HomeHero>
         <div className="site-title">
           <Logo className="logo"></Logo>
-          <p>Galiano Island, Canada</p>
+          <p>Galiano Island, BC</p>
 
           <p className="date">July 2nd  - 4th 2019</p>
 
@@ -373,7 +373,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Partay</h4>
-                <p></p>
+                <p>Dance the night away to your favourite tunes in the lodge.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -387,7 +387,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Depart</h4>
-                <p>Depending on numbers, and people's departure plans, we may organise a brunch. </p>
+                <p>Depending on numbers, and people's departure plans, we may organise a brunch at Bodega Ridge. Otherwise after emotional goodbyes, you can carry on with your Canadian travels</p>
               </div>
               <div className="meta">
                 <span className="icon">

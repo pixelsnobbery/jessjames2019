@@ -63,7 +63,7 @@ const Accommodation = () => (
 
         <Button text="Find out more" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html" bgColor={Theme.secondary}></Button>
       
-        <p>Note: Anyone visiting the US during their trip will need to apply for an <a href="https://esta.cbp.dhs.gov/esta/" target="_blank" rel="nofollow noreferrer">ESTA</a>.</p>
+        <p>Note: Anyone visiting the US during their trip will also need to apply for an <a href="https://esta.cbp.dhs.gov/esta/" target="_blank" rel="nofollow noreferrer">ESTA</a>.</p>
       </Section>
 
       <Section>
