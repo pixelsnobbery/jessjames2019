@@ -265,8 +265,10 @@ const Index = () => (
             <p>Renting a car is recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent. However if it's not possible for you to rent a car, please get in touch with us and we'll be able to coordinate lifts.</p>
 
             <p>There are 3 ferries per day to Galiano Island. If travelling by car, you should make a ferry reservation. You must arrive at Tsawwassen Ferry Terminal no later than 40 minutes before your departure for your reservation to be valid.</p>
+
+            <p>If you are travelling by foot, reservations are not needed, however you should arrive 30 minutes before.</p>
             
-            <p> Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
+            <p>Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
 
             <ul>
               <li>
@@ -276,7 +278,7 @@ const Index = () => (
                 1:40PM
               </li>
               <li>
-                7:50PM (High chance you'll have missed the BBQ if you get this ferry. We'll save you a burger!)
+                7:50PM
               </li>
             </ul>
 
