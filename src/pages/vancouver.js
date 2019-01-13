@@ -76,7 +76,7 @@ const Travel = () => (
 
         <h3>Downtown</h3>
 
-        <p>The main feature of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbor, Granville Street, features numerous independent boutiques. Granville Street is also known as "Theater Row" because of the dozens of concert, theater and movie venues that are located there.</p>
+        <p>One of the main feature of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
       
         <h3>Kitsilano</h3>
         <p>Aaaah Kitsilano. Where the beautiful people live. (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>

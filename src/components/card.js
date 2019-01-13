@@ -8,6 +8,7 @@ const CardDiv = styled.div`
     background-color: #fff;
     margin: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 16px;
 
     > img {
         margin: 0;

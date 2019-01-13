@@ -291,7 +291,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Whistler</h3>
-              <p>Finally, you can see for yourselves why Jess fell in love with this place. Named for the furry marmots that populate the area and whistle like deflating balloons, this gabled alpine village and 2010 Olympics venue is one of the world's most popular ski resorts. Summer visitors now outnumber their ski-season equivalents, with many lured by the area's scenic hiking, biking and thrill-popping outdoor adventures.</p>
+              <p>Finally, you can see for yourselves why Jess fell in love with this place. Perhaps named for the furry marmots that populate the area and whistle like deflating balloons, this gabled alpine village and 2010 Olympics venue is one of the world's most popular ski resorts. Summer visitors now outnumber their ski-season equivalents, with many lured by the area's scenic hiking, biking and thrill-popping outdoor adventures.</p>
               <img src={WhistlerItinerary} alt="Whistler"></img>
             </div>
             <h4 className="wow">Day 4</h4>
