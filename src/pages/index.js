@@ -260,11 +260,11 @@ const Index = () => (
             icon={<Boat></Boat>}>
           </SectionTitle>
           <ContentBox>
-            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver (60 minutes by public transit). You must arrive at Tsawwassen Ferry Terminal no later than 45 minutes before your reserved departure.</p>
+            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of the city (60 minutes by public transit). </p>
 
             <p>Renting a car is recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent. However if it's not possible for you to rent a car, please get in touch with us and we'll be able to coordinate lifts.</p>
 
-            <p>There are 3 ferries per day to Galiano Island. If travelling by car, you should make a ferry reservation.</p>
+            <p>There are 3 ferries per day to Galiano Island. If travelling by car, you should make a ferry reservation. You must arrive at Tsawwassen Ferry Terminal no later than 40 minutes before your departure for your reservation to be valid.</p>
             
             <p> Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
 
