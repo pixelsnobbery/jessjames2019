@@ -225,7 +225,7 @@ const Index = () => (
 
           <ul>
             <li>
-              The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception. There is ample seating available at the ceremony site.
+              The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception.
             </li>
             <li>
               Bring sun screen, sunglasses, and keep an eye out for orcas in the channel!
@@ -260,11 +260,13 @@ const Index = () => (
             icon={<Boat></Boat>}>
           </SectionTitle>
           <ContentBox>
-            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver. You must arrive at Tsawwassen Ferry Terminal no later than 45 minutes before your reserved departure.</p>
+            <p>Galiano Island is a 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver (60 minutes by public transit). You must arrive at Tsawwassen Ferry Terminal no later than 45 minutes before your reserved departure.</p>
 
-            <p>Renting a car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
+            <p>Renting a car is recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent. However if it's not possible for you to rent a car, please get in touch with us and we'll be able to coordinate lifts.</p>
 
-            <p>There are just 3 ferries per day to Galiano Island. Reserving a space on the ferry is HIGHLY recommended. Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
+            <p>There are 3 ferries per day to Galiano Island. If travelling by car, you should make a ferry reservation.</p>
+            
+            <p> Ferries depart Tsawwassen on Tuesday, July 2nd at the following times:</p>
 
             <ul>
               <li>
