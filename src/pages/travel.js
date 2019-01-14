@@ -445,6 +445,7 @@ const TravelPage = () => (
             <h4 className="wow">Day 12</h4>
             <div className="content-spacer"></div>
           </li>
+          
         </Itinerary>
       </Section>
 
