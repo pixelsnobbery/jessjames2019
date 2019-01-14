@@ -13,10 +13,6 @@ const typography = new Typography({
       name: 'Lato',
       styles: ['400', '400i', '700', '700i'],
     },
-    {
-      name: 'Aisha Latin',
-      styles: ['400'],
-    },
   ],
   headerFontFamily: [
     'Lora',
@@ -43,11 +39,12 @@ const typography = new Typography({
       content: '"— "',
     },
     'h1,h2,h3,h4,h5,h6': {
-      marginTop: rhythm(1),
+      marginTop: rhythm(2),
     },
-    h1: {
-      ...scale(3),
-    },
+    // h1: {
+    //   ...scale(6 / 5),
+    //   letterSpacing: '-2px',
+    // },
     h2: {
       ...scale(1.2),
     },
