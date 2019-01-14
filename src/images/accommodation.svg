@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 81 66" class="accommodation">
+  <defs>
+    <style>
+
+      .accommodation .cls-2, .accommodation .cls-4, .accommodation .cls-5, .accommodation .cls-6, .accommodation .cls-8 {
+        fill: none;
+      }
+
+      .accommodation .cls-2, .accommodation .cls-4, .accommodation .cls-5, .accommodation .cls-6 {
+        stroke: #fff;
+      }
+
+      .accommodation .cls-2 {
+        stroke-width: 6px;
+      }
+
+      .accommodation .cls-3 {
+        fill: #fff;
+      }
+
+      .accommodation .cls-4 {
+        stroke-width: 5px;
+      }
+
+      .accommodation .cls-5 {
+        stroke-width: 4px;
+      }
+
+      .accommodation .cls-6 {
+        stroke-width: 8px;
+      }
+
+      .accommodation .cls-7 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="accommodation" class="cls-1">
+    <g id="Rectangle_1" data-name="Rectangle 1" class="cls-2" transform="translate(8.048 28.599)">
+      <rect class="cls-7" width="64.987" height="36.924" rx="4"/>
+      <rect class="cls-8" x="3" y="3" width="58.987" height="30.924" rx="1"/>
+    </g>
+    <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-3" width="14.77" height="24" transform="translate(33.157 39.461)"/>
+    <line id="Line_1" data-name="Line 1" class="cls-4" x2="17.724" transform="translate(53.096 42.415)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-4" x2="17.724" transform="translate(10.264 42.415)"/>
+    <line id="Line_3" data-name="Line 3" class="cls-4" x2="17.724" transform="translate(10.264 52.708)"/>
+    <line id="Line_4" data-name="Line 4" class="cls-4" x2="17.724" transform="translate(53.096 52.708)"/>
+    <path id="Path_1" data-name="Path 1" class="cls-2" d="M1147.905,4074.683,1186.7,4044.7l38.325,29.984" transform="translate(-1145.905 -4040.698)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-5" x1="0.041" y2="24.363" transform="translate(40.5 4.66)"/>
+    <line id="Line_6" data-name="Line 6" class="cls-6" y2="14.77" transform="translate(64.173 8.137)"/>
+    <line id="Line_7" data-name="Line 7" class="cls-5" x1="15.482" y2="12.314" transform="translate(42.018 17.024)"/>
+    <line id="Line_8" data-name="Line 8" class="cls-5" x2="15.303" y2="12.314" transform="translate(24.5 17.024)"/>
+  </g>
+</svg>

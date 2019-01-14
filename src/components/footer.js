@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import Button from './button'
 
 import FooterDivider from '-!svg-react-loader?name=LogoTop!../images/footer_divider.svg';
+
+import HeaderBanner from '-!svg-react-loader?name=HeaderBanner!../images/banner.svg';
 // import { Link } from 'gatsby'
 // import Navigation from './navigation'
 
-const Foot = styled.footer`
-    
-    
+const Foot = styled.footer` 
     z-index: 3;
     position: relative;
     .hidden {
@@ -33,6 +33,9 @@ const Foot = styled.footer`
             padding: 8px 16px;
             text-align: center;
             margin: 0 auto 32px auto;
+            text-transform: uppercase;
+            position: relative;
+
         }
 
         form {
@@ -48,15 +51,12 @@ const Foot = styled.footer`
             }
             
             .fieldWrapper {
-                flex-basis: 30%;
+                flex-basis: 48%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 text-align: center;
                 margin-bottom: 32px;
-                @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-                    margin-bottom: 0;
-                }
                 span {
                     font-weight: 200;
                 }
@@ -99,8 +99,10 @@ const Foot = styled.footer`
                 margin: 32px 0 0 0;
 
                 a {
-                    width: 200px;
-                    
+                    font-weight: bold;
+                    &:hover, &:active {
+                        background-color: #333!important;
+                    }
                 }
             }
         }
@@ -111,16 +113,27 @@ const Foot = styled.footer`
         
     }
 `
+const HeaderBannerStyle = styled.span`
+    position:absolute;
+    right: -35px;
 
-const Footer = () => (
+    top: 5px;
+    height: 48px;
+    width: 48px;
+`
+const FooterElement = () => (
     
   <Foot>
     <a name="rsvp" href="#rsvp" className="hidden">RSVP</a>
     <FooterDivider></FooterDivider>
     <div>
         <div>
-        <h3>Will you be joining us?</h3>
-        <form method="post" name="rsvp" data-netlify="true">
+        <h3>
+            <HeaderBannerStyle flipped={true}><HeaderBanner></HeaderBanner></HeaderBannerStyle>    
+            Will you be joining us?
+            <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
+        </h3>
+        <form method="post" name="rsvp" id="rsvp" action="/success" data-netlify="true">
             <div className="fieldWrapper">
                 <span>We're stoked to have you as</span>
                 <h4>Our Guest</h4>
@@ -131,18 +144,30 @@ const Footer = () => (
                 <span>Please tell us more about</span>
                 <h4>Your entourage</h4>
                 <span className="sub">So we know how many are coming</span>
-                <input name="number_of_adults" id="number_of_adults" rows="5" placeholder="Number of adults" />
-                <input name="number_of_kids" id="number_of_kids" rows="5" placeholder="Number of kids" />
+                <input name="number_of_adults" id="number_of_adults" placeholder="Number of adults" />
+                <input name="number_of_kids" id="number_of_kids" placeholder="Number & ages of kids" />
             </div>
             <div className="fieldWrapper">
-                <span>Would you like to include</span>
-                <h4>A Message</h4>
-                <span className="sub">Song requests, dietary requirements, praise and gratitude, etc</span>
-                <textarea name="message" id="message" rows="5"></textarea>
+                <span>Let us know any</span>
+                <h4>Dietary requirements</h4>
+                <span className="sub">Dietary requirements and intolerances</span>
+                <textarea name="diet" id="diet" rows="5"></textarea>
+            </div>
+            <div className="fieldWrapper">
+                <span>What gets you up</span>
+                <h4>On the dancefloor?</h4>
+                <span className="sub">Song requests. We won't judge  you.</span>
+                <textarea name="songs" id="songs" rows="5"></textarea>
+            </div>
+            <div className="fieldWrapper">
+                <span>Tell us about</span>
+                <h4>Accommodation</h4>
+                <span className="sub">Would you like to stay on-site?</span>
+                <textarea name="accommodation" id="accommodation" rows="5"></textarea>
             </div>
             <ul className="actions">
                 <li>
-                    <Button text="Send My RSVP" href="#"></Button>
+                    <input type="submit" value="Send my RSVP" className="special" />
                 </li>
             </ul>
         </form>
@@ -151,4 +176,16 @@ const Footer = () => (
   </Foot>
 )
 
-export default Footer
+export default class Footer extends React.Component {
+    // constructor(props) {
+    //     super(props)
+    //     this.myRef = React.createRef() 
+    // }
+
+    render () {
+      return (
+        <FooterElement ref="rsvp"></FooterElement>
+      )
+    };
+  };
+  

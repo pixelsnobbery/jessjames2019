@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Button from './button'
 
-import Logo from '-!svg-react-loader?name=LogoTop!../images/logo-top.svg';
+import Logo from '-!svg-react-loader?name=LogoTop!../images/small-logo.svg';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -11,16 +11,23 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   overflow: hidden;
-  padding: 24px 8px 8px 8px;
+  padding: 24px 8px 8px 24px;
   z-index: 10;
   border-bottom: ${props => props.isTop ? "0px solid #eee" : "1px solid #eee"};
   background-color: ${props => props.isTop ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)"};
   box-shadow: ${props => props.isTop ? "0 0 0 rgba(0,0,0,0)" : "0 1px 1px rgba(0,0,0,0.05)"};
   color: ${props => props.isTop ? "black" : "black"};
-
+  h1 {
+    line-height: 0;
+    padding-bottom: 16px;
+  }
   svg {
-    width: 200px;
-    display: ${props => props.isTop ? "none" : "block"};
+    display: ${props => props.noLogo ? 'none' : 'block'}!important;
+    width: 50px;
+    path {
+      fill: ${props => props.isTop ? props.theme.white : '#444'}!important;
+    }
+    
   }
 
   nav {
@@ -35,12 +42,19 @@ const StyledHeader = styled.header`
         margin: 0;
         li {
             margin-right: 32px;
+            text-transform:  uppercase;
             a:link, a:visited {
                 color: ${props => props.isTop ? props.theme.white : '#444'};
                 text-decoration: none;
+                padding-bottom: 8px;
+                font-size: .9rem;
             }
             a:hover, a:active {
-                color: #333;
+                color: ${props => props.theme.primary};
+            }
+
+            a.active {
+              border-bottom: 3px solid ${props => props.isTop ? props.theme.white : '#444'};
             }
         }
     }
@@ -51,10 +65,16 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    display: ${props => props.noLogo ? 'none' : 'block'};
+  }
+
+
 `
 
-const HeaderElement = ({ siteTitle, isTop }) => (
-  <StyledHeader className={siteTitle} isTop={isTop}>
+const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
+  <StyledHeader className={siteTitle} isTop={isTop} noLogo={noLogo}>
     
     <Container>
     
@@ -67,23 +87,26 @@ const HeaderElement = ({ siteTitle, isTop }) => (
             textDecoration: 'none',
           }}
         >
-          <Logo></Logo>
+          <Logo noLogo={noLogo}></Logo>
         </Link>
         
       </h1>
       <nav>
         <ul>
           <li>
-              <Link to="/">Home</Link>
+              <Link to="/" activeClassName="active">Wedding</Link>
           </li>
           <li>
-              <Link to="/wedding">Wedding</Link>
+            <Link to="/accommodation" activeClassName="active">Accommodation</Link>
           </li>
           <li>
-              <Link to="/accommodation">Accommodation</Link>
+              <Link to="/galiano" activeClassName="active">Galiano</Link>
           </li>
           <li>
-              <Link to="/travel">Travel</Link>
+              <Link to="/getting-here" activeClassName="active">Getting to Canada</Link>
+          </li>
+          <li>
+              <Link to="/travel" activeClassName="active">Travel</Link>
           </li>
           <li>
               <Button href="#rsvp" text="RSVP"></Button>
@@ -97,17 +120,20 @@ const HeaderElement = ({ siteTitle, isTop }) => (
 )
 
 export default class Header extends React.Component {
+  
   state = {
     isTop: true,
+    noLogo: this.props.noLogo
   };
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 200;
+      const isTop = window.scrollY < 500;
       if (isTop !== this.state.isTop) {
           this.setState({ isTop })
       }
     });
+
   }
   componentWillUnmount() {
     document.removeEventListener('scroll', () => {
@@ -116,7 +142,8 @@ export default class Header extends React.Component {
   }
   render () {
     return (
-      <HeaderElement isTop={this.state.isTop}></HeaderElement>
+      <HeaderElement isTop={this.state.isTop} noLogo={this.state.noLogo}></HeaderElement>
     )
+
   };
 };
