@@ -167,7 +167,7 @@ const FooterElement = () => (
             </div>
             <ul className="actions">
                 <li>
-                    <Button type="submit">Send my RSVP</Button>
+                    <button type="submit">Send my RSVP</button>
                 </li>
             </ul>
         </form>
