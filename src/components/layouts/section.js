@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const SectionElement = styled.section` 
 padding: 96px 16px;
+width: 100%;
 @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
   padding-left:0;
   padding-right: 0;

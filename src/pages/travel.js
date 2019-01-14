@@ -65,7 +65,10 @@ const Hero = styled.div`
     z-index: 3;
     font-size: 1.8rem;
     text-align: center;
-    max-width: 500px;
+    width: 100%;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      max-width: 500px;
+    }
     font-weight: 200;
   }
 `
@@ -135,10 +138,17 @@ const Itinerary = styled.ul`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  -webkit-padding-start: 0;
 
   li {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      flex-direction: row;
+    }
 
     h4 {
       width: 80px;
@@ -171,7 +181,9 @@ const Itinerary = styled.ul`
       background-color: #fff;
       padding: 32px;
       order: 0;
-      flex-basis: 40%;
+      @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      width: 40%;
+      }
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 
       h3 {
@@ -445,7 +457,7 @@ const TravelPage = () => (
             <h4 className="wow">Day 12</h4>
             <div className="content-spacer"></div>
           </li>
-          
+
         </Itinerary>
       </Section>
 

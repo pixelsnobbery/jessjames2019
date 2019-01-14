@@ -59,6 +59,10 @@ const Hero = styled.div`
     right: 0;
     left: 0;
     width: 100%;
+
+    svg {
+      width: 80%;
+    }
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       top: 0;
       bottom: initial;
@@ -75,6 +79,7 @@ const Hero = styled.div`
     padding-top: 64px;
     font-family: 'Aisha Latin';
     font-size: 2rem;
+
 
     p {
       color: ${Theme.primary}!important;
@@ -116,15 +121,6 @@ const CountdownWrapper = styled.div`
   }
 `
 
-const Intro = styled.div`
-  p {
-    font-family: 'Lora';
-    font-size: 1.3rem;
-    text-align: center;
-    color: #829EBA;
-  }
-`
-
 const Index = () => (
   <ThemeProvider theme={Theme}>
     <Layout location="/" noLogo={true}>
@@ -140,18 +136,7 @@ const Index = () => (
         </div>
         <Overlay></Overlay>
       </Hero>
-        <Section bgColor={Theme.paleBlue} skewY="skewY(0deg)">
-          <Intro>
-          <p>Welcome to our wedding website, we can’t wait to celebrate our special day with you.</p>
 
-          <p>We’ve created this website as a convenient way to share all of the important details in the lead up to our Canadian wedding.</p>
-
-          <p>So have fun, take a look around and don’t forget to <a href="#">RSVP</a>!</p>
-
-          <p>Finally – thank you for your ongoing love and support. We are so excited to share this day with you and look forward to spending some quality time with all of our favourite people!’</p>
-
-          </Intro>
-        </Section>
         <Section>
           <SectionTitle 
             text="Wedding Deets" 

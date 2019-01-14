@@ -137,16 +137,9 @@ const FooterElement = () => (
                 <input type="hidden" name="form-name" value="rsvp" />
                 <div className="fieldWrapper">
                     <span>We're stoked to have you as</span>
-                    <h4>Our Guest</h4>
-                    <span className="sub">Please enter your name</span>
+                    <h4>Our Guests</h4>
+                    <span className="sub">Please enter your names, and names/ages of any children attending</span>
                     <textarea name="name" id="name" rows="5"></textarea>
-                </div>
-                <div className="fieldWrapper"> 
-                    <span>Please tell us more about</span>
-                    <h4>Your entourage</h4>
-                    <span className="sub">So we know how many are coming</span>
-                    <input name="number_of_adults" id="number_of_adults" placeholder="Number of adults" />
-                    <input name="number_of_kids" id="number_of_kids" placeholder="Number & ages of kids" />
                 </div>
                 <div className="fieldWrapper">
                     <span>Let us know any</span>

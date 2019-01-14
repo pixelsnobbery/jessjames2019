@@ -5,7 +5,10 @@ const CountdownDiv = styled.div`
     display: flex;
     justify-content: center;
     font-family: 'Lora';
-    font-size: 3rem;
+    font-size: 2rem;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+      font-size: 3rem;
+    }
     .Countdown-col {
         margin-right: 16px;
         background-color: ${props => props.theme.primary};
