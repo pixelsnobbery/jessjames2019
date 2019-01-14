@@ -128,49 +128,50 @@ const FooterElement = () => (
     <FooterDivider></FooterDivider>
     <div>
         <div>
-        <h3>
-            <HeaderBannerStyle flipped={true}><HeaderBanner></HeaderBanner></HeaderBannerStyle>    
-            Will you be joining us?
-            <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
-        </h3>
-        <form method="post" name="rsvp" id="rsvp" action="/success" data-netlify="true">
-            <div className="fieldWrapper">
-                <span>We're stoked to have you as</span>
-                <h4>Our Guest</h4>
-                <span className="sub">Please enter your name</span>
-                <textarea name="name" id="name" rows="5"></textarea>
-            </div>
-            <div className="fieldWrapper"> 
-                <span>Please tell us more about</span>
-                <h4>Your entourage</h4>
-                <span className="sub">So we know how many are coming</span>
-                <input name="number_of_adults" id="number_of_adults" placeholder="Number of adults" />
-                <input name="number_of_kids" id="number_of_kids" placeholder="Number & ages of kids" />
-            </div>
-            <div className="fieldWrapper">
-                <span>Let us know any</span>
-                <h4>Dietary requirements</h4>
-                <span className="sub">Dietary requirements and intolerances</span>
-                <textarea name="diet" id="diet" rows="5"></textarea>
-            </div>
-            <div className="fieldWrapper">
-                <span>What gets you up</span>
-                <h4>On the dancefloor?</h4>
-                <span className="sub">Song requests. We won't judge  you.</span>
-                <textarea name="songs" id="songs" rows="5"></textarea>
-            </div>
-            <div className="fieldWrapper">
-                <span>Tell us about</span>
-                <h4>Accommodation</h4>
-                <span className="sub">Would you like to stay on-site?</span>
-                <textarea name="accommodation" id="accommodation" rows="5"></textarea>
-            </div>
-            <ul className="actions">
-                <li>
-                    <input type="submit" value="Send my RSVP" className="special" />
-                </li>
-            </ul>
-        </form>
+            <h3>
+                <HeaderBannerStyle flipped={true}><HeaderBanner></HeaderBanner></HeaderBannerStyle>    
+                Will you be joining us?
+                <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
+            </h3>
+            <form method="post" name="rsvp" action="/success" data-netlify="true">
+            <input type="hidden" name="rsvp" value="contact" />
+                <div className="fieldWrapper">
+                    <span>We're stoked to have you as</span>
+                    <h4>Our Guest</h4>
+                    <span className="sub">Please enter your name</span>
+                    <textarea name="name" id="name" rows="5"></textarea>
+                </div>
+                <div className="fieldWrapper"> 
+                    <span>Please tell us more about</span>
+                    <h4>Your entourage</h4>
+                    <span className="sub">So we know how many are coming</span>
+                    <input name="number_of_adults" id="number_of_adults" placeholder="Number of adults" />
+                    <input name="number_of_kids" id="number_of_kids" placeholder="Number & ages of kids" />
+                </div>
+                <div className="fieldWrapper">
+                    <span>Let us know any</span>
+                    <h4>Dietary requirements</h4>
+                    <span className="sub">Dietary requirements and intolerances</span>
+                    <textarea name="diet" id="diet" rows="5"></textarea>
+                </div>
+                <div className="fieldWrapper">
+                    <span>What gets you up</span>
+                    <h4>On the dancefloor?</h4>
+                    <span className="sub">Song requests. We won't judge  you.</span>
+                    <textarea name="songs" id="songs" rows="5"></textarea>
+                </div>
+                <div className="fieldWrapper">
+                    <span>Tell us about</span>
+                    <h4>Accommodation</h4>
+                    <span className="sub">Would you like to stay on-site?</span>
+                    <textarea name="accommodation" id="accommodation" rows="5"></textarea>
+                </div>
+                <ul className="actions">
+                    <li>
+                        <input type="submit" value="Send my RSVP" />
+                    </li>
+                </ul>
+            </form>
         </div>
     </div>
   </Foot>
