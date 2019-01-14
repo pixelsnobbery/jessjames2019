@@ -15,7 +15,7 @@ import Dinner from '-!svg-react-loader?name=Dinner!../images/dinner-icon.svg'
 import Ferry from '-!svg-react-loader?name=Ferry!../images/ferry-icon.svg'
 import Canapes from '-!svg-react-loader?name=Canapes!../images/canapes-icon.svg'
 
-import Map from '../images/map.png'
+
 
 import Button from '../components/button'
 import Section from '../components/layouts/section'
@@ -30,12 +30,16 @@ import BarbecueImage from '-!svg-react-loader?name=Icon!../images/barbecue.svg';
 import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg';
 import PartyImage from '-!svg-react-loader?name=Icon!../images/party-icon.svg';
 
+import Map from '../images/map.png'
+
 import Overlay from '../components/overlay';
 
 
 
 const Hero = styled.div`
+@media only screen and (min-width: ${props => props.theme.aboveMobile}) {
   height: 85vh;
+}
   display:flex;
   flex-direction:column;
   justify-content: flex-start;
@@ -48,14 +52,25 @@ const Hero = styled.div`
     color:#fff;
   }
   .site-title {
-    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    /* @media only screen and (min-width: ${props => props.theme.aboveMobile}) { */
     background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 64px;
-    z-index: 2;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      top: 0;
+      bottom: initial;
+      left: 64px;
+      right: initial;
+      width: 330px;
+      position: absolute;
+    }
+    z-index: 4;
     padding: 32px;
-    width: 330px;
+    
+
     text-align: center;
     padding-top: 64px;
     font-family: 'Aisha Latin';
@@ -74,7 +89,7 @@ const Hero = styled.div`
     .ghost {
       padding-bottom: 0;
     }
-  }
+  /* } */
   
   }
 
@@ -147,8 +162,8 @@ const Index = () => (
           <p className="lead">Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will be around 4pm on Wedneday, July 3rd.</p>
           
           <p>Bodega Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
-          
-          <img src={Map} alt="Map of Galiano Island" />
+
+          <img src={Map} alt="map" />
 
           <h3>Helpful Details</h3>
 
@@ -200,7 +215,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Arrive</h4>
-                <p>Grab a coffee from Sturdies Bay. If you have time, then drive the kilometre to Bellhouse Park, where you might be able to see seals, eagles and orcas. Then, head north to Bodega Ridge and check in to your accommodation.</p>
+                <p>Grab a coffee from Sturdies Bay. If you have time, drive the kilometre to Bellhouse Park where you might be able to see seals, eagles and orcas. Then, head north to Bodega Ridge and check in to your accommodation.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -225,7 +240,7 @@ const Index = () => (
             <ScheduleItem>
             <div className="description">
                 <h4>Free Time</h4>
-                <p>We're thinking of organising an optional hike around Bodega Ridge Provincial Park. Let us know if you're interested. Otherwise, spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
+                <p>We're thinking of organising an optional hike around Bodega Ridge Provincial Park - please let us know if you're interested. Otherwise, spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -236,7 +251,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Wedding</h4>
-                <p>The ceremony will start at around 4pm. The wedding site is a short walk up to the bluff, and features a beautiful panoramic view of the Gulf Islands.</p>
+                <p>The ceremony will start around 4pm. The wedding site is a short walk up to the bluff, and features a beautiful panoramic view of the Gulf Islands.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -287,7 +302,7 @@ const Index = () => (
               </div>
               <div className="meta">
                 <span className="icon">
-                  <Boat></Boat>
+                  <Ferry></Ferry>
                 </span>
               </div>
             </ScheduleItem>

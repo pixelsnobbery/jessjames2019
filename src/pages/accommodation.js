@@ -59,7 +59,7 @@ const Accommodation = () => (
             color="#ffffff">
           </SectionTitle>
 
-              <p>There are seven charming, self-contained log cabins right on-site at Bodega Ridge. Each has three spacious double bedrooms, living room, full kitchen and bathroom. We have reserved these for our guests, and they will be available on a first-come, first-serve basis. Please indicate if you'd like to stay in a cabin in your RSVP and we'll do our best to accommodate you.</p>
+              <p>There are seven charming log cabins right on-site at Bodega Ridge. Each has three spacious double bedrooms including one larger 'family room', living room, full kitchen and bathroom. We have reserved these rooms for our guests, and they will be available on a first-come, first-serve basis. We are hoping as many guests as possible will be able to stay right on-site with us. Please indicate if you'd like to stay in a cabin room in your RSVP and we'll do our best to accommodate you.</p>
 
               <h4>Price per double room: $140/night</h4>
 
@@ -74,10 +74,13 @@ const Accommodation = () => (
           </Section>
 
           <Section skewY="0deg">
-            <SectionTitle text="Bodega Cove"></SectionTitle>
+
+          <SectionTitle text="Other Options"></SectionTitle>
+            
+            <h3>Bodega Cove</h3>
 
 
-              <p>A 5-minute walk from Bodega Ridge, and the ceremony site, Bodega Cove consists of 5 cedar cabins. There are two designs: romantic one bedroom units and more spacious two bedroom cabins ideal for two couples or a small family.</p>
+              <p>A 5-minute walk from Bodega Ridge, Bodega Cove consists of 5 cedar cabins. There are two designs: romantic one bedroom units and more spacious two bedroom cabins ideal for two couples or a small family. If you're interested in one of these cabins please contact us.</p>
             
               <ul>
         <li>
@@ -92,14 +95,16 @@ const Accommodation = () => (
 
       <img src={BodegaCove} alt="Bodega Cove" />
 
-          </Section>
-
-          <Section bgColor="#F6F9FC" skewY="0deg">
-
-            <SectionTitle text="Other Options"></SectionTitle>
+      <h3>Rest of Galiano</h3>
+            
  
             <CardWrapper>
 
+              <Card>
+                <h4><a href="https://serenitybythesea.com/">Serenity by the Sea</a></h4>
+                <p><em>Jess & James stayed here in 2014</em></p>
+                <p>Several suites nestled among trees on a knoll overlooking the ocean. About 15 minutes drive from Bodega Ridge.</p>
+              </Card>
               <Card>
                 <h4><a href="https://abnb.me/9soohDPSNL">Private Oceanfront Studio</a></h4> 
                 <p>Close to Bodega Cove. Modern waterfront studio suite with private entrance. Large deck with views of Trincomali Channel, surrounded by fir and arbutus trees. Go for a swim in the ocean. Take an outdoor shower. Watch whales, eagles, hummingbirds, sea lions and otters.</p>

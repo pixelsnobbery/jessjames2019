@@ -145,19 +145,25 @@ const FooterElement = () => (
                 <h4>Your entourage</h4>
                 <span className="sub">So we know how many are coming</span>
                 <input name="number_of_adults" id="number_of_adults" rows="5" placeholder="Number of adults" />
-                <input name="number_of_kids" id="number_of_kids" rows="5" placeholder="Number of kids" />
+                <input name="number_of_kids" id="number_of_kids" rows="5" placeholder="Number & ages of kids" />
             </div>
             <div className="fieldWrapper">
                 <span>Let us know any</span>
                 <h4>Dietary requirements</h4>
-                <span className="sub">Dietary requirements and intolerances of note</span>
-                <textarea name="message" id="message" rows="5"></textarea>
+                <span className="sub">Dietary requirements and intolerances</span>
+                <textarea name="diet" id="diet" rows="5"></textarea>
             </div>
             <div className="fieldWrapper">
                 <span>What gets you up</span>
                 <h4>On the dancefloor?</h4>
                 <span className="sub">Song requests. We won't judge  you.</span>
-                <textarea name="message" id="message" rows="5"></textarea>
+                <textarea name="songs" id="songs" rows="5"></textarea>
+            </div>
+            <div className="fieldWrapper">
+                <span>Tell us about</span>
+                <h4>Accommodation</h4>
+                <span className="sub">Would you like to stay on-site?</span>
+                <textarea name="accommodation" id="accommodation" rows="5"></textarea>
             </div>
             <ul className="actions">
                 <li>

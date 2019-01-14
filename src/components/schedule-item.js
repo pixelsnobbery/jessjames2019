@@ -6,8 +6,12 @@ const ScheduleItemLi = styled.li`
     justify-content: flex-start;
     
     .icon {
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
+        @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+            width: 150px;
+            height: 150px;
+        }
         display: flex;
         background: ${props => props.theme.white};
         border-radius: 75px;

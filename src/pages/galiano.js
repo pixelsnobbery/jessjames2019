@@ -10,7 +10,7 @@ import Overlay from '../components/overlay'
 import SectionTitle from '../components/layouts/section-title';
 import Button from '../components/button'
 
-import Galiano1 from '../images/galiano-1.jpg'
+import Galiano1 from '../images/kayak.jpg'
 import Galiano2 from '../images/galiano-2.jpg'
 import Galiano3 from '../images/galiano-3.jpg'
 import Galiano4 from '../images/galiano-4.jpg'
@@ -25,6 +25,7 @@ const Hero = styled.div`
   flex-direction:column;
   justify-content: center;
   align-content: center;
+  align-items: center;
   position: relative;
 
   h1, h2 {
@@ -35,6 +36,15 @@ const Hero = styled.div`
   h1 {
     font-size: 4rem;
   }
+  span {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 500px;
+    font-weight: 200;
+  }
 `
 
 
@@ -44,6 +54,7 @@ const Accommodation = () => (
       <Hero>
       <GalianoImage></GalianoImage>
         <h1>Galiano</h1>
+        <span>How to get there, and things to do.</span>
         <Overlay></Overlay>
       </Hero>
 
@@ -93,11 +104,12 @@ const Accommodation = () => (
               <p>Explore the calm waters of Montague Harbour, taking in the beautiful bscenery, and scouting out private beaches to moore at.</p>
             </div>
             <div data-src={Galiano2} alt="Mount Galiano">
-              <h3>Hike up Mount Galiano</h3>
-              <p>With a 301 metre elevation at it's peak, Mount Galiano offers incredible views of the southern gulf islands. Allow 45 minutes to an hour for the ascent.</p>
+              <h3>Go on a hike</h3>
+              <p>With a 301 metre elevation at it's peak, Mount Galiano offers incredible views of the southern gulf islands. Allow 45 minutes to an hour for the ascent. Or, right on the doorstep of the venue is the stunning Bodega Ridge Provincial Park.</p>
             </div>
             <div data-src={Galiano3} alt="Coastline">
               <h3>Explore the stunning coastline</h3>
+              <p>Must-sees: Morning Beach, Retreat Cove, and if you fancy a hike, Pebble Beach.</p>
             </div>
             <div data-src={Galiano4} alt="Bodega Ridge">
               <h3>Get to know the local wildlife</h3>

@@ -103,6 +103,9 @@ const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
               <Link to="/galiano" activeClassName="active">Galiano</Link>
           </li>
           <li>
+              <Link to="/getting-here" activeClassName="active">Getting to Canada</Link>
+          </li>
+          <li>
               <Link to="/travel" activeClassName="active">Travel</Link>
           </li>
           <li>

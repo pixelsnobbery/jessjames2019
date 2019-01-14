@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layouts/layout'
-import AccommodationHero from '../components/accommodation-hero'
+import AccommodationHero from '../components/hero-images/vancouver'
 import Card from '../components/card'
 
 import Theme from '../config/theme'

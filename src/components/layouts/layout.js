@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import Theme from '../../config/theme'
 import Header from '../header'
 import Footer from '../footer'
-import BottomNav from '../bottom-nav'
 import './layout.css'
 
 import styled from 'styled-components'
@@ -50,7 +49,6 @@ const Layout = ({ children, location, noLogo }) => (
           {children}
         </Wrapper>
         <Footer></Footer>
-        <BottomNav></BottomNav>
       </>
     )}
   />
