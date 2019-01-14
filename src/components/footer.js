@@ -140,7 +140,7 @@ const FooterElement = () => (
                 <span className="sub">Please enter your name</span>
                 <textarea name="name" id="name" rows="5"></textarea>
             </div>
-            <div className="fieldWrapper">
+            <div className="fieldWrapper"> 
                 <span>Please tell us more about</span>
                 <h4>Your entourage</h4>
                 <span className="sub">So we know how many are coming</span>
