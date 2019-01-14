@@ -133,7 +133,7 @@ const FooterElement = () => (
             Will you be joining us?
             <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
         </h3>
-        <form method="post" name="rsvp" id="rsvp" data-netlify="true">
+        <form method="post" name="rsvp" id="rsvp" action="/success" data-netlify="true">
             <div className="fieldWrapper">
                 <span>We're stoked to have you as</span>
                 <h4>Our Guest</h4>
