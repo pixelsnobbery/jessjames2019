@@ -5,49 +5,114 @@ import styled from 'styled-components'
 import Layout from '../components/layouts/layout'
 import TravelHero from '../components/travel-hero'
 
-import Button from '../components/button'
-
 import Theme from '../config/theme'
 import { ThemeProvider } from 'styled-components'
 
-import Overlay from '../components/overlay'
-import Section from '../components/layouts/section'
-import SectionTitle from '../components/layouts/section-title'
+import Button from '../components/button'
+import Card from '../components/card'
 
 import Tofino from '../images/tofino.jpg'
 import Vancouver from '../images/vancouver.jpg'
 import Whistler from '../images/whistler.jpg'
 import Okanagan from '../images/okanagan.jpg'
+import Banff from '../images/banff.jpg'
 
-import Heart from  '-!svg-react-loader?name=Heart!../images/heart.svg'
-import ItineraryIcon from  '-!svg-react-loader?name=Itinerary!../images/itinerary-icon.svg'
-import AccommodationIcon from  '-!svg-react-loader?name=Accommodation!../images/accommodation.svg'
+const Container = styled.div`
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 0;
 
-import TofinoTravel from '../images/tofino-travel.jpg'
-import SeaToSky from '../images/sea-to-sky.jpg'
-import MountGaliano from '../images/mount-galiano.jpg'
-import WhistlerLakes from '../images/whistler-lakes.jpg'
-import BearTour from '../images/bear-tour.jpg'
-import VancouverSeawall from '../images/vancouver-seawall.jpg'
-import WhistlerItinerary from '../images/whistler-itinerary.jpg'
+    h2 {
+      margin: 0 0 32px 0;
+    }
 
-import GranvilleIsland from '../images/granville-island.jpg'
-import StanleyPark from '../images/stanley-park.jpg'
-import Gastown from '../images/gastown.jpg'
-import Capilano from '../images/capilano.jpg'
-import Grouse from '../images/grouse.jpg'
-import SpanishBanks from '../images/spanish-banks.jpg'
+    p {
+      margin: 0 0 48px 0;
+    }
 
-import Card from '../components/card'
+    .float-left {
+      width: 50%;
+    }
 
+    .grid-display {
+      display: flex;
+      flex-direction: column;
+      .row1 {
+        max-width: 50%;
+
+      }
+
+      .row {
+        .box {
+          background-color: #333;
+          margin: 8px;
+          width: 20%;
+          
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            padding-top: 75%;
+          }
+          .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+
+      .row2 {
+        justify-content: flex-end;
+        align-items: flex-end;
+        display: flex;
+        .box {
+          width: 20%;
+          &:first-child {
+            width: 38%;
+            top: 150px;
+          }
+          &:last-child {
+            width: 47%;
+          }
+          
+        }
+      }
+
+      .row3 {
+        display: flex;
+        justify-content: center;
+
+        .box {
+          background-color: #555;
+          width: 35%;
+          &:first-child {
+            width: 20%;
+            &:before {
+              padding-top: 50%;
+            }
+          }
+          &:last-child {
+            width: 30%;
+          }
+        }
+      }
+    }
+
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    max-width: 1000px;
+  }
+`
 const Hero = styled.div`
   display: block;
-  height: 85vh;
+  height: 65vh;
   display:flex;
   flex-direction:column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 120px;
   align-content: center;
-  align-items: center;
   position: relative;
 
   h1, h2 {
@@ -55,412 +120,165 @@ const Hero = styled.div`
     z-index:3;
     color:#fff;
   }
-  h1 {
-    font-size: 4rem;
-  }
-
-  span {
-    color: #fff;
-    position: relative;
-    z-index: 3;
-    font-size: 1.8rem;
-    text-align: center;
-    max-width: 500px;
-    font-weight: 200;
+  .overlay {
+    background: rgba(0,0,0,0.4);
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 `
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   .card {
     position: relative;
-    flex: 1 0 0;
-    min-width: 300px;
-    height: 300px;
+    flex-basis: 280px;
+    height: 400px;
     overflow: hidden;
-    margin: 8px 8px;
+    margin: 0 8px;
     border-radius: 8px;
-    transition: .8s all ease;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
-    a {
-      > img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-      }
-      h3 {
-        z-index: 2;
-        position:absolute;
-        text-align:center;
-        left: 0;
-        right: 0;
-        top: 50%;
-        color: #fff;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
-        font-size: 1.4rem;
-        transition: .8s font-size ease;
-      }
-
-      p {
-        color: #999!important;
-      }
-    
-      &:hover {
-        
-        h3 {
-          font-size: 1.5rem;
-        }
-      }
-  }
-  &:hover, &:active {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  }
-  &.animated {
-        animation: scaleUp .5s ease;
-        animation-fill-mode: backwards;
-      }
-      @keyframes scaleUp {
-        0%   { transform: translateY(50px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-      }
+    transition: .8s transform ease;
+    > img {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: left center;
     }
-`
-
-const Itinerary = styled.ul`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  li {
-    display: flex;
-    align-items: center;
-
-    h4 {
-      width: 80px;
-      height: 80px;
-      border-radius: 40px;
-      background-color: ${props => props.theme.primary};
-      text-align: center;
-      line-height: 80px;
-      text-transform: uppercase;
-      font-family: 'Lato';
+    h3 {
+      z-index: 2;
+      position:absolute;
+      text-align:center;
+      left: 0;
+      right: 0;
+      top: 50%;
       color: #fff;
-      font-weight: normal;
-      margin: 0 16px;
-      align-content: center;
-      justify-content: center;
-      display: flex;
-      order: 1;
-
-      &.animated {
-        animation: scaleIn .5s ease;
-        animation-fill-mode: backwards;
-      }
-      @keyframes scaleIn {
-        0%   { transform: scale(0,0); opacity: 0; }
-        100% { transform: scale(1,1); opacity: 1; }
-      }
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+      font-size: 2rem;
+      transition: .8s font-size ease;
     }
-
-    .content-box {
-      background-color: #fff;
-      padding: 32px;
-      order: 0;
-      flex-basis: 40%;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    &:hover {
+      transform: translateY(-10px);
 
       h3 {
-        margin-top: 0;
-        
-      }
-
-      p {
-        color: #999;
-        line-height: 1.4rem;
-        font-size:.9rem;
-      }
-
-      &.animated {
-        animation: scaleInLeft .5s ease;
-        animation-fill-mode: backwards;
-      }
-      @keyframes scaleInLeft {
-        0%   { transform: translateX(-40px); opacity: 0; }
-        100% { transform: translateX(0); opacity: 1; }
-      }
-
-      
-    }
-
-    .content-spacer {
-        flex-basis: 40%;
-        width: 40%;
-        display: block;
-        order: 2;
-      }
-
-    &:nth-child(even) {
-      .content-box {
-        order: 2;
-
-        &.animated {
-          animation: scaleInRight .5s ease;
-        }
-
-        @keyframes scaleInRight {
-        0%   { transform: translateX(40px); opacity: 0; }
-        100% { transform: translateX(0); opacity: 1; }
-      }
-      }
-      .content-spacer {
-        order: 0;
+        font-size: 2.2rem;
       }
     }
   }
-  
 `
 
-const TravelPage = () => (
+const Section = styled.section` 
+  padding: 64px 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    /* top: calc(var(--section-padding) / 2);
+    bottom: calc(0px - var(--section-padding)); */
+    background-color: ${props => props.bgColor || "#fff"};
+    top: 0;
+    bottom: 0;
+    -webkit-transform: skewY(-8deg);
+    transform: skewY(-8deg);
+  }
+`
+
+const OutsideCanada = styled.div`
+  display: flex;
+`
+
+const Travel = () => (
   <ThemeProvider theme={Theme}>
     <Layout>
 
       <Hero>
         <TravelHero />
         <h1>Travel</h1>
-        <span>Read on for some of our favourite places to see in British Columbia</span>
-        <Overlay />
+        <div className="overlay"></div>
       </Hero>
 
 
-      <Section>
-        <SectionTitle text="Where to Stay" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
+      
+      <Section bgColor="#f6f9fc">
+      <Container>
+          <h2>Coming from outside of Canada?</h2>
+          <p className="lead">The nearest airport is Vancouver International Airport (YVR). The following UK airports have summer flights direct to Vancouver:</p>
+          <CardWrapper>
+            <Card>
+              <h3>London Gatewick</h3>
+              <span>13 flights per week</span>
+            </Card>
+            <Card>
+              <h3>London Heathrow</h3>
+              <span>21 flights per week</span>
+            </Card>
+            <Card>
+              <h3>Manchester</h3>
+              <span>3 flights per week</span>
+            </Card>
+            <Card>
+              <h3>Glasgow</h3>
+              <span>1 flight per week</span>
+            </Card>
 
-        <h3>Downtown</h3>
-
-        <p>One of the main feature of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
-      
-        <h3>Kitsilano</h3>
-        <p>Aaaah Kitsilano. Where the beautiful people live. (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
-      
-        <h3>Mount Pleasant / East Vancouver</h3>
-        <p>Vancouver's east side is made up of a conglomeration of ethnic neighborhoods which feature unconventional shopping, top-notch dining options and plenty of entertainment venues. Commercial Drive – also known as Little Italy – is famous for being Vancouver's artistic hub and is packed with art galleries, second-hand shops and plenty of Italian restaurants and cafes. Oh, and there’s also tonnes of craft breweries.</p>
-      
-        <h3>North Vancouver</h3>
-        <p>Located across the Burrard Inlet from downtown Vancouver is North Vancouver, which acts as a gateway to some of the city’s nearby natural attractions, including Lynn Canyon Park, Grouse Mountain and the Capilano Suspension Bridge. Even if you are not interested in these outdoor activities, recent visitors say that North Vancouver is worth a visit. The area is filled with antiques shops, and the Lonsdale Quay Market – which consists of three different levels – is home to dozens of specialty shops, restaurants and fresh food vendors.</p>
+          </CardWrapper>
+      </Container>
       </Section>
-
-      <Section bgColor={Theme.paleBlue}>
-        <SectionTitle
-          text="Things to Do"
-          subtitle="Shamelessly lifted from TripAdvisor">
-        </SectionTitle>
-
-        <CardWrapper>
-          <Card>
-            <img src={GranvilleIsland} alt="Granville Island"></img>
-            <div>
-              <h4>Granville Island</h4>
-              <p>Granville Island is home to a public market, food shops, restaurants, artist studios and galleries, shopping and green space.</p>
-            </div>
-          </Card>
-          <Card>
-          <img src={StanleyPark} alt="Stanley Park"></img>
-            <div>
-              <h4>Bike Around the Seawall</h4>
-              <p>The Seawall starts downtown at the cruise ship terminal, heads west around Stanley Park and then encircles False Creek past Kitsilano beach.</p>
-            </div>
-          </Card>
-          <Card>
-          <img src={Gastown} alt="Gastown"></img>
-            <div>
-             <h4>Visit Gastown</h4>
-              <p>The neighborhood where the city began, Gastown is Vancouver's cobbled old-town district. Home to some of the city’s best independent shops, bars and restaurants. </p>
-            </div>
-          </Card>
-          <Card>
-          <img src={Capilano} alt="Capilano Suspension Bridge"></img>
-            <div>
-              <h4>Capilano Suspension Bridge</h4>
-              <p>One of the world's longest (140m) and highest (70m) suspension bridges, sways gently over the roiling Capilano Canyon. Arrive early as it gets busy!</p>
-            </div>
-          </Card>
-          <Card>
-            <img src={Grouse} alt="Grouse Mountain"></img>
-            <div>
-              <h4>Grouse Mountain</h4>
-              <p>Rising 1,250 metres (4,100 feet) above Vancouver and just 15 minutes from the city’s downtown core, is the vast alpine playground of Grouse Mountain. </p>
-            </div>
-          </Card>
-          <Card>
-          <img src={SpanishBanks} alt="Spanish Banks"></img>
-            <div>
-              <h4>Spanish Banks</h4>
-              <p>
-                This expansive beach offers fantastic picnicking opportunities, swimming, beach volleyball, and gorgeous panoramic views of Vancouver and the mountains. </p>
-            </div>
-          </Card>
-        </CardWrapper>
-        
+      <Section bgColor="#f6f6f6">
+      <Container>
+        <div className="float-left">
+          <h2>About Galiano Island</h2>
+          <p>Galiano Island is a quick 45 minute ferry away from Vancouver. Ferries depart from Tsawwassen Ferry Port, which is a 30 minute drive from the centre of Vancouver.</p>
+          <p>Travelling by car is strongly recommended. Galiano island is a rural paradise with just 1,300 permanent residents. Public transport is practically non-existent.</p>
+          <Button text="View Schedule & Reserve Ferry" href="https://www.bcferries.com/schedules/southern/vade-current.php?scheduleSelect=sch062619007.html"></Button>
+        </div>
+      </Container>
       </Section>
-      
       <Section>
-        <SectionTitle text="BC Highlights" icon={<Heart></Heart>}></SectionTitle>
-
+        <Container>
+          <h2>Places you have to see whilst you're here</h2>
+        </Container>
+      
+      
+      
       <CardWrapper>
-        <div className="card wow">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
-          <img src={Whistler} alt="Whistler" />
+        <div className="card">
+          <img src={Whistler} />
           <h3>Whistler</h3>
-          </a>
         </div>
 
-        <div className="card wow" data-wow-delay=".1s">
-          <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
-          <img src={Vancouver} alt="Vancouver" />
+        <div className="card">
+          <img src={Vancouver} />
           <h3>Vancouver</h3>
-          </a>
         </div>
 
-        <div className="card wow" data-wow-delay=".2s">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
-          <img src={Tofino} alt="Tofino" />
+        <div className="card">
+          <img src={Tofino} />
           <h3>Tofino</h3>
-          </a>
         </div>
 
-        <div className="card wow" data-wow-delay=".3s">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
-          <img src={Okanagan} alt="Okanagan" />
-          <h3>Okanagan Valley</h3>
-        </a>
+        <div className="card">
+          <img src={Banff} />
+          <h3>Banff</h3>
+        </div>
+
+        <div className="card">
+          <img src={Okanagan} />
+          <h3>Okanagan</h3>
         </div>
       </CardWrapper>
       </Section>
-
-      <Section bgColor="#F6F9FC">
-        <SectionTitle text="Example Itinerary" icon={<ItineraryIcon></ItineraryIcon>}></SectionTitle>
-
-        <Itinerary>
-          <li>
-            <div className="content-box wow">
-              <h3>Arrive</h3>
-              <p>Once you get through immigration (Don't forget to apply for your eTA!), drop your bags off at the hotel and then head out to one of Vancouver's foodie areas for a bite to eat.</p>
-            </div>
-            <h4 className="wow">Day 1</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Vancouver Stuff</h3>
-              <p>Spend a day exploring what makes Vancouver one of the world’s most livable cities. There are so many free attractions to enjoy, such as Stanley and Queen Elizabeth Parks, Granville Island, and Kitsilano Beach. For museum buffs, check out the Museum of Vancouver, Science World, and the Museum of Anthropology.</p>
-              <img src={VancouverSeawall} alt="Vancouver" />
-            </div>
-            <h4 className="wow">Day 2</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Sea to Sky Highway</h3>
-              <p>The drive along the Sea to Sky Highway is one of the most beautiful in Canada. Definitely stop at the Sea to Sky Gondola along the way, which has amazing views of Howe Sound, plus a suspension bridge and trails. Another great place to visit is Shannon Falls, BC’s third largest waterfall. Once in Whistler, head to Whistler Village for dinner.</p>
-              <img src={SeaToSky} alt="Sea to Sky Highway"></img>
-            </div>
-            <h4 className="wow">Day 3</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Whistler</h3>
-              <p>Finally, you can see for yourselves why Jess fell in love with this place. Perhaps named for the furry marmots that populate the area and whistle like deflating balloons, this gabled alpine village and 2010 Olympics venue is one of the world's most popular ski resorts. Summer visitors now outnumber their ski-season equivalents, with many lured by the area's scenic hiking, biking and thrill-popping outdoor adventures.</p>
-              <img src={WhistlerItinerary} alt="Whistler"></img>
-            </div>
-            <h4 className="wow">Day 4</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Whistler Lakes</h3>
-              <p>Take a day and explore Whistler's lakes and beaches by bike or on foot via the Valley Trail.</p>
-              <img src={WhistlerLakes} alt="Whistler Lakes"></img>
-            </div>
-            <h4 className="wow">Day 5</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Ferry to Galiano Island</h3>
-              <p>Drive back down the Sea-to-Sky highway (stop off at Brandywine Falls on the way - it's a picture-perfect waterfall!) to Tsawwassen ferry terminal, and board your ferry to Galiano. (Don't forget to reserve a space - they book up quickly!)</p>
-              <img src={MountGaliano} alt="Mount Galiano"></img>
-            </div>
-            <h4 className="wow">Day 6</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Watch Jess get Wifed</h3>
-            </div>
-            <h4 className="wow">Day 7</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Salt Spring Island</h3>
-            </div>
-            <h4 className="wow">Day 8</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Victoria</h3>
-            </div>
-            <h4 className="wow">Day 9</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Drive to Tofino</h3>
-              <p>Tofino is Vancouver Island's favorite outdoorsy retreat. It's not surprising that surf fans, families and city-escaping Vancouverites keep coming: packed with activities and blessed with spectacular local beaches, it sits on Clayoquot Sound, where forested mounds rise from roiling, ever-dramatic waves.</p>
-              <img src={TofinoTravel} alt="=Tofino"></img>
-            </div>
-            <h4 className="wow">Day 10</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Bear Tour?</h3>
-              <p>Take a cruise along the coast and watch bears come to the shore in search of crabs.</p>
-              <img src={BearTour} alt="Bear Tour"></img>
-            </div>
-            <h4 className="wow">Day 11</h4>
-            <div className="content-spacer"></div>
-          </li>
-          <li>
-            <div className="content-box wow">
-              <h3>Back to Vancouver</h3>
-            </div>
-            <h4 className="wow">Day 12</h4>
-            <div className="content-spacer"></div>
-          </li>
-        </Itinerary>
-      </Section>
-
+      <h2>Our personal, off the beaten track recommendations</h2>
+      <p>Blah blah</p>
     </Layout>
   </ThemeProvider>
 )
 
-export default class Travel extends React.Component {
-  componentDidMount() {
-    const WOW = require("wowjs");
-    const wow = new WOW.WOW();
-    wow.init();
-  }
-  render () {
-    return (
-      <TravelPage></TravelPage>
-    )
-  };
-};
+export default Travel

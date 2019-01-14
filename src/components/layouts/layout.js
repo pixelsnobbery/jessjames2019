@@ -2,27 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import Theme from '../../config/theme'
+
 import Header from '../header'
 import Footer from '../footer'
+import BottomNav from '../bottom-nav'
 import './layout.css'
 
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-margin: 0 auto;
-max-width: 100%;
-padding-top: 0;
- a:link, a:visited {
-   color: ${Theme.primary};
- }
- a:hover, a:active {
-   color: #333;
- }
-`
 
 
-const Layout = ({ children, location, noLogo }) => (
+
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,13 +31,20 @@ const Layout = ({ children, location, noLogo }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en" class={location} />
+          <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata} location={location} noLogo={noLogo} />
-        <Wrapper>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div
+          style={{
+            margin: '0 auto',
+            maxWidth: '100%',
+            paddingTop: 0,
+          }}
+        >
           {children}
-        </Wrapper>
+        </div>
         <Footer></Footer>
+        <BottomNav></BottomNav>
       </>
     )}
   />

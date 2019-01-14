@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../header'
 import Footer from '../footer'
+import Hero from '../hero'
 import './layout.css'
 import BottomNav from '../bottom-nav'
 
@@ -32,6 +33,7 @@ const LayoutIndex = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <Hero></Hero>
         <div
           style={{
             margin: '0 auto',

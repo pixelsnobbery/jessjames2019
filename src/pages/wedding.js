@@ -13,7 +13,7 @@ import FreeTimeImage from '-!svg-react-loader?name=Icon!../images/free-time.svg'
 
 import Button from '../components/button'
 
-
+import WOW from "wowjs"
 
 const Hero = styled.div`
   display: block;
@@ -292,7 +292,6 @@ const WeddingPage = () => (
 
 export default class Wedding extends React.Component {
   componentDidMount() {
-    const WOW = require("wowjs");
     const wow = new WOW.WOW();
     wow.init();
   }
