@@ -144,8 +144,8 @@ const FooterElement = () => (
                 <span>Please tell us more about</span>
                 <h4>Your entourage</h4>
                 <span className="sub">So we know how many are coming</span>
-                <input name="number_of_adults" id="number_of_adults" rows="5" placeholder="Number of adults" />
-                <input name="number_of_kids" id="number_of_kids" rows="5" placeholder="Number & ages of kids" />
+                <input name="number_of_adults" id="number_of_adults" placeholder="Number of adults" />
+                <input name="number_of_kids" id="number_of_kids" placeholder="Number & ages of kids" />
             </div>
             <div className="fieldWrapper">
                 <span>Let us know any</span>
@@ -167,7 +167,7 @@ const FooterElement = () => (
             </div>
             <ul className="actions">
                 <li>
-                    <Button text="Send My RSVP" href="#"></Button>
+                    <Button text="Send My RSVP" type="submit"></Button>
                 </li>
             </ul>
         </form>
