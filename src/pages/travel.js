@@ -30,6 +30,7 @@ import WhistlerLakes from '../images/whistler-lakes.jpg'
 import BearTour from '../images/bear-tour.jpg'
 import VancouverSeawall from '../images/vancouver-seawall.jpg'
 import WhistlerItinerary from '../images/whistler-itinerary.jpg'
+import Victoria from '../images/victoria.jpg'
 
 import GranvilleIsland from '../images/granville-island.jpg'
 import StanleyPark from '../images/stanley-park.jpg'
@@ -252,27 +253,24 @@ const TravelPage = () => (
 
 
       <Section>
-        <SectionTitle text="Where to Stay" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
 
-        <h3>Downtown</h3>
+        <SectionTitle text="Vancouver" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
+
+        <h3>Where to Stay</h3>
+        <h4>Downtown</h4>
 
         <p>One of the main feature of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
       
-        <h3>Kitsilano</h3>
+        <h4>Kitsilano</h4>
         <p>Aaaah Kitsilano. Where the beautiful people live. (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
       
-        <h3>Mount Pleasant / East Vancouver</h3>
+        <h4>Mount Pleasant / East Vancouver</h4>
         <p>Vancouver's east side is made up of a conglomeration of ethnic neighborhoods which feature unconventional shopping, top-notch dining options and plenty of entertainment venues. Commercial Drive – also known as Little Italy – is famous for being Vancouver's artistic hub and is packed with art galleries, second-hand shops and plenty of Italian restaurants and cafes. Oh, and there’s also tonnes of craft breweries.</p>
       
-        <h3>North Vancouver</h3>
+        <h4>North Vancouver</h4>
         <p>Located across the Burrard Inlet from downtown Vancouver is North Vancouver, which acts as a gateway to some of the city’s nearby natural attractions, including Lynn Canyon Park, Grouse Mountain and the Capilano Suspension Bridge. Even if you are not interested in these outdoor activities, recent visitors say that North Vancouver is worth a visit. The area is filled with antiques shops, and the Lonsdale Quay Market – which consists of three different levels – is home to dozens of specialty shops, restaurants and fresh food vendors.</p>
-      </Section>
 
-      <Section bgColor={Theme.paleBlue}>
-        <SectionTitle
-          text="Things to Do"
-          subtitle="Shamelessly lifted from TripAdvisor">
-        </SectionTitle>
+        <h3>Things to do in Vancouver</h3>
 
         <CardWrapper>
           <Card>
@@ -319,7 +317,6 @@ const TravelPage = () => (
             </div>
           </Card>
         </CardWrapper>
-        
       </Section>
       
       <Section>
@@ -416,51 +413,80 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Watch Jess get Wifed</h3>
+              <p></p>
             </div>
             <h4 className="wow">Day 7</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Salt Spring Island</h3>
+              <h3>Vancouver Island & Victoria</h3>
+              <p>After emotional goodbyes, take the ferry from Galiano to Victoria - capital city of British Columbia. Have afternoon tea at the Empress Hotel, and explore this colonial city.</p>
+              <img src={Victoria} alt="=Victora"></img>
             </div>
             <h4 className="wow">Day 8</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Victoria</h3>
+              <h3>Road trip to Tofino</h3>
+              <p>Embark on a 4.5 hour drive across Vancouver Island towards Tofino - British Columbia's favourite outdoor retreat.It's not surprising that surf fans, families and city-escaping Vancouverites keep coming: packed with activities and blessed with spectacular local beaches, it sits on Clayoquot Sound, where forested mounds rise from roiling, ever-dramatic waves.</p>
+              <img src={TofinoTravel} alt="=Tofino"></img>
             </div>
             <h4 className="wow">Day 9</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Drive to Tofino</h3>
-              <p>Tofino is Vancouver Island's favorite outdoorsy retreat. It's not surprising that surf fans, families and city-escaping Vancouverites keep coming: packed with activities and blessed with spectacular local beaches, it sits on Clayoquot Sound, where forested mounds rise from roiling, ever-dramatic waves.</p>
-              <img src={TofinoTravel} alt="=Tofino"></img>
+              <h3>Bear Tour</h3>
+              <p>In the morning, take a cruise along the coast and watch bears come to the shore in search of crabs. Then head to one of the fantastic Tofino beaches and surf the pacific ocean. </p>
+              <img src={BearTour} alt="Bear Tour"></img>
             </div>
             <h4 className="wow">Day 10</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Bear Tour?</h3>
-              <p>Take a cruise along the coast and watch bears come to the shore in search of crabs.</p>
-              <img src={BearTour} alt="Bear Tour"></img>
+              <h3>Back to Vancouver</h3>
+              <p>Drive back across Vancouver Island to Nanaimo. From there, you can get a ferry to Horseshoe Bay, which is 15 minutes from downtown Vancouver.</p>
+              <img src={Vancouver} alt="Vancouver"></img>
             </div>
             <h4 className="wow">Day 11</h4>
             <div className="content-spacer"></div>
           </li>
           <li>
             <div className="content-box wow">
-              <h3>Back to Vancouver</h3>
+              <h3>Explore the local mountains</h3>
+              <p>There are 3 local mountains in Vancouver: Cypress, Grouse, and Seymour. Each has some fantastic hikes. Grouse has plenty of other things going on at the top too, including some resident grizzlies, lumberjack shows, and bird shows. Anyone feeling energetic could attempt the Grouse Grind - a 2.9km assent featuring 2830 stairs! The views from the top are worth it.</p>
+              <img src={Grouse} alt="Grouse"></img>
             </div>
             <h4 className="wow">Day 12</h4>
             <div className="content-spacer"></div>
           </li>
+          <li>
+            <div className="content-box wow">
+              <h3>Fly home</h3>
+              <p>It's been a blast!</p>
+            </div>
+            <h4 className="wow">Day 13</h4>
+            <div className="content-spacer"></div>
+          </li>
 
         </Itinerary>
+
+        <h3>Other places worth checking out if you have the time:</h3>
+
+        <ul>
+          <li>
+            Another popular thing to do is to fly in to Calgary, and drive through the Rockies, stopping off at Banff, Revelstoke, and the Okanagan before arriving at Vancouver. It's advisable to do this over at a week or so as it's a long drive.
+          </li>
+          <li>
+            Vancouver is very close to the US border. Seattle is just 4 hours drive away. Portland, Oregon is approx 6 hour drive, and San Francisco is approx 16 hours drive.
+          </li>
+          <li>
+            Feel free to ask us for any advice!
+          </li>
+        </ul>
       </Section>
 
     </Layout>
