@@ -69,10 +69,11 @@ const Foot = styled.footer`
                 span.sub {
                     flex-grow: 1;
                     margin-bottom: 8px;
-                    font-size: .8rem;
-                    color: rgba(255,255,255,0.75)!important;
+                    font-size: .85rem;
+                    color: rgba(255,255,255,1)!important;
                 }
                 h4 {
+                    color: rgba(255,255,255,0.6);
                     font-size:  1.6rem;
                     font-family: sans-serif!important;
                     text-transform: uppercase;
@@ -81,7 +82,8 @@ const Foot = styled.footer`
                 input, textarea {
                     align-self: flex-end;
                     width: 100%;
-                    border: 1px solid #555;
+                    border: 1px solid #408D60;
+                    padding: 8px;
 
                 }
                 input {

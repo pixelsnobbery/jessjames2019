@@ -77,7 +77,7 @@ const Accommodation = () => (
 
           <Section skewY="0deg">
 
-          <SectionTitle text="Other Options"></SectionTitle>
+          <SectionTitle text="Other Options" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
             
             <h3>Bodega Cove</h3>
 

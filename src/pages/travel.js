@@ -56,7 +56,9 @@ const Hero = styled.div`
     color:#fff;
   }
   h1 {
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
     font-size: 4rem;
+    }
   }
 
   span {

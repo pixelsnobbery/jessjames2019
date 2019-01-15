@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Theme from '../../config/theme'
 import Header from '../header'
 import Footer from '../footer'
+import MobileNav from '../mobile-nav'
+
 import './layout.css'
 
 import styled from 'styled-components'
@@ -44,7 +46,9 @@ const Layout = ({ children, location, noLogo }) => (
         >
           <html lang="en" class={location} />
         </Helmet>
+<MobileNav></MobileNav>
         <Header siteTitle={data.site.siteMetadata} location={location} noLogo={noLogo} />
+        
         <Wrapper>
           {children}
         </Wrapper>

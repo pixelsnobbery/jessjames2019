@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const OverlayDiv = styled.div`
-    background: rgba(0,0,0,0.4);
+    background: ${props => props.bgColor || 'rgba(0,0,0,0.4)' }!important;
     position:absolute!important;
     top: 0;
     right: 0;
@@ -11,8 +11,8 @@ const OverlayDiv = styled.div`
     z-index: 1!important;
 `
 
-const Overlay = () => (
-    <OverlayDiv></OverlayDiv>
+const Overlay = ({bgColor}) => (
+    <OverlayDiv bgColor={bgColor}></OverlayDiv>
 )
 
 export default Overlay

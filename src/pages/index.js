@@ -8,7 +8,6 @@ import { ThemeProvider } from 'styled-components'
 import Logo from '-!svg-react-loader?name=Logo!../images/logo.svg'
 import Marker from '-!svg-react-loader?name=Marker!../images/marker.svg'
 
-import Boat from  '-!svg-react-loader?name=Boat!../images/boat-icon.svg'
 import Calendar from  '-!svg-react-loader?name=Calendar!../images/calendar-icon.svg'
 import Gift from  '-!svg-react-loader?name=Gift!../images/gift-icon.svg'
 import Dinner from '-!svg-react-loader?name=Dinner!../images/dinner-icon.svg'
@@ -21,6 +20,7 @@ import Button from '../components/button'
 import Section from '../components/layouts/section'
 import SectionTitle from '../components/layouts/section-title'
 import HomeHero from '../components/hero-images/home'
+import GalianoHero from '../components/hero-images/galiano-2'
 import Schedule from '../components/schedule'
 import ScheduleItem from '../components/schedule-item'
 import Countdown from '../components/countdown'
@@ -64,6 +64,9 @@ const Hero = styled.div`
       width: 80%;
     }
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      svg {
+        width: 100%;
+      }
       top: 0;
       bottom: initial;
       left: 64px;
@@ -79,7 +82,6 @@ const Hero = styled.div`
     padding-top: 64px;
     font-family: 'Aisha Latin';
     font-size: 2rem;
-
 
     p {
       color: ${Theme.primary}!important;
@@ -121,6 +123,24 @@ const CountdownWrapper = styled.div`
   }
 `
 
+const ContentBox = styled.div`
+  /* background-color: #fff; */
+  padding: 16px;
+  width: 100%;
+  max-width: 550px;
+  /* box-shadow: 0 6px 10px rgba(0,0,0,0.25); */
+  
+  h2 {
+    color: #fff;
+  }
+  ul {
+    li {
+      color: #fff;
+    }
+  }
+`
+
+
 const Index = () => (
   <ThemeProvider theme={Theme}>
     <Layout location="/" noLogo={true}>
@@ -150,22 +170,7 @@ const Index = () => (
 
           <img src={Map} alt="map" />
 
-          <h3>Helpful Details</h3>
-
-          <ul>
-            <li>
-              The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception.
-            </li>
-            <li>
-              Bring sun screen, sunglasses, and keep an eye out for orcas in the channel!
-            </li>
-            <li>
-              The bar accepts cash & card payments. There are cash points available on the island towards Sturdies Bay.
-            </li>
-            <li>
-              Children are very welcome to the wedding. Please let us know how many you're bringing and their ages in your RSVP. Depending on numbers, we are hoping to arrange a local vetted babysitter to entertain them for part of the evening.
-            </li>
-          </ul>
+          
 
           <CountdownWrapper>
             <address>
@@ -181,6 +186,29 @@ const Index = () => (
             <Countdown date={`2019-07-03T16:00:00`}></Countdown>
           </CountdownWrapper>
           
+        </Section>
+
+        <Section skewY="0deg">
+        <GalianoHero></GalianoHero>
+        <ContentBox>
+        <h2>Helpful details</h2>
+
+<ul>
+  <li>
+    The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception.
+  </li>
+  <li>
+    The bar accepts cash & card payments. There are cash points available on the island towards Sturdies Bay.
+  </li>
+  <li>
+    Bring sun screen, sunglasses, and keep an eye out for orcas in the channel!
+  </li>
+  <li>
+    Children are very welcome to the wedding. Please let us know how many you're bringing and their ages in your RSVP. Depending on numbers, we are hoping to arrange a local vetted babysitter to entertain them for part of the evening.
+  </li>
+</ul>
+</ContentBox>
+<Overlay bgColor="rgba(0,0,0,0.5);"></Overlay>
         </Section>
 
         

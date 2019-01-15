@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="595" height="593" viewBox="0 0 595 593" class="party">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="party" viewBox="0 0 595 593">
   <defs>
     <style>
-      .party .cls-2 {
-        fill: #a390d6;
+
+      .party .cls-12, .party .cls-2, .party .cls-7 {
+        fill: #000;
       }
 
-      .party .cls-2, .party .cls-3, .party .cls-4 {
-        stroke: #a390d6;
+      .party .cls-2, .party .cls-3, .party .cls-4, .party .cls-5, .party .cls-8, .party .cls-9 {
+        stroke: #000;
       }
 
       .party .cls-11, .party .cls-3, .party .cls-4, .party .cls-5, .party .cls-6, .party .cls-8, .party .cls-9 {
@@ -22,47 +23,34 @@
       }
 
       .party .cls-5 {
-        stroke: #bdd8e6;
         stroke-width: 16px;
       }
 
-      .party .cls-7 {
-        fill: #fff09d;
-      }
-
       .party .cls-8 {
-        stroke: #ea5dae;
         stroke-width: 20px;
       }
 
       .party .cls-9 {
-        stroke: #fc9374;
         stroke-width: 15px;
       }
 
       .party .cls-10, .party .cls-12 {
         stroke: none;
       }
-
-      .party .cls-12 {
-        fill: #bdd8e6;
-      }
     </style>
   </defs>
   <g id="Party_icon" data-name="Party icon" class="cls-1">
-    <g id="Group_2" data-name="Group 2" transform="matrix(0.883, -0.469, 0.469, 0.883, -262.621, 457.232)">
-      <g id="Ellipse_1" data-name="Ellipse 1" class="cls-2" transform="translate(395 333.154)">
-        <circle class="cls-10" cx="17.125" cy="17.125" r="17.125"/>
-        <circle class="cls-11" cx="17.125" cy="17.125" r="16.625"/>
-      </g>
-      <g id="Ellipse_2" data-name="Ellipse 2" class="cls-2" transform="translate(518.988 333.154)">
-        <circle class="cls-10" cx="17.125" cy="17.125" r="17.125"/>
-        <circle class="cls-11" cx="17.125" cy="17.125" r="16.625"/>
-      </g>
-      <line id="Line_1" data-name="Line 1" class="cls-3" y1="97.957" transform="translate(426.168 252.665)"/>
-      <line id="Line_2" data-name="Line 2" class="cls-3" y1="97.957" transform="translate(550.156 251.98)"/>
-      <line id="Line_3" data-name="Line 3" class="cls-4" x1="130.838" y2="1.37" transform="translate(422.743 246.5)"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-2" transform="matrix(0.883, -0.469, 0.469, 0.883, 244.55, 565.949)">
+      <circle class="cls-10" cx="17.125" cy="17.125" r="17.125"/>
+      <circle class="cls-11" cx="17.125" cy="17.125" r="16.625"/>
     </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" class="cls-2" transform="matrix(0.883, -0.469, 0.469, 0.883, 354.025, 507.74)">
+      <circle class="cls-10" cx="17.125" cy="17.125" r="17.125"/>
+      <circle class="cls-11" cx="17.125" cy="17.125" r="16.625"/>
+    </g>
+    <line id="Line_1" data-name="Line 1" class="cls-3" y1="97.957" transform="matrix(0.883, -0.469, 0.469, 0.883, 232.283, 480.249)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-3" y1="97.957" transform="matrix(0.883, -0.469, 0.469, 0.883, 341.436, 421.435)"/>
+    <line id="Line_3" data-name="Line 3" class="cls-4" x1="130.838" y2="1.37" transform="matrix(0.883, -0.469, 0.469, 0.883, 226.364, 476.413)"/>
     <line id="Line_4" data-name="Line 4" class="cls-5" x2="155" transform="translate(25.957 509.428) rotate(21)"/>
     <path id="Path_3" data-name="Path 3" class="cls-5" d="M0,152V0" transform="translate(151.098 401.078) rotate(21)"/>
     <g id="Path_1" data-name="Path 1" class="cls-6" transform="translate(152.486 108.652) rotate(21)">

@@ -2,16 +2,18 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Button from './button'
-import Hamburger from './Menu'
+
 
 import Logo from '-!svg-react-loader?name=LogoTop!../images/small-logo.svg';
-import { timingSafeEqual } from 'crypto';
 
 const StyledHeader = styled.header`
+/* display: none; */
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
   padding: 24px 8px 8px 24px;
   z-index: 10;
   border-bottom: ${props => props.isTop ? "0px solid #eee" : "1px solid #eee"};
@@ -20,10 +22,16 @@ const StyledHeader = styled.header`
   color: ${props => props.isTop ? "black" : "black"};
   h1 {
     line-height: 0;
-    padding-bottom: 0;
+    padding-bottom: 16px;
   }
+
   svg {
     display: ${props => props.noLogo ? 'none' : 'block'}!important;
+    @media only screen and (max-width: ${props => props.theme.aboveMobile}) {
+      
+      display: none;
+    }
+    
     width: 50px;
     path {
       fill: ${props => props.isTop ? props.theme.white : '#444'}!important;
@@ -31,34 +39,33 @@ const StyledHeader = styled.header`
     
   }
 
-  > div > nav {
+  nav {
     display:none;
+    
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
       display: block;
-      position: relative;
-
-      ul {
+    }
+    ul {
         display: flex;
-        
+        list-style-type: none;
         margin: 0;
         li {
-          margin-right: 32px;
-          text-transform:  uppercase;
-          a:link, a:visited {
-              color: ${props => props.isTop ? props.theme.white : '#444'};
-              text-decoration: none;
-              padding-bottom: 8px;
-              font-size: .9rem;
-          }
-          a:hover, a:active {
-              color: ${props => props.theme.primary};
-          }
+            margin-right: 32px;
+            text-transform:  uppercase;
+            a:link, a:visited {
+                color: ${props => props.isTop ? props.theme.white : '#444'};
+                text-decoration: none;
+                padding-bottom: 8px;
+                font-size: .9rem;
+            }
+            a:hover, a:active {
+                color: ${props => props.theme.primary};
+            }
 
-          a.active {
-            border-bottom: 3px solid ${props => props.isTop ? props.theme.white : '#444'};
-          }
-        } 
-      }
+            a.active {
+              border-bottom: 3px solid ${props => props.isTop ? props.theme.white : '#444'};
+            }
+        }
     }
   }
 `
@@ -75,12 +82,11 @@ const Container = styled.div`
 
 `
 
-
 const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
   <StyledHeader className={siteTitle} isTop={isTop} noLogo={noLogo}>
     
     <Container>
-    
+
       <h1 style={{ margin: 0 }}>
       
         <Link
@@ -90,11 +96,10 @@ const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
             textDecoration: 'none',
           }}
         >
-          <Logo></Logo>
+          <Logo noLogo={noLogo}></Logo>
         </Link>
         
       </h1>
-      <Hamburger></Hamburger>
       <nav>
         <ul>
           <li>
@@ -104,10 +109,10 @@ const HeaderElement = ({ siteTitle, isTop, noLogo }) => (
             <Link to="/accommodation" activeClassName="active">Accommodation</Link>
           </li>
           <li>
-              <Link to="/galiano" activeClassName="active">Galiano</Link>
+            <Link to="/galiano" activeClassName="active">Galiano</Link>
           </li>
           <li>
-              <Link to="/getting-here" activeClassName="active">Getting to Canada</Link>
+              <Link to="/getting-here" activeClassName="active">Getting To Canada</Link>
           </li>
           <li>
               <Link to="/travel" activeClassName="active">Travel</Link>
@@ -127,13 +132,8 @@ export default class Header extends React.Component {
   
   state = {
     isTop: true,
-    noLogo: this.props.noLogo,
-    menuOpen: false
+    noLogo: this.props.noLogo
   };
-
-  handleMenuClick() {
-    this.setState({menuOpen:!this.state.menuOpen});
-  }
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
@@ -145,11 +145,13 @@ export default class Header extends React.Component {
 
   }
   componentWillUnmount() {
-    document.removeEventListener('scroll', () => {});
+    document.removeEventListener('scroll', () => {
+
+    });
   }
   render () {
     return (
-      <HeaderElement isTop={this.state.isTop} noLogo={this.state.noLogo} menuOpen={this.state.menuOpen}></HeaderElement>
+      <HeaderElement isTop={this.state.isTop} noLogo={this.state.noLogo}></HeaderElement>
     )
 
   };

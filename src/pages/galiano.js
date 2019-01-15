@@ -34,7 +34,9 @@ const Hero = styled.div`
     color:#fff;
   }
   h1 {
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
     font-size: 4rem;
+    }
   }
   span {
     color: #fff;
@@ -42,7 +44,10 @@ const Hero = styled.div`
     z-index: 3;
     font-size: 1.8rem;
     text-align: center;
-    max-width: 500px;
+    width: 100%;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+      max-width: 500px;
+    }
     font-weight: 200;
   }
 `
