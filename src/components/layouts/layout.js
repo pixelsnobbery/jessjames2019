@@ -52,6 +52,7 @@ const Layout = ({ children, location, noLogo }) => (
         <Wrapper>
           {children}
         </Wrapper>
+        <a name="rsvp"></a>
         <Footer></Footer>
       </>
     )}
