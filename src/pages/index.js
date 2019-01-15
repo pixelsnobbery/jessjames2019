@@ -148,7 +148,6 @@ const Index = () => (
         <HomeHero></HomeHero>
         <div className="site-title">
           <Logo className="logo"></Logo>
-          <p>Galiano Island, BC</p>
 
           <p className="date">July 2nd  - 4th 2019</p>
 
