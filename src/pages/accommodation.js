@@ -61,7 +61,7 @@ const Accommodation = () => (
             color="#ffffff">
           </SectionTitle>
 
-              <p>There are seven charming log cabins right on-site at Bodega Ridge. Each has three spacious double bedrooms including one larger 'family room', living room, full kitchen and bathroom. We have reserved these rooms for our guests, and they will be available on a first-come, first-serve basis. We are hoping as many guests as possible will be able to stay right on-site with us. Please indicate if you'd like to stay in a cabin room in your RSVP and we'll do our best to accommodate you.</p>
+              <p>There are seven charming log cabins right on-site at Bodega Ridge. Each has three spacious bedrooms, living room, full kitchen and bathroom. We have reserved these rooms for our guests, and they will be available on a first-come, first-serve basis. We are hoping as many guests as possible will be able to stay right on-site with us. Please indicate if you'd like to stay in a cabin room in your RSVP and we'll do our best to accommodate you.</p>
 
               <h4>Price per double room: $140/night</h4>
 
@@ -77,7 +77,7 @@ const Accommodation = () => (
 
           <Section skewY="0deg">
 
-          <SectionTitle text="Other Options" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
+          <SectionTitle text="Other Options" icon={<AccommodationIcon></AccommodationIcon>}gat></SectionTitle>
             
             <h3>Bodega Cove</h3>
 
@@ -104,17 +104,15 @@ const Accommodation = () => (
 
               <Card>
                 <h4><a href="https://serenitybythesea.com/">Serenity by the Sea</a></h4>
-                <p><em>Jess & James stayed here in 2014</em></p>
                 <p>Several suites nestled among trees on a knoll overlooking the ocean. About 15 minutes drive from Bodega Ridge.</p>
               </Card>
               <Card>
                 <h4><a href="https://abnb.me/9soohDPSNL">Private Oceanfront Studio</a></h4> 
                 <p>Close to Bodega Cove. Modern waterfront studio suite with private entrance. Large deck with views of Trincomali Channel, surrounded by fir and arbutus trees. Go for a swim in the ocean. Take an outdoor shower. Watch whales, eagles, hummingbirds, sea lions and otters.</p>
               </Card>
-
               <Card>
               <h4><a href="http://pinkgeraniumcottage.com/Welcome.html">Pink Geranium</a></h4>           
-              <p>A 10-minute walk from Bodega Ridge. Beautiful little cottage with one bedroom and pull out across the street from the water</p>
+              <p>A 10-minute walk from Bodega Ridge. Beautiful little cottage with one bedroom and pull out across the street from the water.</p>
               </Card>
               <Card>
               <h4><a href="http://www.galianoreddoor.com">Behind the Red Door</a></h4>
@@ -134,7 +132,7 @@ const Accommodation = () => (
               </Card>
               <Card>
               <h4><a href="http://hiddenridgegaliano.com">The Hidden Ridge</a></h4>
-              <p>A Cottage and a Bed & Breakfast about a 5-7-minute drive from Bodega Ridge.</p> 
+              <p>A cottage and a Bed & Breakfast about a 5-7-minute drive from Bodega Ridge.</p> 
               </Card>
               <Card>
               <h4><a href="https://www.vrbo.com/596088">Heritage House</a></h4>

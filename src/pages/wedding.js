@@ -197,7 +197,7 @@ const WeddingPage = () => (
       <div className="overlap">
         <h2>When and Where</h2>
       
-        <p>The wedding will take place atop the bluffs at Bodega Ridge, on beautiful Galiano Island. (You didn't think a simple flight to Canada would suffice did you?!). Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+        <p>The wedding will take place atop a bluff at Bodega Ridge, on beautiful Galiano Island. (You didn't think a simple flight to Canada would suffice did you?!). Bodege Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
 
         
       </div>

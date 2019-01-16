@@ -59,16 +59,16 @@ const MobileNav = () => (
                 <Link to="/" activeClassName="active">Wedding</Link>
             </li>
             <li>
-                <Link to="/accommodation" activeClassName="active">Accommodation</Link>
+                <Link to="/accommodation/" activeClassName="active">Accommodation</Link>
             </li>
             <li>
-                <Link to="/galiano" activeClassName="active">Galiano</Link>
+                <Link to="/galiano/" activeClassName="active">Galiano</Link>
             </li>
             <li>
-                <Link to="/getting-here" activeClassName="active">Getting to Canada</Link>
+                <Link to="/getting-here/" activeClassName="active">Getting to Canada</Link>
             </li>
             <li>
-                <Link to="/travel" activeClassName="active">Travel</Link>
+                <Link to="/travel/" activeClassName="active">Travel</Link>
             </li>
         </ul>
         

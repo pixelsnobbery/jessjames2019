@@ -157,6 +157,7 @@ const Itinerary = styled.ul`
       width: 80px;
       height: 80px;
       border-radius: 40px;
+      flex-shrink: 0;
       background-color: ${props => props.theme.primary};
       text-align: center;
       line-height: 80px;
@@ -185,7 +186,7 @@ const Itinerary = styled.ul`
       padding: 32px;
       order: 0;
       @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
-      width: 40%;
+      width: 70%;
       }
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 
@@ -259,10 +260,10 @@ const TravelPage = () => (
         <h3>Where to Stay</h3>
         <h4>Downtown</h4>
 
-        <p>One of the main feature of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
+        <p>One of the main features of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
       
         <h4>Kitsilano</h4>
-        <p>Aaaah Kitsilano. Where the beautiful people live. (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
+        <p>Aaaah Kitsilano. Where the beautiful people live (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
       
         <h4>Mount Pleasant / East Vancouver</h4>
         <p>Vancouver's east side is made up of a conglomeration of ethnic neighborhoods which feature unconventional shopping, top-notch dining options and plenty of entertainment venues. Commercial Drive – also known as Little Italy – is famous for being Vancouver's artistic hub and is packed with art galleries, second-hand shops and plenty of Italian restaurants and cafes. Oh, and there’s also tonnes of craft breweries.</p>
@@ -298,7 +299,7 @@ const TravelPage = () => (
           <img src={Capilano} alt="Capilano Suspension Bridge"></img>
             <div>
               <h4>Capilano Suspension Bridge</h4>
-              <p>One of the world's longest (140m) and highest (70m) suspension bridges, sways gently over the roiling Capilano Canyon. Arrive early as it gets busy!</p>
+              <p>One of the world's longest (140m) and highest (70m) suspension bridges, sways gently over the dramatic Capilano Canyon. Arrive early as it gets busy!</p>
             </div>
           </Card>
           <Card>
@@ -324,7 +325,7 @@ const TravelPage = () => (
 
       <CardWrapper>
         <div className="card wow">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.lonelyplanet.com/canada/british-columbia/whistler" target="_blank" rel="noopener noreferrer">
           <img src={Whistler} alt="Whistler" />
           <h3>Whistler</h3>
           </a>
@@ -338,14 +339,14 @@ const TravelPage = () => (
         </div>
 
         <div className="card wow" data-wow-delay=".2s">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.lonelyplanet.com/canada/british-columbia/tofino-and-around" target="_blank" rel="noopener noreferrer">
           <img src={Tofino} alt="Tofino" />
           <h3>Tofino</h3>
           </a>
         </div>
 
         <div className="card wow" data-wow-delay=".3s">
-        <a href="https://www.lonelyplanet.com/canada/vancouver" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.lonelyplanet.com/canada/british-columbia/okanagan-valley" target="_blank" rel="noopener noreferrer">
           <img src={Okanagan} alt="Okanagan" />
           <h3>Okanagan Valley</h3>
         </a>

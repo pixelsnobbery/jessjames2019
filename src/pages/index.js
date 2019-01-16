@@ -166,7 +166,7 @@ const Index = () => (
 
           <p className="lead">Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will be around 4pm on Wedneday, July 3rd.</p>
           
-          <p>Bodega Ridge is located on the north of the island, and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+          <p>Bodega Ridge is located on the north of the island and is about 25 minutes drive away from Sturdies Bay harbour.</p>
 
           <img src={Map} alt="map" />
 
@@ -274,7 +274,7 @@ const Index = () => (
             </ScheduleItem>
             <ScheduleItem>
               <div className="description">
-                <h4>Drinks & Canapes</h4>
+                <h4>Drinks & Canapés</h4>
                 <p>Enjoy celebratory drinks and nibbles whilst listening to some local acoustics.</p>
               </div>
               <div className="meta">
@@ -311,7 +311,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Depart</h4>
-                <p>Depending on numbers, we are planning to organise a goodbye brunch on the morning of Thursday July 4th. We'll be in touch nearer the time to confirm attendees. Otherwise after emotional goodbyes, you can carry on with your Canadian travels</p>
+                <p>Depending on numbers, we are planning to organise a goodbye brunch on the morning of Thursday July 4th. We'll be in touch nearer the time to confirm attendees. Otherwise after emotional goodbyes, you can carry on with your Canadian travels.</p>
               </div>
               <div className="meta">
                 <span className="icon">
