@@ -66,6 +66,7 @@ const Hero = styled.div`
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       svg {
         width: 100%;
+        max-height: 400px;
       }
       top: 0;
       bottom: initial;
