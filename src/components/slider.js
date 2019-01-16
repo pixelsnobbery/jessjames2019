@@ -17,6 +17,10 @@ const SliderDiv = styled.div`
         }
         .aws-sld__wrapper {
             box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            height: 500px;
+            @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+                height: initial;
+            }
             .aws-sld__controls {
                 span {
                     ::before, ::after {

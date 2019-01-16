@@ -13,6 +13,8 @@ import Overlay from '../components/overlay'
 import SectionTitle from '../components/layouts/section-title';
 import Button from '../components/button'
 
+import PassportIcon from  '-!svg-react-loader?name=Passport!../images/passport-icon.svg'
+
 const Hero = styled.div`
   display: block;
   height: 85vh;
@@ -86,6 +88,24 @@ const Accommodation = () => (
             </li>
             <li>
               <strong>Glasgow: </strong>1 flight per week
+            </li>
+          </ul>
+
+          <p>The following airlines offer direct flights to Vancouver:
+          </p>
+
+          <ul>
+            <li>
+              Air Transat
+            </li>
+            <li>
+              Westjet
+            </li>
+            <li>
+              British Airways
+            </li>
+            <li>
+              Air Canada
             </li>
           </ul>
 

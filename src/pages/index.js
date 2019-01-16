@@ -13,6 +13,7 @@ import Gift from  '-!svg-react-loader?name=Gift!../images/gift-icon.svg'
 import Dinner from '-!svg-react-loader?name=Dinner!../images/dinner-icon.svg'
 import Ferry from '-!svg-react-loader?name=Ferry!../images/ferry-icon.svg'
 import Canapes from '-!svg-react-loader?name=Canapes!../images/canapes-icon.svg'
+import Breakfast from '-!svg-react-loader?name=Breakfast!../images/breakfast-icon.svg'
 
 
 
@@ -315,7 +316,7 @@ const Index = () => (
               </div>
               <div className="meta">
                 <span className="icon">
-                  <Ferry></Ferry>
+                  <Breakfast></Breakfast>
                 </span>
               </div>
             </ScheduleItem>

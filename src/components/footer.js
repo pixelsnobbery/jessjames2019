@@ -100,8 +100,14 @@ const Foot = styled.footer`
                 -webkit-padding-start: 0;
                 margin: 32px 0 0 0;
 
-                a {
+                input {
                     font-weight: bold;
+                    background-color: ${props => props.theme.primary};
+                    border-width: 0;
+                    color: #fff;
+                    padding: 16px 32px;
+                    text-transform: uppercase;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
                     &:hover, &:active {
                         background-color: #333!important;
                     }
@@ -123,6 +129,17 @@ const HeaderBannerStyle = styled.span`
     height: 48px;
     width: 48px;
 `
+const HeaderBannerStyleLeft = styled.span`
+    position:absolute;
+    left: -35px;
+    > * {
+        transform: scaleX(-1);
+    }
+    
+    top: 5px;
+    height: 48px;
+    width: 48px;
+`
 const FooterElement = () => (
     
   <Foot>
@@ -131,7 +148,7 @@ const FooterElement = () => (
     <div>
         <div>
             <h3>
-                <HeaderBannerStyle flipped={true}><HeaderBanner></HeaderBanner></HeaderBannerStyle>    
+                <HeaderBannerStyleLeft><HeaderBanner></HeaderBanner></HeaderBannerStyleLeft>    
                 Will you be joining us?
                 <HeaderBannerStyle><HeaderBanner></HeaderBanner></HeaderBannerStyle>
             </h3>
