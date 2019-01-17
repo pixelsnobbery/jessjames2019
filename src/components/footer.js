@@ -176,7 +176,7 @@ const FooterElement = () => (
                     <span>We're stoked to have you as</span>
                     <h4>Our Guests</h4>
                     <span className="sub">Please enter your names, and names/ages of any children attending</span>
-                    <textarea name="name" id="name" rows="5"></textarea>
+                    <textarea name="name" id="name" rows="5" required></textarea>
                 </div>
                 <div className="fieldWrapper">
                     <span>Let us know any</span>
