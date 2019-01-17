@@ -174,7 +174,10 @@ const Itinerary = styled.ul`
       align-content: center;
       justify-content: center;
       display: flex;
+      order: 0;
+      @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       order: 1;
+      }
 
       &.animated {
         animation: scaleIn .5s ease;
@@ -189,9 +192,10 @@ const Itinerary = styled.ul`
     .content-box {
       background-color: #fff;
       padding: 32px;
-      order: 0;
+      order: 1;
       @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       width: 70%;
+      order: 0;
       }
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 
