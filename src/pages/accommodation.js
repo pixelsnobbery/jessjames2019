@@ -100,7 +100,7 @@ const Accommodation = () => (
           1 bedroom cabin: $350/night
         </li>
         <li>
-          2 bedroom cabin (price per room): $200/night
+          2 bedroom cabin: $400/night
         </li>
       </ul>
 
