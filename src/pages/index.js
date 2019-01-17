@@ -39,7 +39,10 @@ import Overlay from '../components/overlay';
 
 const Hero = styled.div`
 @media only screen and (min-width: ${props => props.theme.maxWidth}) {
-  height: 85vh;
+  height: 500px;
+}
+@media only screen and (min-width: 1024px) {
+  height: 650px;
 }
   display:flex;
   flex-direction:column;
@@ -76,8 +79,8 @@ const Hero = styled.div`
         width: 100%;
         max-height: 400px;
       }
-      top: 0;
-      bottom: initial;
+      top: 80px;
+      bottom: 0;
       left: 64px;
       right: initial;
       width: 330px;

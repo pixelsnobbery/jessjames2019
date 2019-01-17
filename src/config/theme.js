@@ -9,7 +9,7 @@ const Theme = {
     skyBottom: '#bfddda',
     // dimensions
     maxWidth: '960px',
-    aboveMobile: '768px'
+    aboveMobile: '960px'
   }
   
   export default Theme

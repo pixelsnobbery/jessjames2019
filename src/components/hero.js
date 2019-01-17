@@ -12,11 +12,7 @@ const HeroWrapper = styled.div`
     position: relative;
 
     overflow:hidden;
-    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
-        height: 100vh;
-        max-height: 600px;
-        width: 100%;
-    }
+
 
     .heroImg {
         height: 100%;
