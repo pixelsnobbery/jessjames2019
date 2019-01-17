@@ -26,6 +26,7 @@
     "react-burger-menu": "^2.6.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-responsive-carousel": "^3.1.45",
     "react-svg-inline": "^2.1.1",
     "react-tabs": "^2.3.0",
     "react-typography": "^0.16.13",
