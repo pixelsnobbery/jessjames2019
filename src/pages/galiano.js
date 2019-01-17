@@ -16,6 +16,7 @@ import Galiano3 from '../images/galiano-3.jpg'
 import Galiano4 from '../images/galiano-4.jpg'
 
 import Boat from  '-!svg-react-loader?name=Boat!../images/boat-icon.svg'
+import GalianoIcon from  '-!svg-react-loader?name=Galiano!../images/galiano-icon.svg'
 import GalianoImage from '../components/hero-images/galiano'
 
 const Hero = styled.div`
@@ -104,7 +105,7 @@ const Accommodation = () => (
       <Section bgColor="#F6F9FC">
           <SectionTitle
             text="Things to do on Galiano"
-            subtitle="How about doing one of these activities on before the wedding ceremony?"
+            icon={<GalianoIcon></GalianoIcon>}
           ></SectionTitle>
 
           <Slider>

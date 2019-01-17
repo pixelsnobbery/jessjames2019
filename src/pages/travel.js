@@ -268,10 +268,10 @@ const TravelPage = () => (
         <p>One of the main features of downtown Vancouver is Stanley Park, which is located at the tip of the peninsula. The park is 1,000 acres in size, featuring numerous hiking and biking trails, and is home to the nearly 14-mile-long Seawall and the Vancouver Aquarium. Downtown is also the city's largest shopping district. Robson Street in particular brims with shops and cafes while its neighbour, Granville Street, features numerous independent boutiques.</p>
       
         <h4>Kitsilano</h4>
-        <p>Aaaah Kitsilano. Where the beautiful people live (Your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
+        <p>Aaaah Kitsilano. Where the beautiful people live (your Bride and Groom included!). Known for its numerous outdoor activities, fantastic beaches and mountain views, Kitsilano sits just south of downtown across English Bay. Here you'll find some of Vancouver's most popular outdoor spaces, including Kitsilano Beach and Vanier Park. Kitsilano is also a foodie's paradise, boasting dozens of one-of-a-kind eateries.</p>
       
         <h4>Mount Pleasant / East Vancouver</h4>
-        <p>Vancouver's east side is made up of a conglomeration of ethnic neighborhoods which feature unconventional shopping, top-notch dining options and plenty of entertainment venues. Commercial Drive – also known as Little Italy – is famous for being Vancouver's artistic hub and is packed with art galleries, second-hand shops and plenty of Italian restaurants and cafes. Oh, and there’s also tonnes of craft breweries.</p>
+        <p>Vancouver's east side is made up of a conglomeration of ethnic neighborhoods which feature unconventional shopping, top-notch dining options and plenty of entertainment venues. Commercial Drive – also known as Little Italy – is famous for being Vancouver's artistic hub and is packed with art galleries, second-hand shops and plenty of Italian restaurants and cafes. Oh, and there’s also loads of craft breweries.</p>
       
         <h4>North Vancouver</h4>
         <p>Located across the Burrard Inlet from downtown Vancouver is North Vancouver, which acts as a gateway to some of the city’s nearby natural attractions, including Lynn Canyon Park, Grouse Mountain and the Capilano Suspension Bridge. Even if you are not interested in these outdoor activities, recent visitors say that North Vancouver is worth a visit. The area is filled with antiques shops, and the Lonsdale Quay Market – which consists of three different levels – is home to dozens of specialty shops, restaurants and fresh food vendors.</p>
@@ -419,7 +419,7 @@ const TravelPage = () => (
           <li>
             <div className="content-box wow">
               <h3>Watch Jess get Wifed</h3>
-              <p></p>
+              <p>The main event!</p>
             </div>
             <h4 className="wow">Day 7</h4>
             <div className="content-spacer"></div>

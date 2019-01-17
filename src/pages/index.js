@@ -165,9 +165,9 @@ const Index = () => (
             icon={<Marker></Marker>}>
           </SectionTitle>
 
-          <p className="lead">Our wedding will take place on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will be around 4pm on Wedneday, July 3rd.</p>
+          <p className="lead">Our wedding will take place at <a href="https://www.bodegaridge.com">Bodega Ridge</a> on beautiful Galiano Island, the closest Southern Gulf Island to Vancouver. The wedding ceremony will be around 4pm on Wedneday, July 3rd.</p>
           
-          <p>Bodega Ridge is located on the north of the island and is about 25 minutes drive away from Sturdies Bay harbour.</p>
+          <p>Bodega Ridge is located on the north of the island, about a 25 minute drive away from Sturdies Bay harbour.</p>
 
           <img src={Map} alt="map" />
 
@@ -196,7 +196,7 @@ const Index = () => (
 
 <ul>
   <li>
-    The ceremony will be held on a bluff overlooking the the ocean and the mountains of Vancouver Island, followed by a marquee reception.
+    The ceremony will be held on a bluff overlooking the ocean and surrounding islands, followed by an al fresco dinner and party in the lodge.
   </li>
   <li>
     The bar accepts cash & card payments. There are cash points available on the island towards Sturdies Bay.
@@ -254,7 +254,7 @@ const Index = () => (
             <ScheduleItem>
             <div className="description">
                 <h4>Free Time</h4>
-                <p>We're thinking of organising an optional hike around Bodega Ridge Provincial Park - please let us know if you're interested. Otherwise, spend some time exploring the beaches near Bodega Ridge? Or just chill out in the grounds and get ready for the party.</p>
+                <p>We're thinking of organising an optional hike around Bodega Ridge Provincial Park - please let us know if you're interested. Otherwise, spend some time exploring the beautiful coastline, or just chill out in the grounds and get ready for the celebrations.</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -265,7 +265,7 @@ const Index = () => (
             <ScheduleItem>
               <div className="description">
                 <h4>Wedding</h4>
-                <p>The ceremony will start around 4pm. The wedding site is a short walk up to the bluff, and features a beautiful panoramic view of the Gulf Islands.</p>
+                <p>The ceremony will start around 4pm. The wedding site is a short walk up from the lodge – the view will be worth it!</p>
               </div>
               <div className="meta">
                 <span className="icon">
@@ -335,7 +335,7 @@ const Index = () => (
             icon={<Gift></Gift>}>
           </SectionTitle>
 
-          <p>We are delighted to have you as our guest and we appreciate that you are making the effort to travel to our wedding. Buying us a gift is not necessary, however if you are looking to give us something, a contribution towards our honeymoon would really make our day.</p>
+          <p>We are delighted to have you as our guest and we appreciate that you are making the effort to travel to our wedding. Buying us a gift is not necessary, however if you would really like to, a contribution towards our honeymoon would be awesome.</p>
         </Section>
     </Layout>
   </ThemeProvider>
