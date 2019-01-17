@@ -21,6 +21,12 @@ padding-top: 0;
  a:hover, a:active {
    color: #333;
  }
+ h2 {
+    font-size: 1.3rem;
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+      font-size: 1.8rem;
+  }
+ }
 `
 
 

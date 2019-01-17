@@ -38,7 +38,7 @@ import Overlay from '../components/overlay';
 
 
 const Hero = styled.div`
-@media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+@media only screen and (min-width: ${props => props.theme.maxWidth}) {
   height: 85vh;
 }
   display:flex;
@@ -63,6 +63,13 @@ const Hero = styled.div`
 
     svg {
       width: 80%;
+    }
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) and (max-width: ${props => props.theme.maxWidth}){ 
+      top: 96px;
+      bottom: 0;
+      svg {
+        width: 60%;
+      }
     }
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       svg {

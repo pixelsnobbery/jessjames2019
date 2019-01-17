@@ -55,7 +55,11 @@ const StyledHeader = styled.header`
         list-style-type: none;
         margin: 0;
         li {
-            margin-right: 32px;
+          margin-right: 16px;
+          @media only screen and (min-width: ${props => props.theme.maxWidth}) {
+margin-right: 32px;
+          }
+            
             text-transform:  uppercase;
             a:link, a:visited {
                 color: ${props => props.isTop ? props.theme.white : '#444'};

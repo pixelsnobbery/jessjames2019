@@ -53,7 +53,7 @@ cursor: pointer; }
 
 .carousel {
 position: relative;
-width: 100%; }
+width: 100%;}
 .carousel * {
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
@@ -170,6 +170,7 @@ width: 100%; }
  position: relative;
  text-align: center;
  background: #000; }
+ 
  .carousel .slide img {
    width: 100%;
    vertical-align: top;
@@ -186,6 +187,7 @@ width: 100%; }
    -o-transition: all 0.5s ease-in-out;
    transition: all 0.5s ease-in-out;
    position: absolute;
+   
    bottom: 40px;
    left: 50%;
    margin-left: -45%;
@@ -194,9 +196,13 @@ width: 100%; }
    background: #000;
    color: #fff;
    padding: 16px;
-   font-size: 1rem;
+   font-size: .8rem;
+   
    text-align: center;
-   opacity: 0.45;
+   opacity: 0.75;
+   @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+    opacity: 0.45;
+  }
    -webkit-transition: opacity 0.35s ease-in-out;
    -moz-transition: opacity 0.35s ease-in-out;
    -ms-transition: opacity 0.35s ease-in-out;
@@ -205,6 +211,16 @@ width: 100%; }
    
     h3 {
       margin-top: 0;
+      margin-bottom: 0;
+      @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+   margin-bottom: 16px; 
+  }
+    }
+    p {
+      display:none;
+      @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+    display: block;
+  }
     }
    }
 .carousel .control-dots {

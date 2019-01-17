@@ -91,6 +91,16 @@ const Foot = styled.footer`
                     padding: 8px;
                 }
             }
+
+            p {
+                color: rgba(255,255,255,0.7);
+            }
+            a:link, a:visited {
+                color: rgba(255,255,255,0.7);
+            }
+            a:hover, a:active {
+                color: rgba(255,255,255,1);
+            }
             ul.actions {
                 display: flex;
                 justify-content: center;
@@ -122,14 +132,21 @@ const Foot = styled.footer`
     }
 `
 const HeaderBannerStyle = styled.span`
+display: none;
+@media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    display: block;
     position:absolute;
     right: -35px;
 
     top: 5px;
     height: 48px;
     width: 48px;
+}
 `
 const HeaderBannerStyleLeft = styled.span`
+display: none;
+@media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+    display: block;
     position:absolute;
     left: -35px;
     > * {
@@ -139,6 +156,7 @@ const HeaderBannerStyleLeft = styled.span`
     top: 5px;
     height: 48px;
     width: 48px;
+}
 `
 const FooterElement = () => (
     
@@ -178,6 +196,8 @@ const FooterElement = () => (
                     <span className="sub">Would you like to stay on-site?</span>
                     <textarea name="accommodation" id="accommodation" rows="5"></textarea>
                 </div>
+
+                <p>If you can’t make it, we’re really sorry to hear that, but would be grateful if you could let us know by contacting either Jess or James or emailing <a href="mailto:us@jessjames2019.com">us@jessjames2019.com</a>.</p>
                 <ul className="actions">
                     <li>
                         <input type="submit" value="Send my RSVP" />
