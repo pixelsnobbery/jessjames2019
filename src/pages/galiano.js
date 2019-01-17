@@ -110,23 +110,31 @@ const Accommodation = () => (
           <Slider>
             <div>
               <img src={Galiano1} />
-              <h3>Kayak around Montague Harbour</h3>
-              <p>Explore the calm waters of Montague Harbour, taking in the beautiful bscenery, and scouting out private beaches to moore at.</p>
+              <div className="legend">
+                <h3>Kayak around Montague Harbour</h3>
+                <p>Explore the calm waters of Montague Harbour, taking in the beautiful bscenery, and scouting out private beaches to moore at.</p>
+              </div>
             </div>
             <div>
               <img src={Galiano2} />
-              <h3>Go on a hike</h3>
-              <p>With a 301 metre elevation at it's peak, Mount Galiano offers incredible views of the southern gulf islands. Allow 45 minutes to an hour for the ascent. Or, right on the doorstep of the venue is the stunning Bodega Ridge Provincial Park.</p>
+              <div className="legend">
+                <h3>Go on a hike</h3>
+                <p>With a 301 metre elevation at it's peak, Mount Galiano offers incredible views of the southern gulf islands. Allow 45 minutes to an hour for the ascent. Or, right on the doorstep of the venue is the stunning Bodega Ridge Provincial Park.</p>
+              </div>
             </div>
             <div>
             <img src={Galiano3} />
-              <h3>Explore the stunning coastline</h3>
-              <p>Must-sees: Morning Beach, Retreat Cove, and if you fancy a hike, Pebble Beach.</p>
+              <div className="legend">
+                <h3>Explore the stunning coastline</h3>
+                <p>Must-sees: Morning Beach, Retreat Cove, and if you fancy a hike, Pebble Beach.</p>
+              </div>
             </div>
             <div>
               <img src={Galiano4}></img>
-              <h3>Get to know the local wildlife</h3>
-              <p>Eagles, deer, seals, otters and orcas are seen regularly from all over the island.</p>
+              <div className="legend">
+                <h3>Get to know the local wildlife</h3>
+                <p>Eagles, deer, seals, otters and orcas are seen regularly from all over the island.</p>
+              </div>
             </div>
           </Slider>
         </Section>

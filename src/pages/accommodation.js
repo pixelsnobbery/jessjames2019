@@ -70,10 +70,18 @@ const Accommodation = () => (
 
               <Button text="Find out more about Bodega Ridge" href="https://www.bodegaridge.com/cabins/" bgColor={Theme.neonBlue}></Button>
               <Slider>
-                <div data-src={BodegaRidge1} alt="Bodega Ridge"></div>
-                <div data-src={BodegaRidge2} alt="Bodega Ridge"></div>
-                <div data-src={BodegaRidge3} alt="Bodega Ridge"></div>
-                <div data-src={BodegaRidge4} alt="Bodega Ridge"></div>
+                <div>
+                  <img src={BodegaRidge1} alt="Bodega Ridge" />
+                </div>
+                <div>
+                  <img src={BodegaRidge2} alt="Bodega Ridge" />
+                </div>
+                <div>
+                  <img src={BodegaRidge3} alt="Bodega Ridge" />
+                </div>
+                <div>
+                  <img src={BodegaRidge4} alt="Bodega Ridge" />
+                </div>
               </Slider>
   
           </Section>

@@ -193,15 +193,20 @@ width: 100%; }
    border-radius: 10px;
    background: #000;
    color: #fff;
-   padding: 10px;
-   font-size: 12px;
+   padding: 16px;
+   font-size: 1rem;
    text-align: center;
-   opacity: 0.25;
+   opacity: 0.45;
    -webkit-transition: opacity 0.35s ease-in-out;
    -moz-transition: opacity 0.35s ease-in-out;
    -ms-transition: opacity 0.35s ease-in-out;
    -o-transition: opacity 0.35s ease-in-out;
-   transition: opacity 0.35s ease-in-out; }
+   transition: opacity 0.35s ease-in-out; 
+   
+    h3 {
+      margin-top: 0;
+    }
+   }
 .carousel .control-dots {
  position: absolute;
  bottom: 0;
@@ -217,8 +222,8 @@ width: 100%; }
    -ms-transition: opacity 0.25s ease-in;
    -o-transition: opacity 0.25s ease-in;
    transition: opacity 0.25s ease-in;
-   opacity: 0.3;
-   filter: alpha(opacity=30);
+   opacity: 0.5;
+   filter: alpha(opacity=50);
    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
    background: #fff;
    border-radius: 50%;
@@ -229,7 +234,8 @@ width: 100%; }
    margin: 0 8px; }
    .carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
      opacity: 1;
-     filter: alpha(opacity=100); }
+     filter: alpha(opacity=100); 
+     width: 12px; height: 12px;}
 .carousel .carousel-status {
  position: absolute;
  top: 0;
@@ -245,7 +251,7 @@ width: 100%; }
 
 const Slider = ({children}) => (
     <SliderDiv>
-        <Carousel>      
+        <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} emulateTouch={true} showStatus={false} autoPlay={true}>      
             {children}
         </Carousel>
     </SliderDiv>
