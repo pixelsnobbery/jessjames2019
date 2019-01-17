@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const Nav = styled.div`
-    height: 50px;
+    height: 60px;
     background-color: #000;
     position: fixed;
     top: 0;
