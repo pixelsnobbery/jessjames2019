@@ -23,11 +23,16 @@ const StyledHeader = styled.header`
   h1 {
     line-height: 0;
     padding-bottom: 16px;
+    display:none;
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
+      
+      display: block;
+    }
   }
 
   svg {
     display: ${props => props.noLogo ? 'none' : 'block'}!important;
-    @media only screen and (max-width: ${props => props.theme.aboveMobile}) {
+    @media only screen and (min-width: ${props => props.theme.aboveMobile}) {
       
       display: none;
     }

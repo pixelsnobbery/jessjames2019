@@ -58,7 +58,9 @@ const ScheduleItemLi = styled.li`
     }
     div.meta {
         order: 0;
+        @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
         margin-right: 16px;
+        }
     }
 
     h3 {

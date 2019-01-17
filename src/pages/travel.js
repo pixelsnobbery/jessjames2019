@@ -43,7 +43,11 @@ import Card from '../components/card'
 
 const Hero = styled.div`
   display: block;
-  height: 85vh;
+  height: 65vh;
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+    height: 85vh;
+  }
+
   display:flex;
   flex-direction:column;
   justify-content: center;
@@ -66,11 +70,12 @@ const Hero = styled.div`
     color: #fff;
     position: relative;
     z-index: 3;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     text-align: center;
-    width: 100%;
+    width: 80%;
     @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
       max-width: 500px;
+      font-size: 1.8rem;
     }
     font-weight: 200;
   }

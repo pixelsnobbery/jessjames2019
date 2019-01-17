@@ -21,7 +21,10 @@ import BodegaCove from '../images/bodega-cove.jpg'
 
 const Hero = styled.div`
   display: block;
-  height: 85vh;
+  height: 65vh;
+  @media only screen and (min-width: ${props => props.theme.aboveMobile}) { 
+    height: 85vh;
+  }
   display:flex;
   flex-direction:column;
   justify-content: center;
