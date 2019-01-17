@@ -87,7 +87,7 @@ const CardWrapper = styled.div`
   .card {
     position: relative;
     flex: 1 0 0;
-    min-width: 300px;
+    min-width: 270px;
     height: 300px;
     overflow: hidden;
     margin: 8px 8px;

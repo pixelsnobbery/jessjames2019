@@ -15,7 +15,7 @@ const typography = new Typography({
     },
     {
       name: 'Aisha Latin',
-      styles: ['400'],
+      styles: ['400', '400i', '700', '700i'],
     },
   ],
   headerFontFamily: [
