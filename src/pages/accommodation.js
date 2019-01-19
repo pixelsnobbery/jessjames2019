@@ -113,10 +113,10 @@ const Accommodation = () => (
  
             <CardWrapper>
 
-              <Card>
+              {/* <Card>
                 <h4><a href="https://serenitybythesea.com/">Serenity by the Sea</a></h4>
                 <p>Several suites nestled among trees on a knoll overlooking the ocean. About 15 minutes drive from Bodega Ridge.</p>
-              </Card>
+              </Card> */}
               <Card>
                 <h4><a href="https://abnb.me/9soohDPSNL">Private Oceanfront Studio</a></h4> 
                 <p>Close to Bodega Cove. Modern waterfront studio suite with private entrance. Large deck with views of Trincomali Channel, surrounded by fir and arbutus trees. Go for a swim in the ocean. Take an outdoor shower. Watch whales, eagles, hummingbirds, sea lions and otters.</p>
@@ -129,33 +129,34 @@ const Accommodation = () => (
               <h4><a href="http://www.galianoreddoor.com">Behind the Red Door</a></h4>
               <p>About a 5-7-minute drive from Bodega Ridge. A cozy 1-bedroom B&B.</p>
               </Card>
-              <Card>
+              {/* <Card>
               <h4><a href="http://www.galianocabins.com">Galiano Oceanfront Cabins</a></h4>
               <p>A 10-minute walk from Bodega Ridge, 2 lovely cabins just down the hill. 1 oceanfront cottage w/ 1 bedroom and a 3-bedroom cabin with a beautiful view of the water.</p>
-              </Card>
-              <Card>
+              </Card> */}
+              {/* <Card>
               <h4><a href="https://www.vrbo.com/2144">Galiano Getaways</a></h4>
               <p>A 3-bedroom beautiful cabin located just north of Bodega Ridge, a 30 second drive, up Clementine Lane. 5-10 walking distance. </p>
-              </Card>
-              <Card>
+              </Card> */}
+              {/* <Card>
               <h4><a href="https://www.airbnb.ca/rooms/13999967">The Sweet Suite</a></h4>
               <p>2-bedroom accommodation on the South End of Galiano Island, about a 20- 25-minute drive to Bodega Ridge.</p> 
-              </Card>
+              </Card> */}
               <Card>
               <h4><a href="http://hiddenridgegaliano.com">The Hidden Ridge</a></h4>
               <p>A cottage and a Bed & Breakfast about a 5-7-minute drive from Bodega Ridge.</p> 
               </Card>
-              <Card>
+              {/* <Card>
               <h4><a href="https://www.vrbo.com/596088">Heritage House</a></h4>
               <p>A cozy 4-bedroom Heritage House on 5 acres of tranquility. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p>
-              </Card>
-              <Card>
+              </Card> */}
+              {/* <Card>
                 <h4><a href="https://www.vrbo.com/810824">Guest Cottage on 3-Acres</a></h4> 
                 <p>Sleeps up to 6 people, waterfront cottage. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p> 
-              </Card>
+              </Card> */}
               <Card>
                 <h4><a href="https://www.airbnb.ca/rooms/12156952">Captain's Quarters</a></h4>
                 <p>5-minute drive from Bodega Ridge, very nice historic log cabin.</p>
+                <p><em>* Minimum 3 night stay</em></p>
               </Card>
               </CardWrapper>
         </Section>
