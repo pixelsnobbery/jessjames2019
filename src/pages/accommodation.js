@@ -58,7 +58,7 @@ const Accommodation = () => (
 
       <Section>
 
-        <p class="lead">Rooms in Galiano are in short supply. We recommend booking your accommodation ASAP. We have a limited number of rooms available left on-site, so please let us know if you'd like to stay at Bodega Ridge.</p><p class="lead"> If people are going to be staying off site, we can arrange for the Galiano Island bus to take people back to their accommodation at the end of the night.</p>
+        <p class="lead">Accommodation on Galiano books up fast, and July is peak season. We recommend finalizing your accommodation ASAP. There are a limited number of rooms available at Bodega Ridge, and self-contained cabins at nearby Bodega Cove. Please let us know if you'd like to stay in one of these.</p><p class="lead"> If people are going to be staying elsewhere on the island we can arrange for the Galiano Island bus to take people back to their accommodation at the end of the night.</p>
 
       </Section>
 
