@@ -56,6 +56,12 @@ const Accommodation = () => (
         <Overlay></Overlay>
       </Hero>
 
+      <Section>
+
+        <p class="lead">Rooms in Galiano are in short supply. We recommend booking your accommodation ASAP. We have a limited number of rooms available left on-site, so please let us know if you'd like to stay at Bodega Ridge.</p><p class="lead"> If people are going to be staying off site, we can arrange for the Galiano Island bus to take people back to their accommodation at the end of the night.</p>
+
+      </Section>
+
       <Section bgColor="#7795F8" skewY="0deg" textColor="#ffffff">
           <SectionTitle 
             text="Bodega Ridge" 

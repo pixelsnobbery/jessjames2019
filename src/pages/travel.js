@@ -486,17 +486,14 @@ const TravelPage = () => (
 
         <h3>Other places worth checking out if you have the time:</h3>
 
-        <ul>
-          <li>
-            Another popular thing to do is to fly in to Calgary, and drive through the Rockies, stopping off at Banff, Revelstoke, and the Okanagan before arriving at Vancouver. It's advisable to do this over at a week or so as it's a long drive.
-          </li>
-          <li>
-            Vancouver is very close to the US border. Seattle is just 4 hours drive away. Portland, Oregon is approx 6 hour drive, and San Francisco is approx 16 hours drive.
-          </li>
-          <li>
-            Feel free to ask us for any advice!
-          </li>
-        </ul>
+            <h4>Canadian Rockies</h4>
+            <p>Another popular thing to do is to fly in to Calgary, and drive through the Rockies, stopping off at Banff, Revelstoke, and the Okanagan before arriving at Vancouver. It's advisable to do this over a week or so as it's a long drive.</p>
+
+            <h4>USA</h4>
+            <p>Vancouver is very close to the US border. Seattle is just 4 hours drive away. Portland, Oregon is approx 6 hour drive, and San Francisco is approx 16 hours drive.</p>
+
+            <p>Feel free to ask us for any advice!</p>
+
       </Section>
 
     </Layout>

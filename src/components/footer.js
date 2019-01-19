@@ -193,7 +193,7 @@ const FooterElement = () => (
                 <div className="fieldWrapper">
                     <span>Tell us about</span>
                     <h4>Accommodation</h4>
-                    <span className="sub">Would you like to stay on-site?</span>
+                    <span className="sub">Would you like to stay in a cabin room at Bodega Ridge, or a self-contained cabin at Bodega Cove?</span>
                     <textarea name="accommodation" id="accommodation" rows="5"></textarea>
                 </div>
 

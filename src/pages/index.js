@@ -205,6 +205,7 @@ const Index = () => (
         <h2>Helpful details</h2>
 
 <ul>
+  <li>We will be hosting a welcome BBQ on Tuesday July 2nd from 6pm.</li>
   <li>
     The ceremony will be held on a bluff overlooking the ocean and surrounding islands, followed by an al fresco dinner and party in the lodge.
   </li>
