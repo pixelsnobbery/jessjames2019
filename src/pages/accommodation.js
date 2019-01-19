@@ -113,30 +113,30 @@ const Accommodation = () => (
  
             <CardWrapper>
 
-              {/* <Card>
-                <h4><a href="https://serenitybythesea.com/">Serenity by the Sea</a></h4>
-                <p>Several suites nestled among trees on a knoll overlooking the ocean. About 15 minutes drive from Bodega Ridge.</p>
-              </Card> */}
+              <Card>
+                <h4><a href="https://www.airbnb.ca/rooms/26395051?guests=1&adults=1">Magic Creek Cabin</a></h4>
+                <p>Magic Creek cabin feels like being in a loft /tree house and is nestled among tall cedars and fir trees at the end of a quiet lane on the Trincomali side of Galiano Island. 5-10 minute drive from Bodega Ridge.</p>
+              </Card>
               <Card>
                 <h4><a href="https://abnb.me/9soohDPSNL">Private Oceanfront Studio</a></h4> 
                 <p>Close to Bodega Cove. Modern waterfront studio suite with private entrance. Large deck with views of Trincomali Channel, surrounded by fir and arbutus trees. Go for a swim in the ocean. Take an outdoor shower. Watch whales, eagles, hummingbirds, sea lions and otters.</p>
               </Card>
               <Card>
-              <h4><a href="http://pinkgeraniumcottage.com/Welcome.html">Pink Geranium</a></h4>           
+              <h4><a href="https://www.airbnb.ca/rooms/10369755">Pink Geranium</a></h4>           
               <p>A 10-minute walk from Bodega Ridge. Beautiful little cottage with one bedroom and pull out across the street from the water.</p>
               </Card>
               <Card>
               <h4><a href="http://www.galianoreddoor.com">Behind the Red Door</a></h4>
               <p>About a 5-7-minute drive from Bodega Ridge. A cozy 1-bedroom B&B.</p>
               </Card>
-              {/* <Card>
-              <h4><a href="http://www.galianocabins.com">Galiano Oceanfront Cabins</a></h4>
-              <p>A 10-minute walk from Bodega Ridge, 2 lovely cabins just down the hill. 1 oceanfront cottage w/ 1 bedroom and a 3-bedroom cabin with a beautiful view of the water.</p>
-              </Card> */}
-              {/* <Card>
-              <h4><a href="https://www.vrbo.com/2144">Galiano Getaways</a></h4>
-              <p>A 3-bedroom beautiful cabin located just north of Bodega Ridge, a 30 second drive, up Clementine Lane. 5-10 walking distance. </p>
-              </Card> */}
+              <Card>
+              <h4><a href="https://www.airbnb.ca/rooms/6956821?location=Galiano%20Island%2C%20Southern%20Gulf%20Islands%2C%20BC&adults=2&check_in=2019-07-02&check_out=2019-07-04&guests=1&s=fPw0f3iC">Azami</a></h4>
+              <p>Rustic cottage, 5-10 minute drive from Bodega Ridge.</p>
+              </Card>
+              <Card>
+              <h4><a href="https://www.airbnb.ca/rooms/28936019?location=Galiano%20Island%2C%20Southern%20Gulf%20Islands%2C%20BC&adults=2&check_in=2019-07-02&check_out=2019-07-04&guests=1&s=fPw0f3iC">Shangri La Retreat</a></h4>
+              <p>Cosy forest cabin, close to Montague Harbour. Approx. 10 minute drive to Bodega Ridge</p>
+              </Card>
               {/* <Card>
               <h4><a href="https://www.airbnb.ca/rooms/13999967">The Sweet Suite</a></h4>
               <p>2-bedroom accommodation on the South End of Galiano Island, about a 20- 25-minute drive to Bodega Ridge.</p> 
