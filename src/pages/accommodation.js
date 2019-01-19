@@ -58,7 +58,7 @@ const Accommodation = () => (
 
       <Section>
 
-        <p class="lead">Accommodation on Galiano books up fast, and July is peak season. We recommend finalizing your accommodation ASAP. There are a limited number of rooms available at Bodega Ridge, and self-contained cabins at nearby Bodega Cove. Please let us know if you'd like to stay in one of these.</p><p class="lead"> If people are going to be staying elsewhere on the island we can arrange for the Galiano Island bus to take people back to their accommodation at the end of the night.</p>
+        <p class="lead">Accommodation on Galiano books up fast, and July is peak season. We recommend finalizing your accommodation ASAP. There are a limited number of rooms available at Bodega Ridge, and self-contained cabins at nearby Bodega Cove. Please let us know if you'd like to stay in one of these.</p><p class="lead"> If you are going to be staying elsewhere on the island we can arrange for the Galiano Island bus to take you back to your accommodation at the end of the night.</p>
 
       </Section>
 
@@ -116,7 +116,8 @@ const Accommodation = () => (
 
       <h3>Rest of Galiano</h3>
             
- 
+            <p>Here are a selection of other options. Please check <a href="https://www.airbnb.com">AirBnb</a>, or <a href="https://www.vrbo.com">VRBO</a> for more.</p>
+            <p>Just a reminder - if you're coming for the whole celebration, you'll need accommodation for the 2nd & 3rd July.</p>
             <CardWrapper>
 
               <Card>
