@@ -31,6 +31,7 @@ import BearTour from '../images/bear-tour.jpg'
 import VancouverSeawall from '../images/vancouver-seawall.jpg'
 import WhistlerItinerary from '../images/whistler-itinerary.jpg'
 import Victoria from '../images/victoria.jpg'
+import JessJames from '../images/jessjames.jpg'
 
 import GranvilleIsland from '../images/granville-island.jpg'
 import StanleyPark from '../images/stanley-park.jpg'
@@ -424,6 +425,7 @@ const TravelPage = () => (
             <div className="content-box wow">
               <h3>Watch Jess get Wifed</h3>
               <p>The main event!</p>
+              <img src={JessJames} alt="Jess & James"></img>
             </div>
             <h4 className="wow">Day 7</h4>
             <div className="content-spacer"></div>

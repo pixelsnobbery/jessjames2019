@@ -147,26 +147,22 @@ const Accommodation = () => (
               <h4><a href="https://www.airbnb.ca/rooms/28936019?location=Galiano%20Island%2C%20Southern%20Gulf%20Islands%2C%20BC&adults=2&check_in=2019-07-02&check_out=2019-07-04&guests=1&s=fPw0f3iC">Shangri La Retreat</a></h4>
               <p>Cosy forest cabin, close to Montague Harbour. Approx. 10 minute drive to Bodega Ridge</p>
               </Card>
-              {/* <Card>
-              <h4><a href="https://www.airbnb.ca/rooms/13999967">The Sweet Suite</a></h4>
-              <p>2-bedroom accommodation on the South End of Galiano Island, about a 20- 25-minute drive to Bodega Ridge.</p> 
-              </Card> */}
               <Card>
               <h4><a href="http://hiddenridgegaliano.com">The Hidden Ridge</a></h4>
               <p>A cottage and a Bed & Breakfast about a 5-7-minute drive from Bodega Ridge.</p> 
               </Card>
-              {/* <Card>
-              <h4><a href="https://www.vrbo.com/596088">Heritage House</a></h4>
-              <p>A cozy 4-bedroom Heritage House on 5 acres of tranquility. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p>
-              </Card> */}
-              {/* <Card>
-                <h4><a href="https://www.vrbo.com/810824">Guest Cottage on 3-Acres</a></h4> 
-                <p>Sleeps up to 6 people, waterfront cottage. On the South End of Galiano Island about a 20-25-minute drive to Bodega Ridge.</p> 
-              </Card> */}
               <Card>
                 <h4><a href="https://www.airbnb.ca/rooms/12156952">Captain's Quarters</a></h4>
                 <p>5-minute drive from Bodega Ridge, very nice historic log cabin.</p>
                 <p><em>* Minimum 3 night stay</em></p>
+              </Card>
+              <Card>
+                <h4><a href="https://www.galianoinn.com/">Galiano Inn & Spa</a></h4>
+                <p>Luxury oceanfront retreat in natural surroundings enhanced with beautiful gardens. 20 minute drive to Bodega Ridge.</p>
+              </Card>
+              <Card>
+                <h4><a href="http://www.env.gov.bc.ca/bcparks/explore/parkpgs/montague/">Camping</a></h4>
+                <p>Go rustic, and camp next to beautiful Montague Harbour. Booking opens 3 months in advance and fills up extremely quickly, so if you're looking to do this, you should book on April 2nd.</p>
               </Card>
               </CardWrapper>
         </Section>
