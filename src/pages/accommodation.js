@@ -92,11 +92,10 @@ const Accommodation = () => (
   
           </Section>
 
-          <Section skewY="0deg">
+          <Section skewY="0deg" bgColor={Theme.paleBlue}>
 
-          <SectionTitle text="Other Options" icon={<AccommodationIcon></AccommodationIcon>}gat></SectionTitle>
+          <SectionTitle text="Bodega Cove" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
             
-            <h3>Bodega Cove</h3>
 
 
               <p>A 5-minute walk from Bodega Ridge, Bodega Cove consists of 5 cedar cabins. There are two designs: romantic one bedroom units and more spacious two bedroom cabins ideal for two couples or a small family. If you're interested in one of these cabins please contact us.</p>
@@ -114,7 +113,11 @@ const Accommodation = () => (
 
       <img src={BodegaCove} alt="Bodega Cove" />
 
-      <h3>Rest of Galiano</h3>
+</Section>
+
+<Section>
+
+<SectionTitle text="Rest of Galiano" icon={<AccommodationIcon></AccommodationIcon>}></SectionTitle>
             
             <p>Here are a selection of other options. Please check <a href="https://www.airbnb.com">AirBnb</a>, or <a href="https://www.vrbo.com">VRBO</a> for more.</p>
             <p>Just a reminder - if you're coming for the whole celebration, you'll need accommodation for the 2nd & 3rd July.</p>
