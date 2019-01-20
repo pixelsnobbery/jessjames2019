@@ -47,6 +47,7 @@ const Layout = ({ children, location, noLogo }) => (
           title={data.site.siteMetadata.title}
         >
           <html lang="en" class={location} />
+          <meta name="description" content="Jess & James are getting married, and we're having a party!" />
         </Helmet>
 <MobileNav></MobileNav>
         <Header siteTitle={data.site.siteMetadata} location={location} noLogo={noLogo} />
