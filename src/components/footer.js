@@ -16,7 +16,7 @@ const Foot = styled.footer`
         display:none;
     }
     > div {
-        margin-top:-5px;
+        margin-top:-10px;
         padding: 0 0 64px 0;
         background-color: ${props => props.theme.secondary};
         > div {
