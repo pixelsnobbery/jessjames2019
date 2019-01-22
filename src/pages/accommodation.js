@@ -72,7 +72,7 @@ const Accommodation = () => (
 
               <p>There are seven charming log cabins right on-site at Bodega Ridge. Each has three spacious bedrooms, living room, full kitchen and bathroom. We have reserved these rooms for our guests, and they will be available on a first-come, first-serve basis. We are hoping as many guests as possible will be able to stay right on-site with us. Please indicate if you'd like to stay in a cabin room in your RSVP and we'll do our best to accommodate you.</p>
 
-              <h4>Price per double room: $140/night</h4>
+              <h4>Price per double room: $140/night (plus tax)</h4>
 
               <Button text="Find out more about Bodega Ridge" href="https://www.bodegaridge.com/cabins/" bgColor={Theme.neonBlue}></Button>
               <Slider>
@@ -102,10 +102,10 @@ const Accommodation = () => (
             
               <ul>
         <li>
-          1 bedroom cabin: $350/night
+          1 bedroom cabin: $350/night (plus tax)
         </li>
         <li>
-          2 bedroom cabin: $400/night
+          2 bedroom cabin: $400/night (plus tax)
         </li>
       </ul>
 
