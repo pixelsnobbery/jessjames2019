@@ -144,8 +144,9 @@ const Accommodation = () => (
               <p>Rustic cottage, 5-10 minute drive from Bodega Ridge.</p>
               </Card>
               <Card>
-              <h4><a href="https://www.airbnb.ca/rooms/28936019?location=Galiano%20Island%2C%20Southern%20Gulf%20Islands%2C%20BC&adults=2&check_in=2019-07-02&check_out=2019-07-04&guests=1&s=fPw0f3iC">Shangri La Retreat</a></h4>
-              <p>Cosy forest cabin, close to Montague Harbour. Approx. 10 minute drive to Bodega Ridge</p>
+              <h4><a href="https://www.vrbo.com/958689">Arrow's Run</a></h4>
+              <p>20 minute drive from Bodega Ridge. Jess & James stayed here in 2018, so contact us if you're innterested and we can give you their email address.</p>
+              <p>Note: 3 nights minimum stay</p>
               </Card>
               <Card>
               <h4><a href="http://hiddenridgegaliano.com">The Hidden Ridge</a></h4>
